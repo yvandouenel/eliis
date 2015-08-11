@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Core Application Feature feature.
+ */
+
+include_once 'core_application_feature.features.inc';
