@@ -77,9 +77,9 @@
   <div class="container">
     <div class="navbar-header">
       <?php if ($logo): ?>
-      <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-      </a>
+      <h1 id="h1-logo"><a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+        <img src="<?php print $logo; ?>" alt="Eliis Seismic Interpretation - <?php print t('Home'); ?>" />
+      </a></h1>
       <?php endif; ?>
 
       <?php if (!empty($site_name)): ?>
@@ -139,7 +139,7 @@
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>
-        <h1 class="page-header"><?php print $title; ?></h1>
+        <h2 class="page-header"><?php print $title; ?></h2>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
