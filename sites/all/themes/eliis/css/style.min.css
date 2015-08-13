@@ -1521,7 +1521,6 @@ ul li.collapsed,ul li.expanded,ul li.leaf{list-style:none}
 .password-strength-text{float:right;font-weight:700}
 .password-indicator{background-color:#949494;height:.3em;width:100%}
 .password-indicator div{height:100%;width:0;background-color:#999}
-.form-autocomplete .input-group-addon,.galleria-theme-classic{background-color:#fff}
 input.password-confirm,input.password-field{width:16em;margin-bottom:.4em}
 div.password-confirm{float:right;margin-top:1.5em;visibility:hidden;width:17em}
 div.form-item div.password-suggestions{padding:.2em .5em;margin:.7em 0;width:38.5em;border:1px solid #B4B4B4}
@@ -1531,6 +1530,7 @@ div.password-suggestions ul{margin-bottom:0}
 .pagination ul>li>a.progress-disabled{float:left}
 .form-autocomplete .glyphicon{color:#777;font-size:120%}
 .form-autocomplete .glyphicon.glyphicon-spin{color:#337ab7}
+.form-autocomplete .input-group-addon{background-color:#fff}
 .ajax-progress .glyphicon{font-size:90%;margin:0 -.25em 0 .5em}
 .glyphicon-spin{display:inline-block;-moz-animation:spin 1s infinite linear;-o-animation:spin 1s infinite linear;-webkit-animation:spin 1s infinite linear;animation:spin 1s infinite linear}
 a .glyphicon-spin{display:inline-block;text-decoration:none}
@@ -1587,11 +1587,15 @@ table .checkbox input[type=checkbox],table .radio input[type=radio]{max-width:in
 .alert-info a{color:#245269}
 .alert-warning a{color:#66512c}
 .alert-danger a{color:#843534}
+#h1-logo{float:left;margin:0}
+@media screen and (min-width:1810px){.fixed-right-column{position:fixed;margin-left:51%;z-index:1040}
+}
 .navbar-fixed-top{top:-20px}
 .main-container{margin-top:60px}
 body.admin-menu .navbar-fixed-top{top:8px}
 body.admin-menu .main-container{margin-top:20px}
 .anchor_product{position:relative;top:-50px}
+.galleria-theme-classic{background-color:transparent}
 .galleria-theme-classic .galleria-info-description,.galleria-theme-classic .galleria-info-text{display:block!important}
 .galleria-theme-classic .galleria-info-text{opacity:.9;background-color:#fff}
 .galleria-theme-classic .galleria-info-description{background-color:transparent;color:#222}
@@ -1600,3 +1604,14 @@ body.admin-menu .main-container{margin-top:20px}
 .galleria-theme-classic .galleria-info-title{color:#000}
 .galleria-theme-classic .galleria-theme-classic .galleria-info-description{color:#222}
 .galleria-theme-classic .galleria-image-nav-left,.galleria-theme-classic .galleria-image-nav-right{opacity:1}
+.galleria-theme-classic .galleria-image img{margin:0 20px}
+@media screen and (max-width:1810px){.view-id-products .attachment-before .view-display-id-attachment_1,.view-id-products .attachment-before .view-display-id-attachment_2{float:left;width:42%}
+}
+@media screen and (max-width:480px){.view-id-products .attachment-before .view-display-id-attachment_1,.view-id-products .attachment-before .view-display-id-attachment_2{float:none;width:98%}
+}
+@media screen and (max-width:1810px){.view-id-products .attachment-before.col-md-2{width:100%;margin-bottom:20px}
+}
+.view-id-products .attachment-before .views-row-even,.view-id-products .attachment-before .views-row-odd{background-color:transparent;padding:0}
+.view-id-products .view-header h3{clear:both}
+.view-id-products .views-row-odd{background-color:#EBF6E6;padding:10px}
+.view-id-products .views-row-even{background-color:#E1E1E1;padding:10px}

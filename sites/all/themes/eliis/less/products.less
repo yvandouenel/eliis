@@ -1,0 +1,38 @@
+.view-id-products {
+  .attachment-before {
+    .view-display-id-attachment_1, .view-display-id-attachment_2 {
+      @media screen and (max-width: @screen-xl) {
+        float: left;
+        width: 42%;
+      }
+      @media screen and (max-width: @screen-xs) {
+        float: none;
+        width: 98%;
+      }
+    }
+    &.col-md-2 {
+      @media screen and (max-width: @screen-xl) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+    .views-row-odd,.views-row-even {
+      background-color: transparent;
+      padding: 0;
+    }
+
+  }
+
+  .view-header h3 {
+    clear: both;
+  }
+  .views-row-odd {
+    background-color: #EBF6E6;
+    padding: 10px;
+  }
+  .views-row-even {
+    background-color: #E1E1E1;
+    padding: 10px;
+  }
+
+}
