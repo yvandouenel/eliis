@@ -23,7 +23,7 @@ regions[page_bottom]    = 'Page bottom'
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
-
+stylesheets[all][] = bootstrap/js/bootstrap-anchor-0.0.1-dist/css/bootstrap-anchor.min.css
 stylesheets[all][] = css/style.min.css
 
 
@@ -51,6 +51,8 @@ scripts[] = 'bootstrap/js/popover.js'
 scripts[] = 'bootstrap/js/scrollspy.js'
 scripts[] = 'bootstrap/js/tab.js'
 scripts[] = 'bootstrap/js/transition.js'
+;scripts[] = 'bootstrap/js/bootstrap-anchor.min.js'
+scripts[] = 'js/my.js'
 ;
 ; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
 settings[bootstrap_cdn] = ''
