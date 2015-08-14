@@ -33,7 +33,7 @@
     <?php print $title; ?>
   <?php endif; ?>
     <?php if ($attachment_before): ?>
-        <nav class="attachment attachment-before col-md-2 fixed-right-column">
+        <nav class="attachment attachment-before col-md-2" id="fixed-right-menu">
             <?php print $attachment_before; ?>
         </nav>
     <?php endif; ?>
