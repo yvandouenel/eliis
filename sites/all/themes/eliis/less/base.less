@@ -1,13 +1,27 @@
-#h1-logo{
+#h1-logo {
   float: left;
   margin: 0;
 }
-
-.fixed-right-column{
-  @media screen and (min-width: @screen-xl){
-    position:fixed;
-    margin-left:51%;
-    z-index:1040;
+#fixed-right-menu{
+  @media screen and (min-width: @screen-xl) {
+    position: fixed;
+    margin-left: 51%;
+    z-index: 1040;
+    background-color: @gris-clair;
+    width: 10.9%;
+    margin-top: 36px;
+    a {
+      color: white;
+    }
   }
-
+  h3 {
+    font-size: 1.2em;
+  }
+  a{
+    display: block;
+    &.selected-link{
+      color: red;
+    }
+  }
+  padding-bottom: 20px;
 }
