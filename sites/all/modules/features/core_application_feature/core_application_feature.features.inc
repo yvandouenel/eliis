@@ -11,9 +11,19 @@ function core_application_feature_ctools_plugin_api($module = NULL, $api = NULL)
   if ($module == "ds" && $api == "ds") {
     return array("version" => "1");
   }
+  if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
   if ($module == "scald" && $api == "context_config") {
     return array("version" => "1");
   }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function core_application_feature_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
 }
 
 /**
@@ -45,6 +55,14 @@ function core_application_feature_image_default_styles() {
  */
 function core_application_feature_node_info() {
   $items = array(
+    'add_on_module' => array(
+      'name' => t('Add-on module'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'core_application_feature' => array(
       'name' => t('Core Application Feature'),
       'base' => 'node_content',

@@ -24,6 +24,9 @@ function core_application_feature_default_scald_context_config() {
     'video' => array(
       '*' => 'passthrough',
     ),
+    'gallery' => array(
+      '*' => 'passthrough',
+    ),
   );
   $context_config->player = array(
     'file' => array(
@@ -35,6 +38,19 @@ function core_application_feature_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+    ),
+    'gallery' => array(
+      '*' => 'galleria',
+      'settings' => array(
+        'width' => '100%',
+        'height' => '300px',
+        'fullscreen_link' => 0,
+        'thumb_style' => 'thumbnail',
+        'normal_style' => 'medium_image_landscape',
+        'big_style' => 'original',
+        'theme' => 'classic',
+        'options' => ' {"showInfo": true,"idleMode": false,"lightbox": true}',
+      ),
     ),
   );
   $context_config->data = array(

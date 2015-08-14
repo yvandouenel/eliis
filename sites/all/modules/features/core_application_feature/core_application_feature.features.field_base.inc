@@ -31,13 +31,13 @@ function core_application_feature_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_images'
-  $field_bases['field_images'] = array(
+  // Exported field_base: 'field_gallery'
+  $field_bases['field_gallery'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_images',
+    'field_name' => 'field_gallery',
     'indexes' => array(
       'sid' => array(
         0 => 'sid',
