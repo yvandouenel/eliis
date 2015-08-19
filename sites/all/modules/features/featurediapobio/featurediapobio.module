@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the FeatureDiapoBio feature.
+ */
+
+include_once 'featurediapobio.features.inc';
