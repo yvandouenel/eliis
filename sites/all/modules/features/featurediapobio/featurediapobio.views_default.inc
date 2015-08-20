@@ -92,38 +92,59 @@ function featurediapobio_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block_slideshow_home');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Block diaporama';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Unfiltered text */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h1 class="center bg-gris-tres-tres-clair base-line"><span class="vert-fonce">Software</span> <span class="vert-mi-fonce">Solutions in Seismic Interpretation</span></h1>';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: URL */
-  $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
-  $handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
-  $handler->display->display_options['fields']['field_url']['field'] = 'field_url';
-  $handler->display->display_options['fields']['field_url']['label'] = '';
-  $handler->display->display_options['fields']['field_url']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_url']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<a href="[field_url]">[title]</a>';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Subtitle */
+  $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['table'] = 'field_data_field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitle']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_diapo_image']['id'] = 'field_diapo_image';
   $handler->display->display_options['fields']['field_diapo_image']['table'] = 'field_data_field_diapo_image';
   $handler->display->display_options['fields']['field_diapo_image']['field'] = 'field_diapo_image';
   $handler->display->display_options['fields']['field_diapo_image']['label'] = '';
-  $handler->display->display_options['fields']['field_diapo_image']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_diapo_image']['alter']['text'] = '<a href="[field_url]">[field_diapo_image]</a>';
+  $handler->display->display_options['fields']['field_diapo_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_diapo_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_diapo_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_diapo_image']['settings'] = array(
     'image_style' => 'extra_large',
     'image_link' => '',
   );
+  /* Field: Content: URL */
+  $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
+  $handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
+  $handler->display->display_options['fields']['field_url']['field'] = 'field_url';
+  $handler->display->display_options['fields']['field_url']['label'] = '';
+  $handler->display->display_options['fields']['field_url']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_url']['alter']['text'] = '<div class="slide-home">
+<div class="title-slide-home"><h2><a href="[field_url]">[title]</a></h2></div>
+<div class="subtitle-slide-home"><h3><a href="[field_url]">[field_subtitle]</a></h3></div>
+<div class="img-slide-home"><a href="[field_url]">[field_diapo_image]</a></div>
+</div>';
+  $handler->display->display_options['fields']['field_url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_url']['empty'] = '<div class="slide-home">
+<div class="title-slide-home"><h2>[title]</h2></div>
+<div class="subtitle-slide-home"><h3>[field_subtitle]</h3></div>
+<div class="img-slide-home">[field_diapo_image]</div>
+</div>';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Draggableviews: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
@@ -219,6 +240,17 @@ function featurediapobio_views_default_views() {
     t('Block'),
     t('Block diaporama'),
     t('more'),
+    t('<h1 class="center bg-gris-tres-tres-clair base-line"><span class="vert-fonce">Software</span> <span class="vert-mi-fonce">Solutions in Seismic Interpretation</span></h1>'),
+    t('<div class="slide-home">
+<div class="title-slide-home"><h2><a href="[field_url]">[title]</a></h2></div>
+<div class="subtitle-slide-home"><h3><a href="[field_url]">[field_subtitle]</a></h3></div>
+<div class="img-slide-home"><a href="[field_url]">[field_diapo_image]</a></div>
+</div>'),
+    t('<div class="slide-home">
+<div class="title-slide-home"><h2>[title]</h2></div>
+<div class="subtitle-slide-home"><h3>[field_subtitle]</h3></div>
+<div class="img-slide-home">[field_diapo_image]</div>
+</div>'),
     t('diaporama'),
     t('Classement diapo'),
   );

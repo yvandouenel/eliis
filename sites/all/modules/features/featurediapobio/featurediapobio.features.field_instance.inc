@@ -10,53 +10,6 @@
 function featurediapobio_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-diaporama-body'
-  $field_instances['node-diaporama-body'] = array(
-    'bundle' => 'diaporama',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'context' => '',
-      'display_summary' => TRUE,
-      'dnd_enabled' => 0,
-      'mee_enabled' => 0,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 31,
-    ),
-  );
-
   // Exported field_instance: 'node-diaporama-field_diapo_image'
   $field_instances['node-diaporama-field_diapo_image'] = array(
     'bundle' => 'diaporama',
@@ -107,12 +60,57 @@ function featurediapobio_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-diaporama-field_subtitle'
+  $field_instances['node-diaporama-field_subtitle'] = array(
+    'bundle' => 'diaporama',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_subtitle',
+    'label' => 'Subtitle',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 41,
+    ),
+  );
+
   // Exported field_instance: 'node-diaporama-field_url'
   $field_instances['node-diaporama-field_url'] = array(
     'bundle' => 'diaporama',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Write here a local path (ex : products). The slideshow image will then be a link to eliis.fr/products.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -128,12 +126,14 @@ function featurediapobio_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_url',
     'label' => 'URL',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
-      'context' => '',
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
       'mee_enabled' => 0,
       'text_processing' => 0,
@@ -152,9 +152,10 @@ function featurediapobio_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Body');
   t('Image');
+  t('Subtitle');
   t('URL');
+  t('Write here a local path (ex : products). The slideshow image will then be a link to eliis.fr/products.');
 
   return $field_instances;
 }
