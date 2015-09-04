@@ -1,4 +1,10 @@
+.container, .container-fluid {
+  padding: 0;
+}
 .center{
+  text-align: center;
+}
+.page-header{
   text-align: center;
 }
 .bg-gris-tres-tres-clair{
@@ -13,7 +19,7 @@
 #fixed-right-menu{
   @media screen and (min-width: @screen-xl) {
     position: fixed;
-    margin-left: 79.8%;
+    margin-left: 82%;
     z-index: 1040;
     background-color: @gris-clair;
     width: 10.9%;
@@ -21,6 +27,9 @@
     a {
       color: white;
     }
+  }
+  @media screen and (min-width:  @container-desktop) and (max-width: @screen-xl) {
+    padding: 0 50px;
   }
   h3 {
     font-size: 1.2em;
@@ -32,4 +41,16 @@
     }
   }
   padding-bottom: 20px;
+}
+/* marge interne des zones du site ***********************************************/
+#navbar .container>div,
+.region-footer-cols,
+#block-system-main>.view-display-id-page >.view-header,
+#block-system-main>.view-display-id-page > .view-content>.views-row,
+#block-system-main .attachment-after .views-row, #block-system-main .attachment-after .view-header,
+body.page-node .main-container{
+  padding: 0 50px;
+  @media (max-width:  @container-desktop) {
+    padding: 0 5px;
+  }
 }
