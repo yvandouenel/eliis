@@ -1598,8 +1598,8 @@ table .checkbox input[type=checkbox],table .radio input[type=radio]{max-width:in
 #fixed-right-menu h3{font-size:1.2em}
 #fixed-right-menu a{display:block}
 #fixed-right-menu a.selected-link{color:red}
-#block-system-main .attachment-after .view-header,#block-system-main .attachment-after .views-row,#block-system-main>.view-display-id-page>.view-content>.views-row,#block-system-main>.view-display-id-page>.view-header,#navbar .container>div,.region-footer-cols,body.page-node .main-container{padding:0 50px}
-@media (max-width:970px){#block-system-main .attachment-after .view-header,#block-system-main .attachment-after .views-row,#block-system-main>.view-display-id-page>.view-content>.views-row,#block-system-main>.view-display-id-page>.view-header,#navbar .container>div,.region-footer-cols,body.page-node .main-container{padding:0 5px}
+#block-system-main .attachment-after .view-header,#block-system-main .attachment-after .views-row,#block-system-main>.view-display-id-page>.view-content>.views-row,#block-system-main>.view-display-id-page>.view-header,#navbar .container>div,.region-footer-cols,body.page-node.not-front .main-container{padding:0 50px}
+@media (max-width:970px){#block-system-main .attachment-after .view-header,#block-system-main .attachment-after .views-row,#block-system-main>.view-display-id-page>.view-content>.views-row,#block-system-main>.view-display-id-page>.view-header,#navbar .container>div,.region-footer-cols,body.page-node.not-front .main-container{padding:0 5px}
 }
 @media (min-width:768px){.container,.navbar.container{max-width:none;width:100%}
 }
@@ -1615,7 +1615,8 @@ body.admin-menu .main-container{margin-top:20px}
 #navbar{background-color:#fff}
 #h1-logo{float:left;margin:0}
 .base-line{margin:0;padding:25px 0}
-.context-sdl_editor_representation:hover{border-radius:6px;margin-top:-10px;padding:20px}
+.context-sdl_editor_representation{margin:0 0 10px}
+.context-sdl_editor_representation:hover{margin:-10px 0 0}
 .region-footer-cols>div{margin-top:30px}
 .region-footer-cols>div h2{color:#004353}
 .social-courtesy{background-color:#e5f0f2;min-height:50px}
