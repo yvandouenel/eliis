@@ -184,12 +184,11 @@
         <?php print render($page['footer']); ?>
     </div>
     <div id="footer-adress">
-        <div id="adress-eliis"><img src="<?php print($directory) ?>/images/logo-eliis-small.gif" alt="logo Eliis"
+        <div id="adress-eliis"><img src="/<?php print($directory) ?>/images/logo-eliis-small.gif" alt="logo Eliis"
                                     style="vertical-align:middle;"> Parc Mermoz, Immeuble l'Onyx - 187, rue Hélène
             Boucher - 34 170 Castelnau le Lez - France | <a href="mailto:contact@eliis.fr">contact@eliis.fr</a> | Tel :
             +33(0) 4 67 41 31 16 | Fax : +33 (0)4 30 96 60 04
         </div>
-        <div id="coopernet"><a target="_blank" href="http://www.coopernet.fr">Coopernet : web site creation with drupal
-                in Montpellier</a></div>
+        <div id="coopernet"><a target="_blank" href="http://www.coopernet.fr">Coopernet : drupal website creation in Montpellier</a></div>
     </div>
 </footer>
