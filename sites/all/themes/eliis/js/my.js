@@ -44,14 +44,19 @@ jQuery(function($) {
     }
 
     $('a[href^="#"]').click(function(event) {
-        $('a[href^="#"]').removeClass( "selected-link" );
-        $(this).addClass( "selected-link" );
-        console.log("source de l'évenement : "+$(this).id);
-        var target = $(this.hash);
-        if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
-        if (target.length == 0) target = $('html');
-        $('html, body').animate({ scrollTop: target.offset().top }, 500);
-        return false;
+        console.log("entrée avant test");
+        if($(this).attr("class").indexOf("contextual-links-trigger") != 0){
+            console.log("après test : "+$(this).attr("class").indexOf("contextual-links-trigger"));
+            $('a[href^="#"]').removeClass( "selected-link" );
+            $(this).addClass( "selected-link" );
+            console.log("source de l'évenement : "+$(this).id);
+            var target = $(this.hash);
+            if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
+            if (target.length == 0) target = $('html');
+            $('html, body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+        }
+
     });
 
 
