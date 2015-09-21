@@ -1,3 +1,6 @@
+img{
+  max-width: 100%;
+}
 .container, .container-fluid {
   padding: 0;
 }
@@ -15,6 +18,9 @@
 }
 .vert-mi-fonce{
   color: @vert-mi-fonce;
+}
+h2.page-header{
+  margin-top: 20px;
 }
 #fixed-right-menu{
   @media screen and (min-width: @screen-xl) {
@@ -46,9 +52,11 @@
 #navbar .container>div,
 .region-footer-cols,
 #block-system-main>.view-display-id-page >.view-header,
-#block-system-main>.view-display-id-page > .view-content>.views-row,
-#block-system-main .attachment-after .views-row, #block-system-main .attachment-after .view-header,
-body.page-node.not-front .main-container{
+body.page-products #block-system-main>.view-display-id-page > .view-content>.views-row,
+body.page-products #block-system-main .attachment-after .views-row,
+body.page-products #block-system-main .attachment-after .view-header,
+body.page-node.not-front .main-container,
+#block-views-evenements-block-home-event {
   padding: 0 50px;
   @media (max-width:  @container-desktop) {
     padding: 0 5px;

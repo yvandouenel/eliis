@@ -1,0 +1,62 @@
+#block-views-evenements-block-zoom-event {
+  .group-title-img-page {
+    min-height: 150px;
+    position: relative;
+    .h3-event {
+      position: absolute;
+      top: 2%;
+      left: 3%;
+      background-color: white;
+      opacity: 0.8;
+      padding: 5px;
+      span {
+        color: black;
+        opacity: 1;
+      }
+    }
+    .date-event {
+      position: absolute;
+      top: 15%;
+      left: 3%;
+      background-color: white;
+      opacity: 0.8;
+      padding: 5px;
+      span {
+        color: black;
+        opacity: 1;
+      }
+      @media (max-width: @screen-xl){
+        top: 50%;
+      }
+      @media (max-width: @screen-md){
+        display: table;
+        top: 2%;
+        left: 50%;
+        max-width: 33%;
+      }
+    }
+    .summary-event {
+      position: absolute;
+      bottom: 5%;
+      left: 3%;
+      background-color: white;
+      opacity: 0.8;
+      padding: 5px;
+      max-width: 33%;
+      p {
+        color: black;
+        opacity: 1;
+      }
+    }
+  }
+}
+.page-events{
+  .col-md-4>div{
+    @media (min-width: 768px) {
+      padding: 0 50px;
+    }
+    @media (max-width: 768px) {
+      padding: 0 5px;
+    }
+  }
+}
