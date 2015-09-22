@@ -1704,6 +1704,8 @@ body.admin-menu .main-container{margin-top:20px}
 #block-views-evenements-block-zoom-event .group-title-img-page .register-view-zoom a{font-size:1.2em}
 }
 .page-events .label-registration,body.node-type-news .label-registration{font-size:2em}
+.page-events .attachment-before{background:url(../images/bg_grey_separator_small.png) 100% 75px no-repeat;min-height:250px}
+.page-events .attachment-after{background:url(../images/bg_grey_separator_small.png) 0 50px no-repeat;min-height:250px}
 @media (min-width:768px){.page-events .col-md-4>div{padding:0 50px}
 }
 @media (max-width:768px){.page-events .col-md-4>div{padding:0 5px}
