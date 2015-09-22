@@ -1692,11 +1692,23 @@ body.admin-menu .main-container{margin-top:20px}
 #block-views-evenements-block-zoom-event .group-title-img-page .date-event span{color:#000;opacity:1}
 @media (max-width:1810px){#block-views-evenements-block-zoom-event .group-title-img-page .date-event{top:50%}
 }
-@media (max-width:992px){#block-views-evenements-block-zoom-event .group-title-img-page .date-event{display:table;top:2%;left:50%;max-width:33%}
+@media (max-width:992px){#block-views-evenements-block-zoom-event .group-title-img-page .date-event{display:table;top:2%;right:2%;left:auto;max-width:33%}
 }
 #block-views-evenements-block-zoom-event .group-title-img-page .summary-event{position:absolute;bottom:5%;left:3%;background-color:#fff;opacity:.8;padding:5px;max-width:33%}
 #block-views-evenements-block-zoom-event .group-title-img-page .summary-event p{color:#000;opacity:1}
+@media (max-width:768px){#block-views-evenements-block-zoom-event .group-title-img-page .summary-event{max-width:66%}
+}
+#block-views-evenements-block-zoom-event .group-title-img-page .register-view-zoom{position:absolute;bottom:50%;left:50%;background-color:#fff;opacity:.8;padding:15px;max-width:33%;border-radius:8px}
+#block-views-evenements-block-zoom-event .group-title-img-page .register-view-zoom a{color:#000;opacity:1;font-size:1.8em}
+@media (max-width:992px){#block-views-evenements-block-zoom-event .group-title-img-page .register-view-zoom{display:table;padding:5px;bottom:4%;right:2%;left:auto;max-width:33%}
+#block-views-evenements-block-zoom-event .group-title-img-page .register-view-zoom a{font-size:1.2em}
+}
+.page-events .label-registration,body.node-type-news .label-registration{font-size:2em}
 @media (min-width:768px){.page-events .col-md-4>div{padding:0 50px}
 }
 @media (max-width:768px){.page-events .col-md-4>div{padding:0 5px}
 }
+.page-events h4.h4-event a{color:#000;text-decoration:underline}
+.page-events .link-register-view{float:right;display:block;padding-right:35%}
+.page-events #event-subscription{position:relative;top:-50px}
+body.node-type-news input,body.node-type-news select{width:250px}

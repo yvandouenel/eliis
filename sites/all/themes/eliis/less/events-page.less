@@ -31,7 +31,8 @@
       @media (max-width: @screen-md){
         display: table;
         top: 2%;
-        left: 50%;
+        right: 2%;
+        left: auto;
         max-width: 33%;
       }
     }
@@ -47,6 +48,35 @@
         color: black;
         opacity: 1;
       }
+      @media (max-width: @screen-sm){
+        max-width: 66%;
+      }
+    }
+    .register-view-zoom{
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      background-color: white;
+      opacity: 0.8;
+      padding: 15px;
+      max-width: 33%;
+      border-radius: 8px;
+      a {
+        color: black;
+        opacity: 1;
+        font-size: 1.8em;
+      }
+      @media (max-width: @screen-md){
+        display: table;
+        padding: 5px;
+        bottom: 4%;
+        right: 2%;
+        left: auto;
+        max-width: 33%;
+        a {
+          font-size: 1.2em;
+        }
+      }
     }
   }
 }
@@ -58,5 +88,29 @@
     @media (max-width: 768px) {
       padding: 0 5px;
     }
+  }
+  h4.h4-event a{
+    color: black;
+    text-decoration: underline;
+  }
+  .label-registration{
+    font-size: 2em;
+  }
+  .link-register-view{
+    float: right;
+    display: block;
+    padding-right: 35%;
+  }
+  #event-subscription{
+    position: relative;
+    top: -50px;
+  }
+}
+body.node-type-news{
+  .label-registration{
+    font-size: 2em;
+  }
+  input, select{
+    width: 250px;
   }
 }
