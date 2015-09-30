@@ -69,8 +69,8 @@ Login in lightbox
         console.log("début du script");
 
         // construction du div qui sera affiché
-        var div_lighbox_login = $('<div id="lighbox_login"></div>');
-        div_lighbox_login.css({
+        var div_lightbox_login = $('<div id="lightbox_login"></div>');
+        div_lightbox_login.css({
             'width':'100%',
             'background-color': 'black',
             'z-index':'1',
@@ -79,9 +79,11 @@ Login in lightbox
             'left':'0',
             'top':'100px'});
         // création de la croix pour fermer
-        var close_icon = $('<div class="icon-close" id="icon-close">Close</div>');
+        var close_icon = $('<div class="icon-close" id="icon-close"><span class="sr-only">Close</span></div>');
         close_icon.css({
-            'float':'right'
+            'position': 'absolute',
+            'top': '5px',
+            'right': '5px'
             });
 
         // Envoi de la croix dans la zone de login
@@ -94,29 +96,30 @@ Login in lightbox
             'background-color': 'white',
             'opacity': '1',
             'width':'250px',
+            'position': 'relative',
             'margin':'50px auto'
         });
         // Envoi de la zone de login dans la lightbox
-        $( "#block-user-login").appendTo(div_lighbox_login);
+        $( "#block-user-login").appendTo(div_lightbox_login);
 
         // Désactivation des liens qui se trouvent dans la zone pour les anonymes
         $( ".field-name-field-text-only-anonymous a").click(function(e) {
             e.preventDefault();
-            div_lighbox_login.show();
+            div_lightbox_login.show();
         });
 
 
         // Mise en place du comportement de la zone pour les anonymes
         $( ".field-name-field-text-only-anonymous").click(function(){
             console.log("Click sur zone pour anonymes");
-            $( "body" ).prepend( div_lighbox_login );
-            div_lighbox_login.show();
+            $( "body" ).prepend( div_lightbox_login );
+            div_lightbox_login.show();
         });
-        div_lighbox_login.click(function(event){
-            if(event.target.id == 'lighbox_login') div_lighbox_login.hide();
+        div_lightbox_login.click(function(event){
+            if(event.target.id == 'lightbox_login') div_lightbox_login.hide();
         });
         close_icon.click(function(event){
-            div_lighbox_login.hide();
+            div_lightbox_login.hide();
         });
     }
 
