@@ -1,0 +1,35 @@
+<?php
+/**
+ * @file
+ * Code for the Feature licencied feature.
+ */
+
+include_once 'feature_licencied.features.inc';
+
+/**
+ * Implements hook_permission().
+ */
+function feature_licencied_permission() {
+  return array(
+    "access licensed files" => array(
+      "title" => "Access licensed files",
+    ),
+  );
+}
+
+/**
+ * Implements hook_file_download().
+ */
+function feature_licencied_file_download($uri) {
+  if (strpos($uri, "private://licensed/") === 0) {
+    if (!user_access("access licensed files")) {
+      return -1;
+    }
+    $files = file_load_multiple(array(), array("uri" => $uri));
+    if (empty($files)) {
+      return -1;
+    }
+    $file = reset($files);
+    return file_get_content_headers($file);
+  }
+}
