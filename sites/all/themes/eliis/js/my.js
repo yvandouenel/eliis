@@ -65,7 +65,7 @@ Login in lightbox
     teste si l'on se trouve dans une page de type "licenced" et s'il y a un formulaire de login et une zone
     uniquement visible pour les anonymes
      */
-    if ( $( "body.node-type-licensed-page" ).length &&  $( "#block-user-login").length && $( ".field-name-field-text-only-anonymous").length){
+    if ( $( "body.node-type-licensed-page" ).length &&  $( "#block-user-login").length) {
         console.log("début du script");
 
         // construction du div qui sera affiché
@@ -102,9 +102,10 @@ Login in lightbox
         // Envoi de la zone de login dans la lightbox
         $( "#block-user-login").appendTo(div_lightbox_login);
 
-        // Désactivation des liens qui se trouvent dans la zone pour les anonymes
-        $( ".field-name-field-text-only-anonymous a").click(function(e) {
+        // Désactivation des liens
+        $( "a").click(function(e) {
             e.preventDefault();
+            console.log("click");
             div_lightbox_login.show();
         });
 
