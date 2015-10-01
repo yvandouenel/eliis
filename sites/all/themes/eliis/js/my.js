@@ -100,6 +100,7 @@ Login in lightbox
             'margin':'50px auto'
         });
         // Envoi de la zone de login dans la lightbox
+        div_lightbox_login.hide();
         $( "#block-user-login").appendTo(div_lightbox_login);
 
         // Désactivation des liens
@@ -109,11 +110,12 @@ Login in lightbox
             div_lightbox_login.show();
         });
 
+        $( "body" ).prepend( div_lightbox_login );
 
         // Mise en place du comportement de la zone pour les anonymes
         $( ".field-name-field-text-only-anonymous").click(function(){
             console.log("Click sur zone pour anonymes");
-            $( "body" ).prepend( div_lightbox_login );
+
             div_lightbox_login.show();
         });
         div_lightbox_login.click(function(event){
