@@ -540,7 +540,7 @@ function field_group_field_group_format_settings($group) {
       $form['instance_settings']['label_element'] = array(
         '#title' => t('Label element'),
         '#type' => 'select',
-        '#options' => array('h2' => t('Header 2'), 'h3' => t('Header 3')),
+        '#options' => array('h2' => t('Header 2'), 'h3' => t('Header 3'),'h4' => t('Header 4'),'h5' => t('Header 5')),
         '#default_value' => isset($group->format_settings['instance_settings']['label_element']) ? $group->format_settings['instance_settings']['label_element'] : $formatter['instance_settings']['label_element'],
         '#weight' => 2,
       );
