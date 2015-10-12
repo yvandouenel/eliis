@@ -35,9 +35,12 @@ function feature_licencied_file_download($uri) {
 }
 
 /**
- * Implements hook_field_group_formatter_info().
+ * Implements hook_menu_alter().
  */
-function feature_licencied_field_group_formatter_info()
-{
+function feature_licencied_menu_alter(&$items){
+    $items['user/register']['page callback'] = 'feature_licencied_ask_account';
+}
 
+function feature_licencied_ask_account(){
+    drupal_goto('/node/17/');
 }
