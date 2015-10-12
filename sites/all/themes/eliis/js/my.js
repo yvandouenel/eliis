@@ -103,8 +103,8 @@ Login in lightbox
         div_lightbox_login.hide();
         $( "#block-user-login").appendTo(div_lightbox_login);
 
-        // Désactivation des liens
-        $( "a").click(function(e) {
+        // Désactivation des liens qui appartiennent à la classe private-file
+        $( ".private-file a").click(function(e) {
             e.preventDefault();
             console.log("click");
             div_lightbox_login.show();
@@ -113,11 +113,13 @@ Login in lightbox
         $( "body" ).prepend( div_lightbox_login );
 
         // Mise en place du comportement de la zone pour les anonymes
-        $( ".field-name-field-text-only-anonymous").click(function(){
+        /*$( ".field-name-field-text-only-anonymous").click(function(){
             console.log("Click sur zone pour anonymes");
 
             div_lightbox_login.show();
-        });
+        });*/
+
+        // on cache la zone de login sur click dans la zone noire ou sur la croix
         div_lightbox_login.click(function(event){
             if(event.target.id == 'lightbox_login') div_lightbox_login.hide();
         });
