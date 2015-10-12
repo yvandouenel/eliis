@@ -13,6 +13,9 @@ img{
 .bg-gris-tres-tres-clair{
   background-color: @gris-tres-tres-clair;
 }
+.bg-gris-extrement-clair{
+  background-color: @gris-extrement-clair;
+}
 .vert-fonce{
   color: @vert-fonce;
 }
@@ -60,5 +63,36 @@ body.page-node.not-front .main-container,
   padding: 0 50px;
   @media (max-width:  @container-desktop) {
     padding: 0 5px;
+  }
+}
+
+/* formulaires ********************************************************************/
+.webform-client-form{
+  label{
+    width: 15%;
+    float: left;
+    text-align: right;
+    margin-bottom: 5px;
+    font-weight: bold;
+    clear: left;
+    @media(max-width: @screen-sm){
+      width: 150px;
+    }
+  }
+  input{
+    width: 60%;
+    float: left;
+    margin-bottom: 5px;
+    &.form-radio,&.form-checkbox{
+      width: auto;
+      margin-left: 30px;
+    }
+    @media(max-width: @screen-sm){
+      width: 50%;
+    }
+  }
+  .description{
+    clear: both;
+    margin-bottom: 10px;
   }
 }
