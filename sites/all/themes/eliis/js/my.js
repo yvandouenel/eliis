@@ -75,7 +75,7 @@ Login in lightbox
             'background-color': 'black',
             'z-index':'1',
             'height':'100%',
-            'position':'absolute',
+            'position':'fixed',
             'left':'0',
             'top':'100px'});
         // création de la croix pour fermer
