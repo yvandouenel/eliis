@@ -10,11 +10,36 @@ img{
 .page-header{
   text-align: center;
 }
+.row-eq-height {
+  @media screen and (min-width:@screen-sm){
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+table.table-classic{
+  td{
+    padding-right: 20px;
+  }
+}
+table.table-configuration{
+  td,th{
+    padding: 5px;
+    border : 4px solid white;
+  }
+}
 .bg-gris-tres-tres-clair{
   background-color: @gris-tres-tres-clair;
 }
+.bg-gris-tres-clair{
+  background-color: @gris-tres-clair;
+}
 .bg-gris-extrement-clair{
   background-color: @gris-extrement-clair;
+}
+.bg-bleu-clair{
+  background-color: @bleu-clair;
 }
 .vert-fonce{
   color: @vert-fonce;

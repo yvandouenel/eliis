@@ -37,6 +37,9 @@
   }
   .view-display-id-attachment_release{
     margin-top: -45px;
+    @media screen and(max-width: @container-tablet){
+      margin: 0 5%;
+    }
   }
   .see-all-events{
     position: absolute;
@@ -44,10 +47,18 @@
     left: 77.5%;
     color: @gris-fonce;
     text-decoration: underline;
+    @media screen and(max-width: @container-tablet){
+      position: inherit;
+      margin: 0 0 0 8%;
+    }
   }
   .attachment-after{
     padding-left: 3%;
     float: left;
     width: 24%;
+    @media screen and(max-width: @container-tablet){
+      float: none;
+      width: 97%;
+    }
   }
 }
