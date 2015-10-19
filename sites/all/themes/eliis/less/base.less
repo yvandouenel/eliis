@@ -10,8 +10,9 @@ img{
 .page-header{
   text-align: center;
 }
+
 .row-eq-height {
-  @media screen and (min-width:@screen-sm){
+  @media screen and (min-width:@screen-md){
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -29,6 +30,7 @@ table.table-configuration{
     border : 4px solid white;
   }
 }
+/* couleurs ***********************************************************************************************************/
 .bg-gris-tres-tres-clair{
   background-color: @gris-tres-tres-clair;
 }
@@ -48,7 +50,7 @@ table.table-configuration{
   color: @vert-mi-fonce;
 }
 h2.page-header{
-  margin-top: 20px;
+  margin-top: 40px;
 }
 #fixed-right-menu{
   @media screen and (min-width: @screen-xl) {
@@ -83,7 +85,7 @@ h2.page-header{
 body.page-products #block-system-main>.view-display-id-page > .view-content>.views-row,
 body.page-products #block-system-main .attachment-after .views-row,
 body.page-products #block-system-main .attachment-after .view-header,
-body.page-node.not-front .main-container,
+body.page-node.not-front .main-container .region-content,
 #block-views-evenements-block-home-event {
   padding: 0 50px;
   @media (max-width:  @container-desktop) {

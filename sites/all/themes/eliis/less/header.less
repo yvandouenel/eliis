@@ -2,28 +2,37 @@
 .region-page-top #toolbar{
   display:none;
 }
+.navbar-default{
+  border: 0;
+}
 /* Gestion de la marge de la barre de navigation */
 .navbar-fixed-top {
   top: -20px;
 }
 // marge non connecté
-.main-container {
+body.front .main-container {
   margin-top: 80px;
+}
+body.not-front .main-container {
+  margin-top: 60px;
 }
 // marge connecté
 body.admin-menu{
   .navbar-fixed-top {
     top: 8px;
   }
-  .main-container {
+  &.front .main-container {
     margin-top: 20px;
+  }
+  &.not-front .main-container {
+    margin-top: -5px;
   }
 }
 
 #navbar{
   background-color: white;
 }
-/* Logo ******************************/
+/* Logo ***************************************************************************************************************/
 #h1-logo {
   float: left;
   margin: 0;
@@ -32,6 +41,38 @@ body.admin-menu{
   margin: 0;
   padding: 25px 0;
 }
+/* Menus **************************************************************************************************************/
+
+body.front #main-nav > ul > li {
+  > a{
+    height: 90px;
+    padding-top: 40px;
+  }
+  .active-trail, .active{
+    background-color: @gris-menus-hauts;
+  }
+}
+body.not-front{
+  #h1-logo img{
+    width: 60%;
+  }
+  #main-nav > ul > li {
+    > a{
+      height: 60px;
+      padding-top: 20px;
+    }
+    .active-trail, .active{
+      background-color: @gris-menus-hauts;
+    }
+  }
+}
+.breadcrumb{
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  padding: 3px 0 3px 50px;
+}
+
 
 
 

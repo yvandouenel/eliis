@@ -9,18 +9,31 @@
 .group-same-height-3 {
   margin-top: 20px;
 }
+.group-license-request{
+  margin-bottom: 30px;
+}
 
 .anchor-licensed-page {
   position: relative;
-  top: -100px;
+  top: -60px;
 }
 
-.licensed-top-anchors {
+#licensed-top-anchors {
   display: table;
   margin: 0 auto;
+  position: fixed;
+  z-index: 3;
+  background-color: white;
+  left: 35%;
   border-bottom: 1px solid @gris-fonce;
   a {
     display: table-cell;
-    padding: 10px 20px;
+    padding: 6px 20px 5px 20px;
+  }
+  @media screen and(max-width: @container-tablet){
+    position: inherit;
+  }
+  &.top-fixed-anchors{
+    /*top: 55px;*/
   }
 }
