@@ -1,8 +1,8 @@
 jQuery(function($) {
-    //var anchors-top;
+    /*
+    Comportement des ancres
+     */
     var menu_top_position = 0;
-
-
     if ($('a.link-fixed-right-menu').length != 0) {
         // Récupération des liens vers des ancres du menu
         var link_menu = [];
@@ -14,19 +14,19 @@ jQuery(function($) {
             clearTimeout($.data(this, 'scrollTimer'));
             $.data(this, 'scrollTimer', setTimeout(function() {
                 // Récupération de la position du haut du menu :
-                // c'est uniquement elle qui change s'il n'y apas de redimensionnement de la page
+                // c'est uniquement elle qui change s'il n'y a pas de redimensionnement de la page
                 var top_menu_position_offset = $('#fixed-right-menu').offset();
                 menu_top_position = top_menu_position_offset.top;
-                console.log( "position du haut du menu : " + menu_top_position);
+                //console.log( "position du haut du menu : " + menu_top_position);
 
                 // Comparaison avec les positions des ancres
                 var link_menu_selected = false;
                 $('.anchor_product').each(function( index ) {
                     link_menu_selected = false;
                     var position_ancre = $( this ).offset();
-                    console.log( "position des ancres : " + position_ancre.top );
+                    //console.log( "position des ancres : " + position_ancre.top );
                     if(menu_top_position < position_ancre.top){
-                        console.log( "Mettre en seletected le lien " + (index-1) + ' du menu.');
+                        //console.log( "Mettre en seletected le lien " + (index-1) + ' du menu.');
                         $('a.link-fixed-right-menu').removeClass( "selected-link" );
                         link_menu[(index-1)].addClass( "selected-link" );
                         link_menu_selected = true;
@@ -34,7 +34,7 @@ jQuery(function($) {
                     }
                 });
                 if (!link_menu_selected){
-                    console.log( "Mettre en seletected le lien " + (link_menu.length-1) + ' du menu.');
+                    //console.log( "Mettre en seletected le lien " + (link_menu.length-1) + ' du menu.');
                     $('a.link-fixed-right-menu').removeClass( "selected-link" );
                     link_menu[(link_menu.length-1)].addClass( "selected-link" );
                 }
@@ -44,12 +44,12 @@ jQuery(function($) {
     }
 
     $('a[href^="#"]').click(function(event) {
-        console.log("entrée avant test");
+        //console.log("entrée avant test");
         if($(this).attr("class").indexOf("contextual-links-trigger") != 0){
-            console.log("après test : "+$(this).attr("class").indexOf("contextual-links-trigger"));
+            //console.log("après test : "+$(this).attr("class").indexOf("contextual-links-trigger"));
             $('a[href^="#"]').removeClass( "selected-link" );
             $(this).addClass( "selected-link" );
-            console.log("source de l'évenement : "+$(this).id);
+            //console.log("source de l'évenement : "+$(this).id);
             var target = $(this.hash);
             if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
             if (target.length == 0) target = $('html');
@@ -62,18 +62,17 @@ jQuery(function($) {
 Login in lightbox
  */
     /*
-    teste si l'on se trouve dans une page de type "licenced" et s'il y a un formulaire de login et une zone
-    uniquement visible pour les anonymes
+    teste si l'on se trouve dans une page de type "licenced" et s'il y a un formulaire de login
      */
     if ( $( "body.node-type-licensed-page" ).length &&  $( "#block-user-login").length) {
-        console.log("début du script");
+        //console.log("début du script");
 
         // construction du div qui sera affiché
         var div_lightbox_login = $('<div id="lightbox_login"></div>');
         div_lightbox_login.css({
             'width':'100%',
             'background-color': 'black',
-            'z-index':'1',
+            'z-index':'3',
             'height':'100%',
             'position':'fixed',
             'left':'0',
@@ -106,7 +105,7 @@ Login in lightbox
         // Désactivation des liens qui appartiennent à la classe private-file
         $( ".private-file a").click(function(e) {
             e.preventDefault();
-            console.log("click");
+            //console.log("click");
             div_lightbox_login.show();
         });
 
@@ -114,7 +113,7 @@ Login in lightbox
 
         // Mise en place du comportement de la zone pour les anonymes
         /*$( ".field-name-field-text-only-anonymous").click(function(){
-            console.log("Click sur zone pour anonymes");
+            //console.log("Click sur zone pour anonymes");
 
             div_lightbox_login.show();
         });*/
@@ -125,6 +124,30 @@ Login in lightbox
         });
         close_icon.click(function(event){
             div_lightbox_login.hide();
+        });
+    }
+    /*
+    menu ancres sur la page de download
+     */
+    if ( $( "body.node-type-licensed-page" ).length &&  $( "#licensed-top-anchors" ).length) {
+    console.log("position des ancres de haut de page");
+        var count = 0;
+        $(window).scroll(function() {
+
+            clearTimeout($.data(this, 'scrollTimer'));
+            $.data(this, 'scrollTimer', setTimeout(function() {
+                if (count && !$( "#licensed-top-anchors").hasClass("top-fixed-anchors")){
+                    $( "#licensed-top-anchors" ).animate({
+                        top: "55px"
+                    }, 500, function() {
+                        // Animation complete.
+                    });
+                    $( "#licensed-top-anchors").addClass("top-fixed-anchors");
+                    console.log("Ajout de la classe");
+                }
+                //console.log("Haven't scrolled in 250ms! " + count);
+                count ++;
+            }, 250));
         });
     }
 
