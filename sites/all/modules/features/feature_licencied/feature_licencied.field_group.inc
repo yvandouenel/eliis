@@ -18,10 +18,10 @@ function feature_licencied_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'licensed_page';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_sofware';
+  $field_group->parent_name = 'group_same_height';
   $field_group->data = array(
     'label' => 'API',
-    'weight' => '10',
+    'weight' => '17',
     'children' => array(
       0 => 'group_paleoscan_db',
       1 => 'group_paleoscan_geomodel',
@@ -31,7 +31,7 @@ function feature_licencied_field_group_info() {
       'label' => 'API',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-api field-group-div col-md-4 bg-gris-tres-tres-clair',
+        'classes' => 'group-api field-group-div col-md-4 bg-gris-tres-tres-clair col-xs-12',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h4',
@@ -75,15 +75,43 @@ function feature_licencied_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_configuration|node|licensed_page|form';
+  $field_group->group_name = 'group_configuration';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'licensed_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_sofware';
+  $field_group->data = array(
+    'label' => 'Configuration',
+    'weight' => '30',
+    'children' => array(
+      0 => 'field_configuration',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-configuration field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_configuration|node|licensed_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_datalink|node|licensed_page|default';
   $field_group->group_name = 'group_datalink';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'licensed_page';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_sofware';
+  $field_group->parent_name = 'group_same_height';
   $field_group->data = array(
     'label' => 'DATALINK',
-    'weight' => '9',
+    'weight' => '16',
     'children' => array(
       0 => 'group_petrel',
       1 => 'group_decision_space',
@@ -93,7 +121,7 @@ function feature_licencied_field_group_info() {
       'label' => 'DATALINK',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-datalink field-group-div col-md-4 bg-gris-extrement-clair',
+        'classes' => 'group-datalink field-group-div col-md-4 bg-gris-extrement-clair col-xs-12',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h4',
@@ -203,6 +231,35 @@ function feature_licencied_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_flexnet_external_drivers|node|licensed_page|form';
+  $field_group->group_name = 'group_flexnet_external_drivers';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'licensed_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_sofware';
+  $field_group->data = array(
+    'label' => 'Flexnet/External Drivers',
+    'weight' => '29',
+    'children' => array(
+      0 => 'field_flexnet',
+      1 => 'field_external_drivers',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-flexnet-external-drivers field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_flexnet_external_drivers|node|licensed_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_licence_request|node|licensed_page|form';
   $field_group->group_name = 'group_licence_request';
   $field_group->entity_type = 'node';
@@ -240,17 +297,16 @@ function feature_licencied_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'License Request',
-    'weight' => '5',
+    'weight' => '8',
     'children' => array(
-      0 => 'field_free_30_days_trial',
-      1 => 'field_sofware_demonstration',
+      0 => 'group_same_height_2',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'License Request',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-license-request field-group-div col-md-12',
+        'classes' => 'group-license-request field-group-div',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h3',
@@ -403,10 +459,10 @@ function feature_licencied_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'licensed_page';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_sofware';
+  $field_group->parent_name = 'group_same_height';
   $field_group->data = array(
     'label' => 'PaleoScan',
-    'weight' => '8',
+    'weight' => '15',
     'children' => array(
       0 => 'field_paleoscan_tm',
       1 => 'field_files_to_download',
@@ -416,7 +472,7 @@ function feature_licencied_field_group_info() {
       'label' => 'PaleoScan',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-paleoscan field-group-div col-md-4 bg-gris-tres-tres-clair',
+        'classes' => 'group-paleoscan field-group-div col-md-4 bg-gris-tres-tres-clair col-xs-12',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h4',
@@ -527,6 +583,106 @@ function feature_licencied_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_same_height_2|node|licensed_page|default';
+  $field_group->group_name = 'group_same_height_2';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'licensed_page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_license_request';
+  $field_group->data = array(
+    'label' => 'same height 2',
+    'weight' => '19',
+    'children' => array(
+      0 => 'field_free_30_days_trial',
+      1 => 'field_sofware_demonstration',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'same height 2',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-same-height-2 field-group-div row row-eq-height',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_same_height_2|node|licensed_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_same_height_3|node|licensed_page|default';
+  $field_group->group_name = 'group_same_height_3';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'licensed_page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'same height 3',
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_flexnet',
+      1 => 'field_external_drivers',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'same height 3',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-same-height-3 field-group-div row row-eq-height bg-gris-tres-tres-clair',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_same_height_3|node|licensed_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_same_height|node|licensed_page|default';
+  $field_group->group_name = 'group_same_height';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'licensed_page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_sofware';
+  $field_group->data = array(
+    'label' => 'same height',
+    'weight' => '14',
+    'children' => array(
+      0 => 'group_paleoscan',
+      1 => 'group_datalink',
+      2 => 'group_api',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'same height',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-same-height field-group-div row row-eq-height',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_same_height|node|licensed_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_sofware|node|licensed_page|default';
   $field_group->group_name = 'group_sofware';
   $field_group->entity_type = 'node';
@@ -535,18 +691,16 @@ function feature_licencied_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Sofware',
-    'weight' => '4',
+    'weight' => '6',
     'children' => array(
-      0 => 'group_paleoscan',
-      1 => 'group_datalink',
-      2 => 'group_api',
+      0 => 'group_same_height',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Sofware',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-sofware field-group-htabs ',
+        'classes' => 'group-sofware field-group-htabs',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h3',
@@ -576,6 +730,8 @@ function feature_licencied_field_group_info() {
       2 => 'group_api',
       3 => 'group_text_intro',
       4 => 'group_licence_request',
+      5 => 'group_flexnet_external_drivers',
+      6 => 'group_configuration',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(

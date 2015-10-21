@@ -660,6 +660,51 @@ function feature_licencied_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-licensed_page-field_configuration'
+  $field_instances['node-licensed_page-field_configuration'] = array(
+    'bundle' => 'licensed_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_configuration',
+    'label' => 'Configuration',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 24,
+    ),
+  );
+
   // Exported field_instance: 'node-licensed_page-field_decisionspace'
   $field_instances['node-licensed_page-field_decisionspace'] = array(
     'bundle' => 'licensed_page',
@@ -705,6 +750,66 @@ function feature_licencied_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-licensed_page-field_external_drivers'
+  $field_instances['node-licensed_page-field_external_drivers'] = array(
+    'bundle' => 'licensed_page',
+    'default_value' => array(
+      0 => array(
+        'mee' => array(
+          'resource_manager' => array(
+            0 => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+        'value' => '<h4>Microsoft Redistribuable Package</h4>
+
+<p>If you have some issues ...</p>
+',
+        'format' => 'filtered_html',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_external_drivers',
+    'label' => 'External Drivers',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-licensed_page-field_files_to_download'
   $field_instances['node-licensed_page-field_files_to_download'] = array(
     'bundle' => 'licensed_page',
@@ -723,7 +828,7 @@ function feature_licencied_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 10,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -857,7 +962,7 @@ function feature_licencied_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -928,6 +1033,87 @@ function feature_licencied_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-licensed_page-field_flexnet'
+  $field_instances['node-licensed_page-field_flexnet'] = array(
+    'bundle' => 'licensed_page',
+    'default_value' => array(
+      0 => array(
+        'mee' => array(
+          'resource_manager' => array(
+            0 => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+        'value' => '<table border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td>
+			<h4>Daemon</h4>
+
+			<p>If you\'re using a floating license, you have to download Eliis daemon</p>
+			</td>
+			<td>
+			<h4>License Server</h4>
+
+			<p>License server tools</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>&nbsp;</h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+',
+        'format' => 'filtered_html',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_flexnet',
+    'label' => 'Flexnet',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-licensed_page-field_free_30_days_trial'
   $field_instances['node-licensed_page-field_free_30_days_trial'] = array(
     'bundle' => 'licensed_page',
@@ -940,7 +1126,7 @@ function feature_licencied_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 16,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1075,7 +1261,7 @@ function feature_licencied_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1165,7 +1351,7 @@ function feature_licencied_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 17,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1294,12 +1480,15 @@ function feature_licencied_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Configuration');
   t('DecisionSpace');
+  t('External Drivers');
   t('Files to download');
   t('Files to download DB');
   t('Files to download DecisionSpace');
   t('Files to download Geomodel');
   t('Files to download Petrel');
+  t('Flexnet');
   t('Free 30-days trial');
   t('Paleoscan Database');
   t('Paleoscan Geomodel 2016');

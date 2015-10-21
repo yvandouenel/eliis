@@ -22,7 +22,7 @@ function feature_licencied_ctools_plugin_api($module = NULL, $api = NULL) {
 function feature_licencied_node_info() {
   $items = array(
     'licensed_page' => array(
-      'name' => t('Licensed page'),
+      'name' => t('Download page'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
