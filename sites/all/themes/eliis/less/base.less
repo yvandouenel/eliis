@@ -60,10 +60,42 @@ h2.page-header{
     background-color: @gris-clair;
     width: 10.9%;
     margin-top: 36px;
+    padding: 0;
     a {
       color: white;
     }
+    h3.overview-right-menu{
+      background-color: @gris-tres-clair;
+      padding: 0;
+      margin: 0;
+      a{
+        display: block;
+        padding: 5px 5px 5px 20px;
+        color: @bleu-moyen;
+        border-bottom: 3px solid white;
+      }
+    }
+    h3.whithout-link{
+      padding: 5px 5px 0px 20px;
+      margin: 5px 0 0 0;
+      font-weight: bold;
+    }
+    .views-field-title a{
+      padding: 5px 5px 5px 20px;
+    }
+    .view-display-id-attachment_2{
+      background-color: @vert-vegetal;
+    }
+    .downloads-right-menu{
+      background-color: @bleu-doux;
+      border-top: 3px solid white;
+      a{
+        display: block;
+        padding: 5px 5px 5px 20px;
+      }
+    }
   }
+
   @media screen and (min-width:  @container-desktop) and (max-width: @screen-xl) {
     padding: 0 50px;
   }
@@ -73,10 +105,19 @@ h2.page-header{
   a{
     display: block;
     &.selected-link{
-      color: red;
+      color: black;
+      background: url(../images/bullet-black.png) no-repeat 8px 15px;
     }
   }
   padding-bottom: 20px;
+}
+#top-arrow{
+  @media screen and (min-width: @screen-xl) {
+    position: fixed;
+    bottom : 100px;
+    right: 7%;
+  }
+  display: none;
 }
 /* marge interne des zones du site ***********************************************/
 #navbar .container>div,
