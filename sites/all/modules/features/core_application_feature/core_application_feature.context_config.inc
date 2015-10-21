@@ -49,7 +49,7 @@ function core_application_feature_default_scald_context_config() {
         'normal_style' => 'medium_image_landscape',
         'big_style' => 'original',
         'theme' => 'classic',
-        'options' => ' {"showInfo": true,"idleMode": false,"lightbox": true}',
+        'options' => ' {"showInfo": true,"idleMode": false,"lightbox": true, "responsive":true}',
       ),
     ),
   );

@@ -17,6 +17,9 @@ function core_application_feature_ctools_plugin_api($module = NULL, $api = NULL)
   if ($module == "scald" && $api == "context_config") {
     return array("version" => "1");
   }
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
 }
 
 /**
@@ -65,6 +68,14 @@ function core_application_feature_node_info() {
     ),
     'core_application_feature' => array(
       'name' => t('Core Application Feature'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'paleoscan_overview' => array(
+      'name' => t('PaleoScan overview'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

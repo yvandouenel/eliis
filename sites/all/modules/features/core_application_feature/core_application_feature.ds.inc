@@ -23,7 +23,7 @@ function core_application_feature_ds_field_settings_info() {
       'format' => 'default',
     ),
     'title' => array(
-      'weight' => '1',
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -59,6 +59,45 @@ function core_application_feature_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_col_1_title_gallery_text' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'col-md-3',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_col_2_title_gallery_text' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'col-md-3',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_col_3_title_gallery_text' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'col-md-3',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
   );
   $export['node|add_on_module|teaser'] = $ds_fieldsetting;
 
@@ -83,6 +122,32 @@ function core_application_feature_ds_field_settings_info() {
       ),
     ),
     'field_gallery' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'col-md-6',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_right_text' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'col-md-6',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_left_gallery' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
@@ -147,6 +212,32 @@ function core_application_feature_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_right_text' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'col-md-4',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_left_gallery' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'col-md-6',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
   );
   $export['node|core_application_feature|teaser'] = $ds_fieldsetting;
 
@@ -170,7 +261,7 @@ function core_application_feature_ds_custom_fields_info() {
   $ds_field->ui_limit = '';
   $ds_field->properties = array(
     'code' => array(
-      'value' => '<div><a id="product<? print \'[node:nid]\';?>" name="product<? print \'[node:nid]\';?>" class="anchor_product"></a></div>',
+      'value' => '<div><a id="product[node:nid]" name="product[node:nid]" class="anchor_product">&nbsp;</a></div>',
       'format' => 'ds_code',
     ),
     'use_token' => 1,
@@ -229,20 +320,32 @@ function core_application_feature_ds_layout_settings_info() {
     'regions' => array(
       'central' => array(
         0 => 'anchor_id',
-        1 => 'title',
-        2 => 'group_text_left',
-        3 => 'body',
-        4 => 'sharethis',
-        5 => 'field_gallery',
+        1 => 'group_title_intro',
+        2 => 'title',
+        3 => 'field_introduction_text',
+        4 => 'body',
+        5 => 'group_text_left',
+        6 => 'field_gallery',
+        7 => 'group_col_3',
+        8 => 'sharethis',
+        9 => 'field_col_1_title_gallery_text',
+        10 => 'field_col_2_title_gallery_text',
+        11 => 'field_col_3_title_gallery_text',
       ),
     ),
     'fields' => array(
       'anchor_id' => 'central',
+      'group_title_intro' => 'central',
       'title' => 'central',
-      'group_text_left' => 'central',
+      'field_introduction_text' => 'central',
       'body' => 'central',
-      'sharethis' => 'central',
+      'group_text_left' => 'central',
       'field_gallery' => 'central',
+      'group_col_3' => 'central',
+      'sharethis' => 'central',
+      'field_col_1_title_gallery_text' => 'central',
+      'field_col_2_title_gallery_text' => 'central',
+      'field_col_3_title_gallery_text' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -266,17 +369,23 @@ function core_application_feature_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'central' => array(
-        0 => 'body',
-        1 => 'field_gallery',
-        2 => 'group_text_left',
-        3 => 'sharethis',
+        0 => 'group_text_left',
+        1 => 'body',
+        2 => 'group_text_right',
+        3 => 'field_gallery',
+        4 => 'sharethis',
+        5 => 'field_left_gallery',
+        6 => 'field_right_text',
       ),
     ),
     'fields' => array(
-      'body' => 'central',
-      'field_gallery' => 'central',
       'group_text_left' => 'central',
+      'body' => 'central',
+      'group_text_right' => 'central',
+      'field_gallery' => 'central',
       'sharethis' => 'central',
+      'field_left_gallery' => 'central',
+      'field_right_text' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -301,16 +410,22 @@ function core_application_feature_ds_layout_settings_info() {
     'regions' => array(
       'central' => array(
         0 => 'anchor_id',
-        1 => 'title',
-        2 => 'group_text_left',
-        3 => 'body',
-        4 => 'field_gallery',
+        1 => 'field_left_gallery',
+        2 => 'title',
+        3 => 'field_right_text',
+        4 => 'group_text_left',
+        5 => 'group_text_right',
+        6 => 'body',
+        7 => 'field_gallery',
       ),
     ),
     'fields' => array(
       'anchor_id' => 'central',
+      'field_left_gallery' => 'central',
       'title' => 'central',
+      'field_right_text' => 'central',
       'group_text_left' => 'central',
+      'group_text_right' => 'central',
       'body' => 'central',
       'field_gallery' => 'central',
     ),
