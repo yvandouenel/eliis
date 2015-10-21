@@ -17,14 +17,14 @@ jQuery(function($) {
                 // c'est uniquement elle qui change s'il n'y a pas de redimensionnement de la page
                 var top_menu_position_offset = $('#fixed-right-menu').offset();
                 menu_top_position = top_menu_position_offset.top;
-                //console.log( "position du haut du menu : " + menu_top_position);
+                console.log( "position du haut du menu : " + menu_top_position);
 
                 // Comparaison avec les positions des ancres
                 var link_menu_selected = false;
                 $('.anchor_product').each(function( index ) {
                     link_menu_selected = false;
                     var position_ancre = $( this ).offset();
-                    //console.log( "position des ancres : " + position_ancre.top );
+                    console.log( "position des ancres : " + position_ancre.top );
                     if(menu_top_position < position_ancre.top){
                         //console.log( "Mettre en seletected le lien " + (index-1) + ' du menu.');
                         $('a.link-fixed-right-menu').removeClass( "selected-link" );
@@ -34,7 +34,7 @@ jQuery(function($) {
                     }
                 });
                 if (!link_menu_selected){
-                    //console.log( "Mettre en seletected le lien " + (link_menu.length-1) + ' du menu.');
+                    //console.log( "Mettre en selected le lien " + (link_menu.length-1) + ' du menu.');
                     $('a.link-fixed-right-menu').removeClass( "selected-link" );
                     link_menu[(link_menu.length-1)].addClass( "selected-link" );
                 }
@@ -44,7 +44,7 @@ jQuery(function($) {
     }
 
     $('a[href^="#"]').click(function(event) {
-        //console.log("entrée avant test");
+        //console.log("entrée sur click d'ancre");
         if($(this).attr("class").indexOf("contextual-links-trigger") != 0){
             //console.log("après test : "+$(this).attr("class").indexOf("contextual-links-trigger"));
             $('a[href^="#"]').removeClass( "selected-link" );
