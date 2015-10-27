@@ -50,3 +50,11 @@
 .icon-network:before { content: '\e830'; } /* '' */
 .icon-search:before { content: '\e831'; } /* '' */
 .icon-cancel:before { content: '\e832'; } /* '' */
+.icon-left-open:before { content: '\e833'; } /* '' */
+.icon-right-open:before { content: '\e834'; } /* '' */
+.icon-down-open:before { content: '\e835'; } /* '' */
+.icon-up-open:before { content: '\e836'; } /* '' */
+.icon-down-big:before { content: '\e837'; } /* '' */
+.icon-left-big:before { content: '\e838'; } /* '' */
+.icon-right-big:before { content: '\e839'; } /* '' */
+.icon-up-big:before { content: '\e83a'; } /* '' */
