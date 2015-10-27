@@ -45,11 +45,15 @@
 [class*=" icon-"]:before {
   .glyphicon();
 }
+.glyphicon-h3-a > h3 > span > a:before{
+  .glyphicon();
+}
+.glyphicon-h3-a > h3 > span > a:hover:before{
+  text-decoration: none;
+}
 [class*=" iconafter-"]:after {
   .glyphicon();
 }
-
-
 .icon-facebook:before{content: "\e801";}
 .icon-twitter:before{content: "\e800";}
 .icon-youtube:before{content: "\e802";}
@@ -64,3 +68,5 @@
 .icon-mail:before{content: "\e809";} /* icon mail */
 .icon-person:before{content: "\e80A";} /* icon 1 personne */
 .icon-close:before{content: "\e832";} /* icon close */
+.icon-right-open:before,
+.icon-right-open-h3-a > h3 > span > a:before{content: "\e834";} /* icon arrow right */

@@ -65,7 +65,7 @@ body.not-front{
     }
   }
 }
-body.logged-in .breadcrumb{
+body.logged-in.admin-menu .breadcrumb{
   top: 88px;
 }
 .breadcrumb{
@@ -73,6 +73,9 @@ body.logged-in .breadcrumb{
   z-index: 3;
   width: 100%;
   padding: 3px 0 3px 50px;
+  @media screen and (max-width: @screen-sm) {
+    margin-top: -40px;
+  }
 }
 
 

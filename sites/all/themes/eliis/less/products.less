@@ -1,9 +1,27 @@
-.view-id-products {
+.view-id-products{
+
   .attachment-before {
-    .view-display-id-attachment_1, .view-display-id-attachment_2 {
+    .view-display-id-attachment_1, .view-display-id-attachment_2{
       @media screen and (max-width: @screen-xl) {
         float: left;
-        width: 42%;
+        width: 30%;
+      }
+      @media screen and (max-width: @screen-xs) {
+        float: none;
+        width: 98%;
+      }
+    }
+    .view-display-id-attachment_7 {
+      @media screen and (max-width: @screen-xl) {
+        float: left;
+        width: 60%;
+        .view-header, .view-content{
+          float: left;
+          width: 50%;
+        }
+        .view-content{
+          clear: left;
+        }
       }
       @media screen and (max-width: @screen-xs) {
         float: none;
