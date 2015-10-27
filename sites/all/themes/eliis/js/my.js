@@ -72,7 +72,7 @@ Login in lightbox
         div_lightbox_login.css({
             'width':'100%',
             'background-color': 'black',
-            'z-index':'3',
+            'z-index':'4',
             'height':'100%',
             'position':'fixed',
             'left':'0',
@@ -90,7 +90,7 @@ Login in lightbox
 
         // habillage de la zone de login
         $( "#block-user-login").css({
-            'z-index':'2',
+            'z-index':'5',
             'padding':'25px ',
             'background-color': 'white',
             'opacity': '1',
@@ -137,13 +137,18 @@ Login in lightbox
             clearTimeout($.data(this, 'scrollTimer'));
             $.data(this, 'scrollTimer', setTimeout(function() {
                 if (count && !$( "#licensed-top-anchors").hasClass("top-fixed-anchors")){
-                    $( "#licensed-top-anchors" ).animate({
+                   /* $( "#licensed-top-anchors" ).animate({
                         top: "55px"
                     }, 500, function() {
                         // Animation complete.
-                    });
+                    });*/
+                    // Ajout de la classe top-fixed-anchors
                     $( "#licensed-top-anchors").addClass("top-fixed-anchors");
-                    console.log("Ajout de la classe");
+
+                    // si le menu admin existe, on ajoute une classe supplémentaire
+                    if($( "#admin-menu" ).length) {
+                        $( "#licensed-top-anchors" ).addClass("width-admin-menu");
+                    }
                 }
                 //console.log("Haven't scrolled in 250ms! " + count);
                 count ++;
