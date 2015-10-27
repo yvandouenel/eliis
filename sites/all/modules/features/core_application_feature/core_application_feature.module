@@ -11,26 +11,63 @@ include_once 'core_application_feature.features.inc';
  * Il me semble qu'il aurait été plus intelligent de trouver le hook qui au changement ou à la création d'un produit
  * (core ou add-on) serait aller modifier la valeur des champs field_core_application_menu et field_add_on_menu.
  * Autre solution : afficher une vue dans un node mais je ne vois pas trop comment faire...
+ *
+ * Utilisation de content et d'un extra_field
  */
 function core_application_feature_node_view($node, $view_mode, $langcode) {
-    if ($node -> type == 'paleoscan_overview' && $view_mode == "full"){
-
-        // Load the view of core application menu
-        $view_menu_core = views_embed_view('products', 'attachment_4');
-
-        // Load the view of core add-on menu
-        $view_menu_addon = views_embed_view('products', 'attachment_5');
-
-        // Create the wrapper
-        $wrapper = entity_metadata_wrapper('node', $node);
-
-        // Set the value to field with the good format
-        $wrapper->field_core_application_menu->set(array("value" => $view_menu_core,"format" => "full_html"));
-        $wrapper->field_add_on_menu->set(array("value" => $view_menu_addon,"format" => "full_html"));
-
-        // Save the wrapper
-        $wrapper->save();
-
+  if ($node->type == 'paleoscan_overview') {
+    //dpm($node);
+    $settings = field_extra_fields_get_display('node',$node->type,$view_mode);
+    if($settings["extra_field_menu_core"]['visible']){
+      $node->content["extra_field_menu_core"] = array(
+        "#markup" => views_embed_view('products', 'attachment_4'),
+      );
+    }
+    if($settings["extra_field_menu_addon"]['visible']){
+      $node->content["extra_field_menu_addon"] = array(
+        '#prefix' => '<div class="test">',
+        "#markup" => views_embed_view('products', 'attachment_5'),
+        '#suffix' => '</div>',
+      );
     }
 
+
+    /* // Load the view of core application menu
+     $view_menu_core = views_embed_view('products', 'attachment_4');
+
+     // Load the view of core add-on menu
+     $view_menu_addon = views_embed_view('products', 'attachment_5');
+
+     // Create the wrapper
+     $wrapper = entity_metadata_wrapper('node', $node);
+
+     // Set the value to field with the good format
+     $wrapper->field_core_application_menu->set(array("value" => $view_menu_core,"format" => "full_html"));
+     $wrapper->field_add_on_menu->set(array("value" => $view_menu_addon,"format" => "full_html"));
+
+     // Save the wrapper
+     $wrapper->save();*/
+
+  }
+
+}
+
+/**
+ * Implements hook_field_extra_fields().
+ */
+function core_application_feature_field_extra_fields() {
+  $extra['node']['paleoscan_overview'] = array(
+    'display' => array(
+      'extra_field_menu_core' => array(
+        'label' => t('Menu core (extra)'),
+        'weight' => 0,
+      ),
+      'extra_field_menu_addon' => array(
+        'label' => t('Menu addon (extra)'),
+        'weight' => 0,
+      ),
+    )
+  );
+
+  return $extra;
 }

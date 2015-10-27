@@ -323,12 +323,27 @@ function core_application_feature_strongarm() {
         'path' => array(
           'weight' => '30',
         ),
+        'redirect' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'sharethis' => array(
           'default' => array(
             'weight' => '18',
             'visible' => FALSE,
+          ),
+        ),
+        'extra_field_menu_core' => array(
+          'default' => array(
+            'weight' => '25',
+            'visible' => TRUE,
+          ),
+        ),
+        'extra_field_menu_addon' => array(
+          'default' => array(
+            'weight' => '26',
+            'visible' => TRUE,
           ),
         ),
       ),

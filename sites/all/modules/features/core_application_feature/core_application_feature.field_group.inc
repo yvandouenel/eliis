@@ -53,14 +53,14 @@ function core_application_feature_field_group_info() {
     'label' => 'Add-on Modules',
     'weight' => '16',
     'children' => array(
-      0 => 'field_add_on_menu',
+      0 => 'extra_field_menu_addon',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Add-on Modules',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-add-on-menu field-group-div',
+        'classes' => 'group-add-on-menu field-group-div glyphicon-h3-a icon-right-open-h3-a',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h3',
@@ -152,14 +152,14 @@ function core_application_feature_field_group_info() {
     'label' => 'Core Application',
     'weight' => '21',
     'children' => array(
-      0 => 'field_core_application_menu',
+      0 => 'extra_field_menu_core',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Core Application',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-core-application-menu field-group-div',
+        'classes' => 'group-core-application-menu field-group-div glyphicon-h3-a icon-right-open-h3-a',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h3',

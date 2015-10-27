@@ -936,51 +936,6 @@ function core_application_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-paleoscan_overview-field_add_on_menu'
-  $field_instances['node-paleoscan_overview-field_add_on_menu'] = array(
-    'bundle' => 'paleoscan_overview',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 17,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_add_on_menu',
-    'label' => 'Add-on menu',
-    'required' => 0,
-    'settings' => array(
-      'context' => 'debug',
-      'context_default' => 'sdl_editor_representation',
-      'dnd_enabled' => 0,
-      'mee_enabled' => 0,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 50,
-    ),
-  );
-
   // Exported field_instance:
   // 'node-paleoscan_overview-field_add_on_module_intro'
   $field_instances['node-paleoscan_overview-field_add_on_module_intro'] = array(
@@ -1124,60 +1079,12 @@ function core_application_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'node-paleoscan_overview-field_core_application_menu'
-  $field_instances['node-paleoscan_overview-field_core_application_menu'] = array(
-    'bundle' => 'paleoscan_overview',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 22,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_core_application_menu',
-    'label' => 'Core application menu',
-    'required' => 0,
-    'settings' => array(
-      'context' => 'debug',
-      'context_default' => 'sdl_editor_representation',
-      'dnd_enabled' => 0,
-      'mee_enabled' => 0,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 49,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Add-On Module introduction');
-  t('Add-on menu');
   t('Body');
   t('Complex Image');
   t('Core Application introduction');
-  t('Core application menu');
   t('Gallery');
   t('Introduction text');
   t('Left gallery');
