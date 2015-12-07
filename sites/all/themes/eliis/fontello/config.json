@@ -37,6 +37,12 @@
       "src": "fontawesome"
     },
     {
+      "uid": "4ba33d2607902cf690dd45df09774cb0",
+      "css": "plus-circled-1",
+      "code": 59454,
+      "src": "fontawesome"
+    },
+    {
       "uid": "17ebadd1e3f274ff0205601eef7b9cc4",
       "css": "help-circled",
       "code": 59397,
@@ -100,6 +106,12 @@
       "uid": "d7a614bd701f6712e8e3b2be124899e1",
       "css": "flag-checkered",
       "code": 59415,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9a76bc135eac17d2c8b8ad4a5774fc87",
+      "css": "download",
+      "code": 59451,
       "src": "fontawesome"
     },
     {
@@ -337,6 +349,12 @@
       "src": "entypo"
     },
     {
+      "uid": "a66cdc7278e6b33b8bd44a141f5e1a8d",
+      "css": "plus-circled",
+      "code": 59453,
+      "src": "entypo"
+    },
+    {
       "uid": "1e099a876c8a6a83f10c9bafa9886614",
       "css": "mic-1",
       "code": 59435,
@@ -347,6 +365,12 @@
       "css": "network",
       "code": 59440,
       "src": "entypo"
+    },
+    {
+      "uid": "59ba4f90d2ca2a843f4f930b03270362",
+      "css": "plus-circle",
+      "code": 59452,
+      "src": "iconic"
     },
     {
       "uid": "40c6538b0fd40540bf78373f8a1fb7af",

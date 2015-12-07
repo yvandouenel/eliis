@@ -58,3 +58,7 @@
 .icon-left-big:before { content: '\e838'; } /* '' */
 .icon-right-big:before { content: '\e839'; } /* '' */
 .icon-up-big:before { content: '\e83a'; } /* '' */
+.icon-download:before { content: '\e83b'; } /* '' */
+.icon-plus-circle:before { content: '\e83c'; } /* '' */
+.icon-plus-circled:before { content: '\e83d'; } /* '' */
+.icon-plus-circled-1:before { content: '\e83e'; } /* '' */
