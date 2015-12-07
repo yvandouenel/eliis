@@ -1,0 +1,77 @@
+<?php
+/**
+ * @file
+ * Code for the Feature Eliis support feature.
+ */
+
+include_once 'feature_eliis_support.features.inc';
+
+/**
+ * Implements hook_permission().
+ */
+function feature_eliis_support_permission() {
+  return array(
+    "access user guide files" => array(
+      "title" => "Access user's guide files",
+    ),
+    "access training files" => array(
+      "title" => "Access user's training files",
+    ),
+    "access set up files" => array(
+      "title" => "Access user's set up files",
+    ),
+  );
+}
+
+/**
+ * Implements hook_file_download().
+ */
+function feature_eliis_support_file_download($uri) {
+  if (strpos($uri, "private://user_guide/") === 0) {
+    if (!user_access("access user guide files")) {
+      return -1;
+    }
+    $files = file_load_multiple(array(), array("uri" => $uri));
+    if (empty($files)) {
+      return -1;
+    }
+    $file = reset($files);
+    return file_get_content_headers($file);
+  }
+  elseif (strpos($uri, "private://training/") === 0) {
+    if (!user_access("access training files")) {
+      return -1;
+    }
+    $files = file_load_multiple(array(), array("uri" => $uri));
+    if (empty($files)) {
+      return -1;
+    }
+    $file = reset($files);
+    return file_get_content_headers($file);
+  }
+  elseif (strpos($uri, "private://setup/") === 0) {
+    if (!user_access("access setup files")) {
+      return -1;
+    }
+    $files = file_load_multiple(array(), array("uri" => $uri));
+    if (empty($files)) {
+      return -1;
+    }
+    $file = reset($files);
+    return file_get_content_headers($file);
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function feature_eliis_support_views_pre_render(&$view) {
+
+  if ($view->name == 'videos' && $view->current_display == 'page_videos_support') {
+
+    drupal_add_js(drupal_get_path('theme', 'eliis') . '/js/diaporama_video.js', array(
+      'type' => 'file',
+      'group' => JS_THEME,
+    ));
+    }
+}
