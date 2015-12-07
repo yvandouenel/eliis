@@ -1,0 +1,94 @@
+body.node-type-support{
+  .field-collection-view{
+    padding: 0;
+    margin: 0;
+  }
+  .panel-body {
+    padding: 0 15px;
+  }
+  .group-help-files > .panel-heading{
+    margin: 0 0 20px 0;
+  }
+  .panel-body .col-md-4{
+    min-height: 50px;
+    padding-top: 15px;
+    border: 1px solid transparent;
+  }
+  .panel-default>.panel-heading{
+    background-color: #FFF;
+  }
+  #block-system-main .group-help-files {
+    padding-left: 15px;
+    border-top: 0;
+    border-left: 1px solid @vert-fonce-logo;
+    border-radius: 0;
+    .row{
+      margin: 0px;
+    }
+    .row-eq-height{
+      min-height: 50px;
+      > .field-group-div{
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+    > legend{
+      border: 0;
+      .panel-title{
+        font-size: 2em;
+      }
+    }
+    fieldset{
+      border: 0;
+      legend{
+        border: 0;
+        .panel-title{
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+  .group-setup{
+    border-left: 1px solid @vert-fonce-logo;
+    padding-left: 20px;
+    .group-cols-setup{
+      margin-top: 20px;
+    }
+  }/* vidéos **********************************************************************************************************/
+  .group-video-wrapper{
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 1px solid @vert-fonce-logo;
+    h3{
+      margin-top: 0;
+    }
+    .view-display-id-page_videos_support{
+      position: relative;
+      background-color: @gris-tres-tres-clair;
+      padding: 20px;
+      min-height: 380px;
+      iframe{
+        max-width: 100% !important;
+      }
+      @media (min-width: @screen-md){
+        > .view-content .views-row{
+          position: absolute;
+          right: 15px;
+          top: 15px;
+        }
+      }
+      .video-list-left{
+        cursor: pointer;
+        color: @bleu-lien;
+        text-decoration: underline;
+        font-size: 1.2em;
+        padding: 5px;
+        &.video-controler-selected{
+          cursor: default;
+          color: #000;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

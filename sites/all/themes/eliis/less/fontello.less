@@ -48,6 +48,9 @@
 .glyphicon-h3-a > h3 > span > a:before{
   .glyphicon();
 }
+.glyphicon-h3-a-after > h3 > span > a:after{
+  .glyphicon();
+}
 .glyphicon-h3-a > h3 > span > a:hover:before{
   text-decoration: none;
 }
@@ -59,7 +62,7 @@
 .icon-youtube:before{content: "\e802";}
 .icon-gplus:before{content: "\e803";}
 
-/* other icons ****************************************************************/
+/* other icons ********************************************************************************************************/
 .icon-doc:before{content: "\e804";} /* icon doc */
 .icon-question:before{content: "\e805";} /* icon ? */
 .icon-people:before{content: "\e806";} /* icon 3 personnes */
@@ -70,3 +73,29 @@
 .icon-close:before{content: "\e832";} /* icon close */
 .icon-right-open:before,
 .icon-right-open-h3-a > h3 > span > a:before{content: "\e834";} /* icon arrow right */
+.plus-open-h3-a > h3 > span > a:after{content: "\e83e";color: @plus-addon; margin-left:10px} /* icon plus in circle */
+
+/* private files ******************************************************************************************************/
+.private-file{
+  float: left;
+  margin-right: 20px;
+  a:before{
+    .glyphicon();
+    content: "\e83b"; /* icon download */
+    margin-right: 5px;
+    color: @bleu-download;
+  }
+}
+/* pdf file ***********************************************************************************************************/
+.pdf-file{
+  a{
+    &:before{
+      .glyphicon();
+      content: "\e823"; /* icon pdf */
+      color: @plus-addon;
+      margin-right: 5px;
+      position: relative;
+      top: -2px;
+    }
+  }
+}
