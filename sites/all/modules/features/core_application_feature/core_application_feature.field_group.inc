@@ -60,7 +60,7 @@ function core_application_feature_field_group_info() {
       'label' => 'Add-on Modules',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-add-on-menu field-group-div glyphicon-h3-a icon-right-open-h3-a',
+        'classes' => 'group-add-on-menu field-group-div glyphicon-h3-a icon-right-open-h3-a glyphicon-h3-a-after plus-open-h3-a',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h3',

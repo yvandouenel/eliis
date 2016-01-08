@@ -38,6 +38,7 @@ function core_application_feature_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'gallery' => array(
       '*' => 'galleria',
