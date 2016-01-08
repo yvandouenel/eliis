@@ -402,7 +402,7 @@ table td[class*=col-],table th[class*=col-]{position:static;float:none;display:t
 .table-responsive>.table-bordered>tbody>tr>td:last-child,.table-responsive>.table-bordered>tbody>tr>th:last-child,.table-responsive>.table-bordered>tfoot>tr>td:last-child,.table-responsive>.table-bordered>tfoot>tr>th:last-child,.table-responsive>.table-bordered>thead>tr>td:last-child,.table-responsive>.table-bordered>thead>tr>th:last-child{border-right:0}
 .table-responsive>.table-bordered>tbody>tr:last-child>td,.table-responsive>.table-bordered>tbody>tr:last-child>th,.table-responsive>.table-bordered>tfoot>tr:last-child>td,.table-responsive>.table-bordered>tfoot>tr:last-child>th{border-bottom:0}
 }
-fieldset,legend{padding:0;border:0}
+fieldset,legend{border:0;padding:0}
 fieldset{margin:0;min-width:0}
 legend{display:block;width:100%;margin-bottom:20px;font-size:21px;line-height:inherit;color:#333;border-bottom:1px solid #e5e5e5}
 label{display:inline-block;max-width:100%;margin-bottom:5px}
@@ -1658,9 +1658,10 @@ h2.page-header{margin-top:40px}
 .icon-right-open-h3-a>h3>span>a:before,.icon-right-open:before{content:"\e834"}
 .plus-open-h3-a>h3>span>a:after{content:"\e83e";color:#90c02c;margin-left:10px}
 .private-file{float:left;margin-right:20px}
-.pdf-file a:before,.private-file a:before{font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-right:5px;position:relative;text-align:center}
-.private-file a:before{top:1px;content:"\e83b";color:#00748c}
-.pdf-file a:before{content:"\e823";color:#90c02c;top:-2px}
+.private-file a{color:#8e1004;font-size:1.4em}
+.pdf-file a:before,.private-file a:after{font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;position:relative;text-align:center}
+.private-file a:after{top:1px;margin-right:10px;content:"\e83b";margin-left:5px;color:#8e1004}
+.pdf-file a:before{content:"\e823";color:#90c02c;margin-right:5px;top:-2px}
 .region-page-top #toolbar{display:none}
 .navbar-default{border:0}
 .navbar-fixed-top{top:-20px}
@@ -1791,7 +1792,7 @@ body.logged-in.admin-menu .breadcrumb{top:88px}
 #block-views-evenements-block-zoom-event .group-title-img-page .register-view-zoom a{position:absolute;bottom:50%;left:50%;background-color:#fff;padding:15px;max-width:33%;border-radius:8px;color:#000;opacity:1;font-size:1.8em}
 @media (max-width:992px){#block-views-evenements-block-zoom-event .group-title-img-page .register-view-zoom a{display:table;padding:5px;bottom:4%;right:2%;left:auto;max-width:33%;font-size:1.2em}
 }
-.page-events .label-registration,body.node-type-news .label-registration{font-size:2em}
+.page-events .label-registration,body.node-type-news .label-registration,body.node-type-support #block-system-main .group-help-files>legend .panel-title{font-size:2em}
 .page-events .attachment-before{background:url(../images/bg_grey_separator_small.png) 100% 75px no-repeat;min-height:250px}
 .page-events .attachment-after{background:url(../images/bg_grey_separator_small.png) 0 50px no-repeat;min-height:250px}
 @media (min-width:768px){.page-events .col-md-4>div{padding:0 50px}
@@ -1813,7 +1814,6 @@ body.node-type-news input,body.node-type-news select{width:250px}
 }
 #licensed-top-anchors.top-fixed-anchors{top:54px;background-color:#e1e1e1}
 #licensed-top-anchors.top-fixed-anchors.width-admin-menu{top:83px}
-.group-sofware .field-name-field-sofware-description{font-size:.8em;font-style:italic;padding-top:3px}
 .group-add-on-menu>.field-group-format-wrapper,.group-core-application-menu>.field-group-format-wrapper{position:absolute;min-width:250px}
 body.node-type-support .field-collection-view{padding:0;margin:0}
 body.node-type-support .panel-body{padding:0 15px}
@@ -1826,7 +1826,6 @@ body.node-type-support #block-system-main .group-help-files .row{margin:0}
 body.node-type-support .group-setup .group-cols-setup,body.node-type-support .group-video-wrapper{margin-top:20px}
 body.node-type-support #block-system-main .group-help-files .row-eq-height{min-height:50px}
 body.node-type-support #block-system-main .group-help-files .row-eq-height>.field-group-div{padding-top:15px;padding-bottom:15px}
-body.node-type-support #block-system-main .group-help-files>legend .panel-title{font-size:2em}
 body.node-type-support .group-setup,body.node-type-support .group-video-wrapper{padding-left:20px;border-left:1px solid #329747}
 body.node-type-support #block-system-main .group-help-files fieldset legend .panel-title{font-size:1.2em}
 body.node-type-support .group-video-wrapper h3{margin-top:0}
@@ -1836,3 +1835,15 @@ body.node-type-support .group-video-wrapper .view-display-id-page_videos_support
 }
 body.node-type-support .group-video-wrapper .view-display-id-page_videos_support .video-list-left{cursor:pointer;color:#337ab7;text-decoration:underline;font-size:1.2em;padding:5px}
 body.node-type-support .group-video-wrapper .view-display-id-page_videos_support .video-list-left.video-controler-selected{cursor:default;color:#000;text-decoration:none}
+.group-sofware h3{padding-right:65px;background:url(../images/icons/exe.png) 100% 100% no-repeat;display:table;line-height:3em}
+.group-sofware h3 span:after{content:'';display:block;height:1px;border-top:2px solid #828282;width:165%;position:relative;top:-7px;left:-50px}
+.group-sofware .field-name-field-sofware-description{font-size:.8em;font-style:italic;padding-top:3px}
+.group-sofware .field-name-field-release-notes a{background:url(../images/icons/pdf_small.png) 100% 50% no-repeat;padding-right:50px;line-height:3em;display:inline-block}
+.group-sofware .group-same-height>div{padding-top:15px}
+.group-sofware .group-same-height>div h4{background:rgba(0,115,140,.5);width:105.4%;margin-left:-15px}
+.group-sofware .group-same-height>div h4:before{content:'';display:block;height:1px;border-top:1px solid #B5C4C9;border-bottom:1px solid #fff}
+.group-sofware .group-same-height>div h4:after{content:'';display:block;height:1px;border-top:1px solid #fff;border-bottom:1px solid #B5C4C9}
+.group-sofware .group-same-height>div h4 span{color:#004353;display:table;margin:0 auto;padding-left:45px;line-height:2em;font-size:1.6em}
+.group-sofware .group-paleoscan h4 span{background:url(../images/icons/Paleoscan.png) 0 50% no-repeat}
+.group-sofware .group-datalink h4 span{background:url(../images/icons/datalink.png) 0 50% no-repeat}
+.group-sofware .group-api h4 span{background:url(../images/icons/api.png) 0 50% no-repeat}

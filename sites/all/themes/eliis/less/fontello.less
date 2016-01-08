@@ -75,15 +75,20 @@
 .icon-right-open-h3-a > h3 > span > a:before{content: "\e834";} /* icon arrow right */
 .plus-open-h3-a > h3 > span > a:after{content: "\e83e";color: @plus-addon; margin-left:10px} /* icon plus in circle */
 
+
 /* private files ******************************************************************************************************/
 .private-file{
   float: left;
   margin-right: 20px;
-  a:before{
-    .glyphicon();
-    content: "\e83b"; /* icon download */
-    margin-right: 5px;
-    color: @bleu-download;
+  a {
+    color: @rouge-eliis;
+    font-size: 1.4em;
+    &:after {
+      .glyphicon();
+      content: "\e83b"; /* icon download */
+      margin-left: 5px;
+      color: @rouge-eliis;
+    }
   }
 }
 /* pdf file ***********************************************************************************************************/
