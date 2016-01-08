@@ -22,7 +22,7 @@ function feature_licencied_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -82,7 +82,7 @@ function feature_licencied_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -126,6 +126,46 @@ function feature_licencied_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_files_to_download-field_sofware_description'
+  $field_instances['field_collection_item-field_files_to_download-field_sofware_description'] = array(
+    'bundle' => 'field_files_to_download',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_sofware_description',
+    'label' => 'Sofware description',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 1,
     ),
   );
@@ -1498,6 +1538,7 @@ function feature_licencied_field_default_field_instances() {
   t('Release notes');
   t('Sofware');
   t('Sofware demonstration');
+  t('Sofware description');
   t('Text only anonymous');
   t('Text only licensed');
   t('Text visible for everybody');

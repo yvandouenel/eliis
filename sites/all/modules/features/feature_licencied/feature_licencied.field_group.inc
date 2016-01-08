@@ -683,6 +683,39 @@ function feature_licencied_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_sofware|field_collection_item|field_files_to_download|default';
+  $field_group->group_name = 'group_sofware';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_files_to_download';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'group sofware',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_sofware',
+      1 => 'field_sofware_description',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'group sofware',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-sofware field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_sofware|field_collection_item|field_files_to_download|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_sofware|node|licensed_page|default';
   $field_group->group_name = 'group_sofware';
   $field_group->entity_type = 'node';
@@ -690,14 +723,14 @@ function feature_licencied_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Sofware',
+    'label' => 'Software',
     'weight' => '6',
     'children' => array(
       0 => 'group_same_height',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Sofware',
+      'label' => 'Software',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-sofware field-group-htabs',
@@ -722,7 +755,7 @@ function feature_licencied_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Sofware',
+    'label' => 'Software',
     'weight' => '3',
     'children' => array(
       0 => 'group_paleoscan',
@@ -735,7 +768,7 @@ function feature_licencied_field_group_info() {
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
-      'formatter' => '',
+      'label' => 'Software',
       'instance_settings' => array(
         'classes' => 'group-sofware field-group-htabs',
       ),
