@@ -17,6 +17,7 @@ features[field_instance][] = node-diaporama-field_diapo_image
 features[field_instance][] = node-diaporama-field_subtitle
 features[field_instance][] = node-diaporama-field_url
 features[node][] = diaporama
+features[variable][] = field_bundle_settings_node__diaporama
 features[views_view][] = diaporama
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][features] = features
