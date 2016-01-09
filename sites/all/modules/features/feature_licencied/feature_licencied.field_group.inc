@@ -75,6 +75,39 @@ function feature_licencied_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_configuration|node|licensed_page|default';
+  $field_group->group_name = 'group_configuration';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'licensed_page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'group configuration',
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_configuration',
+      1 => 'configuration_anchor',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'group configuration',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-configuration field-group-div bg-gris-tres-tres-clair',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_configuration|node|licensed_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_configuration|node|licensed_page|form';
   $field_group->group_name = 'group_configuration';
   $field_group->entity_type = 'node';
@@ -241,8 +274,7 @@ function feature_licencied_field_group_info() {
     'label' => 'Flexnet/External Drivers',
     'weight' => '29',
     'children' => array(
-      0 => 'field_flexnet',
-      1 => 'field_external_drivers',
+      0 => 'field_external_drivers',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -267,21 +299,23 @@ function feature_licencied_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_sofware';
   $field_group->data = array(
-    'label' => 'License Request',
+    'label' => 'Licensing',
     'weight' => '28',
     'children' => array(
       0 => 'field_free_30_days_trial',
-      1 => 'field_sofware_demonstration',
+      1 => 'field_dongle_key',
+      2 => 'field_node_locked',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Licensing',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-licence-request field-group-htab',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-licence-request field-group-htab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_licence_request|node|licensed_page|form'] = $field_group;
@@ -296,14 +330,14 @@ function feature_licencied_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'License Request',
+    'label' => 'Licensing',
     'weight' => '8',
     'children' => array(
       0 => 'group_same_height_2',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'License Request',
+      'label' => 'Licensing',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-license-request field-group-div',
@@ -594,7 +628,8 @@ function feature_licencied_field_group_info() {
     'weight' => '19',
     'children' => array(
       0 => 'field_free_30_days_trial',
-      1 => 'field_sofware_demonstration',
+      1 => 'field_dongle_key',
+      2 => 'field_node_locked',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -623,18 +658,17 @@ function feature_licencied_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'same height 3',
-    'weight' => '10',
+    'label' => 'group external drivers',
+    'weight' => '9',
     'children' => array(
-      0 => 'field_flexnet',
-      1 => 'field_external_drivers',
+      0 => 'field_external_drivers',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'same height 3',
+      'label' => 'group external drivers',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-same-height-3 field-group-div row row-eq-height bg-gris-tres-tres-clair',
+        'classes' => 'group-same-height-3 field-group-div row',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',

@@ -10,6 +10,34 @@
 function feature_licencied_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_color_link_download'
+  $field_bases['field_color_link_download'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_color_link_download',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'red' => 'red',
+        'blue' => 'blue',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_configuration'
   $field_bases['field_configuration'] = array(
     'active' => 1,
@@ -39,6 +67,28 @@ function feature_licencied_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_decisionspace',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_dongle_key'
+  $field_bases['field_dongle_key'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_dongle_key',
     'field_permissions' => array(
       'type' => 0,
     ),
@@ -201,13 +251,13 @@ function feature_licencied_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_flexnet'
-  $field_bases['field_flexnet'] = array(
+  // Exported field_base: 'field_free_30_days_trial'
+  $field_bases['field_free_30_days_trial'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_flexnet',
+    'field_name' => 'field_free_30_days_trial',
     'field_permissions' => array(
       'type' => 0,
     ),
@@ -223,13 +273,13 @@ function feature_licencied_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_free_30_days_trial'
-  $field_bases['field_free_30_days_trial'] = array(
+  // Exported field_base: 'field_node_locked'
+  $field_bases['field_node_locked'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_free_30_days_trial',
+    'field_name' => 'field_node_locked',
     'field_permissions' => array(
       'type' => 0,
     ),
@@ -383,28 +433,6 @@ function feature_licencied_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'file',
-  );
-
-  // Exported field_base: 'field_sofware_demonstration'
-  $field_bases['field_sofware_demonstration'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_sofware_demonstration',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_sofware_description'
