@@ -160,7 +160,7 @@ function feature_eliis_support_strongarm() {
       'display' => array(
         'sharethis' => array(
           'default' => array(
-            'weight' => '15',
+            'weight' => '16',
             'visible' => FALSE,
           ),
         ),

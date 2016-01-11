@@ -87,6 +87,7 @@ function feature_eliis_support_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_videos_support');
+  $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -133,7 +134,14 @@ function feature_eliis_support_views_default_views() {
 
   /* Display: Attachment Core */
   $handler = $view->new_display('attachment', 'Attachment Core', 'attachment_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Unfiltered text */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h4 class="support-video-subtitle"><span>Core Application</span></h4>';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -248,6 +256,7 @@ function feature_eliis_support_views_default_views() {
   [field_video]
 </div>'),
     t('Attachment Core'),
+    t('<h4 class="support-video-subtitle"><span>Core Application</span></h4>'),
     t('<div id="video-link-[nid]" class="video-list-left">
   [title]
 </div>'),

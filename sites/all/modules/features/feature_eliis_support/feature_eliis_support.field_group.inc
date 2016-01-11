@@ -13,18 +13,82 @@ function feature_eliis_support_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_api_database|node|support|default';
+  $field_group->group_name = 'group_api_database';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'support';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_api';
+  $field_group->data = array(
+    'label' => 'group api database',
+    'weight' => '69',
+    'children' => array(
+      0 => 'field__support_paleoscan_db',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'group api database',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-api-database field-group-div col-md-6',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_api_database|node|support|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_api_geomodel|node|support|default';
+  $field_group->group_name = 'group_api_geomodel';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'support';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_api';
+  $field_group->data = array(
+    'label' => 'group api geomodel',
+    'weight' => '71',
+    'children' => array(
+      0 => 'field_support_paleoscan_geomodel',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'group api geomodel',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-api-geomodel field-group-div col-md-6',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_api_geomodel|node|support|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_api|node|support|default';
   $field_group->group_name = 'group_api';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'support';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_user_guide_over';
+  $field_group->parent_name = 'group_help_files';
   $field_group->data = array(
     'label' => 'API',
     'weight' => '27',
     'children' => array(
-      0 => 'field_user_guide',
-      1 => 'field_help_user_guide_api_geo',
+      0 => 'group_api_database',
+      1 => 'group_api_geomodel',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -34,7 +98,7 @@ function feature_eliis_support_field_group_info() {
         'classes' => 'group-api field-group-div col-md-4 bg-gris-tres-tres-clair',
         'description' => '',
         'show_label' => '1',
-        'label_element' => 'h5',
+        'label_element' => 'h4',
         'effect' => 'none',
         'speed' => 'fast',
       ),
@@ -56,8 +120,8 @@ function feature_eliis_support_field_group_info() {
     'label' => 'API',
     'weight' => '9',
     'children' => array(
-      0 => 'field_user_guide',
-      1 => 'field_help_user_guide_api_geo',
+      0 => 'field__support_paleoscan_db',
+      1 => 'field_support_paleoscan_geomodel',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
@@ -113,7 +177,7 @@ function feature_eliis_support_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'support';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_user_guide_over';
+  $field_group->parent_name = 'group_help_files';
   $field_group->data = array(
     'label' => 'DATALINK',
     'weight' => '26',
@@ -129,7 +193,7 @@ function feature_eliis_support_field_group_info() {
         'classes' => 'group-datalink field-group-div col-md-4 bg-gris-extrement-clair',
         'description' => '',
         'show_label' => '1',
-        'label_element' => 'h5',
+        'label_element' => 'h4',
         'effect' => 'none',
         'speed' => 'fast',
       ),
@@ -151,8 +215,8 @@ function feature_eliis_support_field_group_info() {
     'label' => 'Datalink',
     'weight' => '8',
     'children' => array(
-      0 => 'field_help_user_guide_petrel',
-      1 => 'field_help_user_guide_decison_sp',
+      0 => 'field_support_petrel_link',
+      1 => 'field_support_decision_space',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
@@ -243,20 +307,19 @@ function feature_eliis_support_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'group global wrapper',
+    'label' => 'Help Files',
     'weight' => '0',
     'children' => array(
-      0 => 'group_global_col_1',
-      1 => 'group_global_col_2',
+      0 => 'group_help_files',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'group global wrapper',
+      'label' => 'Help Files',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-global-wrapper field-group-div row',
+        'classes' => 'group-global-wrapper field-group-div',
         'description' => '',
-        'show_label' => '0',
+        'show_label' => '1',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
@@ -274,24 +337,23 @@ function feature_eliis_support_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'support';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_global_col_1';
+  $field_group->parent_name = 'group_global_wrapper';
   $field_group->data = array(
-    'label' => 'Help Files',
+    'label' => 'Help Files wrapper',
     'weight' => '56',
     'children' => array(
-      0 => 'group_user_guide',
-      1 => 'group_release_note',
-      2 => 'group_new_features',
-      3 => 'group_training_doc',
+      0 => 'group_datalink',
+      1 => 'group_api',
+      2 => 'group_paleoscan',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Help Files',
+      'label' => 'Help Files wrapper',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-help-files field-group-div ',
+        'classes' => 'group-help-files field-group-div row row-eq-height',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
@@ -674,7 +736,7 @@ function feature_eliis_support_field_group_info() {
     'label' => 'group paleoscan col1',
     'weight' => '27',
     'children' => array(
-      0 => 'field_help_user_guide_paleoscan',
+      0 => 'field_support_paleoscan',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -706,7 +768,7 @@ function feature_eliis_support_field_group_info() {
     'label' => 'group paleoscan col2',
     'weight' => '29',
     'children' => array(
-      0 => 'field_help_user_guide_ps_viewer',
+      0 => 'field_support_viewer',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -733,7 +795,7 @@ function feature_eliis_support_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'support';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_user_guide_over';
+  $field_group->parent_name = 'group_help_files';
   $field_group->data = array(
     'label' => 'Paleoscan',
     'weight' => '25',
@@ -749,7 +811,7 @@ function feature_eliis_support_field_group_info() {
         'classes' => 'group-paleoscan field-group-div col-md-4 bg-gris-tres-tres-clair',
         'description' => '',
         'show_label' => '1',
-        'label_element' => 'h5',
+        'label_element' => 'h4',
         'effect' => 'none',
         'speed' => 'fast',
       ),
@@ -771,8 +833,8 @@ function feature_eliis_support_field_group_info() {
     'label' => 'Paleoscan',
     'weight' => '7',
     'children' => array(
-      0 => 'field_help_user_guide_paleoscan',
-      1 => 'field_help_user_guide_ps_viewer',
+      0 => 'field_support_paleoscan',
+      1 => 'field_support_viewer',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
@@ -817,6 +879,66 @@ function feature_eliis_support_field_group_info() {
     ),
   );
   $export['group_petrel|field_collection_item|field_help_user_guide_petrel|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_publications|node|support|form';
+  $field_group->group_name = 'group_publications';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'support';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_tabs';
+  $field_group->data = array(
+    'label' => 'Publications',
+    'weight' => '19',
+    'children' => array(
+      0 => 'field_support_publications',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-publications field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_publications|node|support|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_publication|node|support|default';
+  $field_group->group_name = 'group_publication';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'support';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'group publication',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_support_publications',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'group publication',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-publication field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_publication|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1157,11 +1279,9 @@ function feature_eliis_support_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'group_help',
-      1 => 'group_release_note',
-      2 => 'group_new_features',
-      3 => 'group_training_coc',
-      4 => 'group_set_up',
-      5 => 'group_videos',
+      1 => 'group_training_coc',
+      2 => 'group_videos',
+      3 => 'group_publications',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -1183,15 +1303,15 @@ function feature_eliis_support_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
-    'label' => 'Training doc',
-    'weight' => '18',
+    'label' => 'Training',
+    'weight' => '16',
     'children' => array(
-      0 => 'field_training_tuto',
-      1 => 'field_training_presentation',
+      0 => 'field_support_tutorial',
+      1 => 'field_presentation',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'label' => 'Training doc',
+      'label' => 'Training',
       'instance_settings' => array(
         'required_fields' => 1,
         'id' => '',
@@ -1224,7 +1344,7 @@ function feature_eliis_support_field_group_info() {
       'label' => 'group training col1',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-training-col1 field-group-div col-md-4 bg-gris-tres-tres-clair',
+        'classes' => 'group-training-col1 field-group-div col-md-4',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -1244,22 +1364,22 @@ function feature_eliis_support_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'support';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_help_files';
+  $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Training Doc',
-    'weight' => '5',
+    'label' => 'Training',
+    'weight' => '1',
     'children' => array(
       0 => 'group_over_training',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Training Doc',
+      'label' => 'Training',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-training-doc field-group-fieldset',
         'description' => '',
         'show_label' => '1',
-        'label_element' => 'h4',
+        'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
       ),
@@ -1281,7 +1401,7 @@ function feature_eliis_support_field_group_info() {
     'label' => 'Tutorial',
     'weight' => '47',
     'children' => array(
-      0 => 'field_training_tuto',
+      0 => 'field_support_tutorial',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1291,7 +1411,7 @@ function feature_eliis_support_field_group_info() {
         'classes' => 'group-tuto-col1 field-group-div col-md-6',
         'description' => '',
         'show_label' => '1',
-        'label_element' => 'h5',
+        'label_element' => 'h4',
         'effect' => 'none',
         'speed' => 'fast',
       ),
@@ -1313,17 +1433,17 @@ function feature_eliis_support_field_group_info() {
     'label' => 'Presentation',
     'weight' => '48',
     'children' => array(
-      0 => 'field_training_presentation',
+      0 => 'field_presentation',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Presentation',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-tuto-col2 field-group-div col-md6',
+        'classes' => 'group-tuto-col2 field-group-div col-md4',
         'description' => '',
         'show_label' => '1',
-        'label_element' => 'h5',
+        'label_element' => 'h4',
         'effect' => 'none',
         'speed' => 'fast',
       ),
@@ -1345,7 +1465,7 @@ function feature_eliis_support_field_group_info() {
     'label' => 'group user guide decision',
     'weight' => '26',
     'children' => array(
-      0 => 'field_help_user_guide_decison_sp',
+      0 => 'field_support_decision_space',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1411,7 +1531,7 @@ function feature_eliis_support_field_group_info() {
     'label' => 'group user guide petrel',
     'weight' => '25',
     'children' => array(
-      0 => 'field_help_user_guide_petrel',
+      0 => 'field_support_petrel_link',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1530,10 +1650,10 @@ function feature_eliis_support_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'support';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_global_col_1';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'group video',
-    'weight' => '58',
+    'weight' => '2',
     'children' => array(
       0 => 'field_videos',
     ),
@@ -1565,7 +1685,7 @@ function feature_eliis_support_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Videos',
-    'weight' => '20',
+    'weight' => '18',
     'children' => array(
       0 => 'field_videos',
     ),
