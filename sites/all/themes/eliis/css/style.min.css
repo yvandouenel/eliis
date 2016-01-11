@@ -1518,6 +1518,7 @@ ul li.collapsed,ul li.expanded,ul li.leaf{list-style:none}
 .password-strength-text{float:right;font-weight:700}
 .password-indicator{background-color:#949494;height:.3em;width:100%}
 .password-indicator div{height:100%;width:0;background-color:#999}
+.blue_background_transparent h4:after,.blue_background_transparent h4:before,.line_under_h3{content:'';height:1px}
 #navbar,.form-autocomplete .input-group-addon{background-color:#fff}
 input.password-confirm,input.password-field{width:16em;margin-bottom:.4em}
 div.password-confirm{float:right;margin-top:1.5em;visibility:hidden;width:17em}
@@ -1573,7 +1574,6 @@ a .glyphicon-spin{display:inline-block;text-decoration:none}
 .tabs-right>.nav-tabs>.active>a,.tabs-right>.nav-tabs>.active>a:focus,.tabs-right>.nav-tabs>.active>a:hover{border-color:#ddd #ddd #ddd transparent}
 td.checkbox,td.radio,th.checkbox,th.radio{display:table-cell}
 .views-display-settings .label{font-size:100%;color:#666}
-#fixed-right-menu h3,.private-file a{font-size:1.2em}
 .views-display-settings .footer{padding:0;margin:4px 0 0}
 table .checkbox input[type=checkbox],table .radio input[type=radio]{max-width:inherit}
 .form-horizontal .form-group label{position:relative;min-height:1px;margin-top:0;margin-bottom:0;padding-top:7px;padding-left:15px;padding-right:15px;text-align:right}
@@ -1601,6 +1601,18 @@ table.table-configuration td,table.table-configuration th{padding:5px;border:4px
 .vert-fonce{color:#076c06}
 .vert-mi-fonce{color:#30952f}
 h2.page-header{margin-top:40px}
+.line_under_h3{display:block;border-top:2px solid #828282;width:165%;position:relative;top:-17px;left:-50px}
+.small-pdf-right,.small-ppt-right{display:inline-block;line-height:30px;padding-right:50px}
+.small-pdf-right{background:url(../images/icons/pdf_small.png) 100% 0 no-repeat}
+.small-ppt-right{background:url(../images/icons/ppt.png) 100% 0 no-repeat}
+.blue_background_transparent h4{background:rgba(0,115,140,.5);width:105.4%;margin-left:-15px}
+.blue_background_transparent h4:before{display:block;border-top:1px solid #B5C4C9;border-bottom:1px solid #fff}
+.blue_background_transparent h4:after{display:block;border-top:1px solid #fff;border-bottom:1px solid #B5C4C9}
+.blue_background_transparent h4 span{color:#004353;display:table;margin:0 auto;padding-left:45px;line-height:2em;font-size:1.6em}
+#fixed-right-menu h3,.private-file a{font-size:1.2em}
+.icons-paleo-data-api .group-paleoscan h4 span{background:url(../images/icons/Paleoscan.png) 0 50% no-repeat}
+.icons-paleo-data-api .group-datalink h4 span{background:url(../images/icons/datalink.png) 0 50% no-repeat}
+.icons-paleo-data-api .group-api h4 span{background:url(../images/icons/api.png) 0 50% no-repeat}
 #fixed-right-menu{padding-bottom:20px}
 @media screen and (min-width:1810px){#fixed-right-menu{position:fixed;margin-left:82%;z-index:1040;background-color:#afb4ad;width:10.9%;margin-top:36px;padding:0}
 #fixed-right-menu a{color:#fff}
@@ -1631,6 +1643,7 @@ h2.page-header{margin-top:40px}
 }
 .webform-client-form .description{clear:both;margin-bottom:10px}
 .pdf-right,a.pdf{background:url(../images/icons/pdf_small.png) 100% 50% no-repeat;padding-right:50px;line-height:3em;display:inline-block}
+a.red,a.rouge{color:#8e1004}
 @media (min-width:768px){.container,.navbar.container{max-width:none;width:100%}
 }
 @media (min-width:1810px){.container,.navbar.container{max-width:none;width:100%}
@@ -1792,7 +1805,7 @@ body.logged-in.admin-menu .breadcrumb{top:88px}
 #block-views-evenements-block-zoom-event .group-title-img-page .register-view-zoom a{position:absolute;bottom:50%;left:50%;background-color:#fff;padding:15px;max-width:33%;border-radius:8px;color:#000;opacity:1;font-size:1.8em}
 @media (max-width:992px){#block-views-evenements-block-zoom-event .group-title-img-page .register-view-zoom a{display:table;padding:5px;bottom:4%;right:2%;left:auto;max-width:33%;font-size:1.2em}
 }
-.page-events .label-registration,body.node-type-news .label-registration,body.node-type-support #block-system-main .group-help-files>legend .panel-title{font-size:2em}
+.page-events .label-registration,body.node-type-news .label-registration{font-size:2em}
 .page-events .attachment-before{background:url(../images/bg_grey_separator_small.png) 100% 75px no-repeat;min-height:250px}
 .page-events .attachment-after{background:url(../images/bg_grey_separator_small.png) 0 50px no-repeat;min-height:250px}
 @media (min-width:768px){.page-events .col-md-4>div{padding:0 50px}
@@ -1815,21 +1828,31 @@ body.node-type-news input,body.node-type-news select{width:250px}
 #licensed-top-anchors.top-fixed-anchors{top:54px;background-color:#e1e1e1}
 #licensed-top-anchors.top-fixed-anchors.width-admin-menu{top:83px}
 .group-add-on-menu>.field-group-format-wrapper,.group-core-application-menu>.field-group-format-wrapper{position:absolute;min-width:250px}
+body.node-type-support.node-type-support .main-container .region-content{padding:0}
 body.node-type-support .field-collection-view{padding:0;margin:0}
 body.node-type-support .panel-body{padding:0 15px}
+body.node-type-support .group-help-files h4{background:rgba(0,115,140,.5);width:105.4%;margin-left:-15px}
+body.node-type-support .group-help-files h4:before{content:'';display:block;height:1px;border-top:1px solid #B5C4C9;border-bottom:1px solid #fff}
+body.node-type-support .group-help-files h4:after{content:'';display:block;height:1px;border-top:1px solid #fff;border-bottom:1px solid #B5C4C9}
+body.node-type-support .group-help-files h4 span{color:#004353;display:table;margin:0 auto;padding-left:45px;line-height:2em;font-size:1.6em}
 body.node-type-support .group-help-files>.panel-heading{margin:0 0 20px}
+body.node-type-support .group-help-files .group-paleoscan h4 span{background:url(../images/icons/Paleoscan.png) 0 50% no-repeat}
+body.node-type-support .group-help-files .group-datalink h4 span{background:url(../images/icons/datalink.png) 0 50% no-repeat}
+body.node-type-support .group-help-files .group-api h4 span{background:url(../images/icons/api.png) 0 50% no-repeat}
 body.node-type-support .panel-body .col-md-4{min-height:50px;padding-top:15px;border:1px solid transparent}
 body.node-type-support .panel-default>.panel-heading{background-color:#FFF}
-body.node-type-support #block-system-main .group-help-files{padding-left:15px;border-top:0;border-left:1px solid #329747;border-radius:0}
-body.node-type-support #block-system-main .group-help-files fieldset,body.node-type-support #block-system-main .group-help-files fieldset legend,body.node-type-support #block-system-main .group-help-files>legend{border:0}
-body.node-type-support #block-system-main .group-help-files .row{margin:0}
-body.node-type-support .group-setup .group-cols-setup,body.node-type-support .group-video-wrapper{margin-top:20px}
-body.node-type-support #block-system-main .group-help-files .row-eq-height{min-height:50px}
-body.node-type-support #block-system-main .group-help-files .row-eq-height>.field-group-div{padding-top:15px;padding-bottom:15px}
-body.node-type-support .group-setup,body.node-type-support .group-video-wrapper{padding-left:20px;border-left:1px solid #329747}
-body.node-type-support #block-system-main .group-help-files fieldset legend .panel-title{font-size:1.2em}
-body.node-type-support .group-video-wrapper h3{margin-top:0}
-body.node-type-support .group-video-wrapper .view-display-id-page_videos_support{position:relative;background-color:#eee;padding:20px;min-height:380px}
+body.node-type-support #block-system-main .group-global-wrapper h3{position:absolute;margin-top:-15px;z-index:1;display:table;padding:0 80px 0 20px;background:url(../images/icons/pdf_gros.png) 100% 50% no-repeat;line-height:3em;width:210px}
+body.node-type-support #block-system-main .group-global-wrapper h3 span:after{content:'';display:block;height:1px;border-top:2px solid #828282;position:relative;top:-17px;left:-50px;width:180%}
+body.node-type-support #block-system-main .group-global-wrapper .row-eq-height{min-height:50px}
+body.node-type-support #block-system-main .group-global-wrapper .row-eq-height>.field-group-div{padding-top:50px;padding-bottom:15px}
+body.node-type-support #block-system-main .group-training-doc h3{display:table;width:210px;padding:0 80px 0 20px;line-height:3em}
+body.node-type-support #block-system-main .group-training-doc h3 span:after{content:'';display:block;height:1px;border-top:2px solid #828282;position:relative;top:-17px;left:-50px;width:180%}
+body.node-type-support #block-system-main .group-training-doc .group-tuto-col1 h4{display:inline-block;line-height:30px;padding-right:50px;background:url(../images/icons/pdf_small.png) 100% 0 no-repeat}
+body.node-type-support #block-system-main .group-training-doc .group-tuto-col2 h4{display:inline-block;line-height:30px;padding-right:50px;background:url(../images/icons/ppt.png) 100% 0 no-repeat}
+body.node-type-support .group-video-wrapper{margin-top:20px}
+body.node-type-support .group-video-wrapper h3{position:absolute;margin-top:0;z-index:1;display:table;padding:0 80px 0 20px;background:url(../images/icons/video.png) 100% 50% no-repeat;line-height:3em;width:210px}
+body.node-type-support .group-video-wrapper h3 span:after{content:'';display:block;height:1px;border-top:2px solid #828282;position:relative;top:-17px;left:-50px;width:180%}
+body.node-type-support .group-video-wrapper .view-display-id-page_videos_support{position:relative;background-color:#eee;padding:80px 60px 60px;min-height:380px}
 body.node-type-support .group-video-wrapper .view-display-id-page_videos_support iframe{max-width:100%!important}
 @media (min-width:992px){body.node-type-support .group-video-wrapper .view-display-id-page_videos_support>.view-content .views-row{position:absolute;right:15px;top:15px}
 }
@@ -1839,7 +1862,6 @@ body.page-node.not-front.node-type-licensed-page .main-container .region-content
 @media (max-width:970px){body.page-node.not-front.node-type-licensed-page .main-container .region-content{padding:0 5px}
 }
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .field-collection-container,body.page-node.not-front.node-type-licensed-page .main-container .region-content .field-name-field-paleoscan-tm,body.page-node.not-front.node-type-licensed-page .main-container .region-content h3{padding-left:20px}
-body.page-node.not-front.node-type-licensed-page .main-container .region-content .line_under_h3{content:'';display:block;height:1px;border-top:2px solid #828282;width:165%;position:relative;top:-17px;left:-50px}
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file a{color:#8e1004;font-size:1.4em}
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file a:after{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#8e1004}
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware h3{padding-right:65px;background:url(../images/icons/exe.png) 100% 50% no-repeat;display:table;line-height:3em}

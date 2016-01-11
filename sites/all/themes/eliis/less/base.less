@@ -57,9 +57,81 @@ table.table-configuration{
 .vert-mi-fonce{
   color: @vert-mi-fonce;
 }
+/* Titres *************************************************************************************************************/
 h2.page-header{
   margin-top: 40px;
 }
+.line_under_h3{
+  content: '';
+  display: block;
+  height: 1px;
+  border-top: 2px solid  @gris-moyen-fonce;
+  width: 165%;
+  position: relative;
+  top: -17px;
+  left: -50px;
+}
+.small-pdf-right{
+  display: inline-block;
+  line-height: 30px;
+  padding-right: 50px;
+  background: url(../images/icons/pdf_small.png) no-repeat 100% 0;
+}
+.small-ppt-right{
+  display: inline-block;
+  line-height: 30px;
+  padding-right: 50px;
+  background: url(../images/icons/ppt.png) no-repeat 100% 0;
+}
+/* Cas des titres sur fond bleu et avec icônes à gauche dans les pages download et support ****************************/
+.blue_background_transparent{
+  h4{
+    /*background-color: #B5C4C9;*/
+    background: rgba(0, 115, 140, 0.5);
+    width: 105.4%;
+    margin-left: -15px;
+    &:before{
+      content: '';
+      display: block;
+      height: 1px;
+      border-top: 1px solid #B5C4C9;
+      border-bottom: 1px solid white;
+    }
+    &:after{
+      content: '';
+      display: block;
+      height: 1px;
+      border-top: 1px solid white;
+      border-bottom: 1px solid #B5C4C9;
+    }
+    span{
+      color: @bleu-nuit;
+      display: table;
+      margin: 0 auto;
+      padding-left: 45px;
+      line-height: 2em;
+      font-size: 1.6em;
+    }
+  }
+}
+.icons-paleo-data-api{
+  .group-paleoscan{
+    h4 span{
+      background: url(../images/icons/Paleoscan.png) no-repeat 0 50%;
+    }
+  }
+  .group-datalink{
+    h4 span{
+      background: url(../images/icons/datalink.png) no-repeat 0 50%;
+    }
+  }
+  .group-api{
+    h4 span{
+      background: url(../images/icons/api.png) no-repeat 0 50%;
+    }
+  }
+}
+/* Menus fixe droit ***************************************************************************************************/
 #fixed-right-menu{
   @media screen and (min-width: @screen-xl) {
     position: fixed;
@@ -184,4 +256,7 @@ body.page-node.not-front .main-container .region-content,
 }
 a.pdf{
   .pdf-right();
+}
+a.rouge, a.red{
+  color: @rouge-eliis;
 }
