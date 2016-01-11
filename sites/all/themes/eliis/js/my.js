@@ -58,13 +58,27 @@ jQuery(function($) {
         }
 
     });
+
+    /**
+     * Remplacement des attributs hrefs des liens comportant le chemin /private/
+     */
+    $( "a[href*='/private/']" ).each(function(){
+        var url = $(this).attr('href');
+        var re = /sites\/default\/files\/private/;
+        var new_url = url.replace(re, "system/files");
+        $(this).attr('href', new_url);
+    });
 /*
 Login in lightbox
  */
     /*
-    teste si l'on se trouve dans une page de type "licenced" et s'il y a un formulaire de login
+    teste si l'on se trouve dans une page de type "licenced" ou "support"
+    et s'il y a un formulaire de login
      */
-    if ( $( "body.node-type-licensed-page" ).length &&  $( "#block-user-login").length) {
+
+    if ( ($( "body.node-type-licensed-page" ).length ||
+      $( "body.node-type-support" ).length)
+      &&  $( "#block-user-login").length) {
         //console.log("début du script");
 
         // construction du div qui sera affiché
@@ -104,6 +118,12 @@ Login in lightbox
 
         // Désactivation des liens qui appartiennent à la classe private-file
         $( ".private-file a").click(function(e) {
+            e.preventDefault();
+            //console.log("click");
+            div_lightbox_login.show();
+        });
+        // Désactivation des liens qui ont dans leur chemin /system/file/
+        $( "a[href*='/system/files/']" ).click(function(e) {
             e.preventDefault();
             //console.log("click");
             div_lightbox_login.show();
