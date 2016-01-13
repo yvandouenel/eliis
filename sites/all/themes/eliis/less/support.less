@@ -26,6 +26,7 @@ body.node-type-support{
   }
 
   #block-system-main .group-global-wrapper {
+    margin-top: 50px;
     h3{
       position: absolute;
       margin-top: -15px;
@@ -72,6 +73,22 @@ body.node-type-support{
     }
 
   }
+  #block-system-main .group-publication{
+    padding-left: 20px;
+    h3{
+      display: table;
+      padding: 0 80px 0 0;
+      background: url(../images/icons/pdf_gros.png) 100% 50% no-repeat;
+      line-height: 3em;
+      width: 210px;
+      span{
+        &:after{
+          .line_under_h3();
+          width: 180%;
+        }
+      }
+    }
+  }
 
   /* vidéos **********************************************************************************************************/
   .group-video-wrapper{
@@ -95,7 +112,7 @@ body.node-type-support{
     .view-display-id-page_videos_support{
       position: relative;
       background-color: @gris-tres-tres-clair;
-      padding: 80px 60px 60px 60px;
+      padding: 80px 60px 30px 60px;
       min-height: 380px;
       iframe{
         max-width: 100% !important;
@@ -103,8 +120,8 @@ body.node-type-support{
       @media (min-width: @screen-md){
         > .view-content .views-row{
           position: absolute;
-          right: 15px;
-          top: 15px;
+          right: 20%;
+          top: 80px;
         }
       }
       .video-list-left{
@@ -119,6 +136,35 @@ body.node-type-support{
           text-decoration: none;
         }
       }
+    }
+  }
+  #support-top-anchors {
+    display: table;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 3;
+    background-color: white;
+    left: 39%;
+    border-bottom: 1px solid @gris-fonce;
+    a {
+      display: table-cell;
+      padding: 6px 20px 5px 20px;
+    }
+    @media screen and(max-width: @container-tablet){
+      position: inherit;
+    }
+    &.top-fixed-anchors{
+      top: 54px;
+      background-color: @gris-menus-hauts;
+    }
+    &.top-fixed-anchors.width-admin-menu{
+      top: 83px;
+    }
+  }
+  /* Marge gauche en cas de grand écran */
+  @media (min-width: @screen-lg){
+    .group-paleoscan-col1 > * , .group-tuto-col1 > *, .group-publication > *{
+      padding-left: 30px;
     }
   }
 }
