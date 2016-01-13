@@ -98,15 +98,13 @@
             </button>
         </div>
 
-        <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+        <?php if (!empty($primary_nav) || !empty($page['navigation'])): ?>
             <div class="navbar-collapse collapse">
                 <nav role="navigation" id="main-nav">
                     <?php if (!empty($primary_nav)): ?>
                         <?php print render($primary_nav); ?>
                     <?php endif; ?>
-                    <?php if (!empty($secondary_nav)): ?>
-                        <?php print render($secondary_nav); ?>
-                    <?php endif; ?>
+
                     <?php if (!empty($page['navigation'])): ?>
                         <?php print render($page['navigation']); ?>
                     <?php endif; ?>
@@ -181,6 +179,9 @@
 <footer class="footer container">
 
     <div class="social-courtesy">
+        <?php if (!empty($secondary_nav)): ?>
+            <?php print render($secondary_nav); ?>
+        <?php endif; ?>
         <?php print render($page['footer']); ?>
     </div>
     <div id="footer-adress">
