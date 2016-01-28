@@ -1470,7 +1470,7 @@ body #admin-menu .dropdown li{line-height:normal}
 .modal{z-index:1620}
 .modal-dialog{z-index:1630}
 .modal-backdrop{z-index:1610}
-.footer{margin-top:45px;padding-top:35px;padding-bottom:36px;border-top:1px solid #E5E5E5}
+.footer{padding-top:35px;padding-bottom:36px;border-top:1px solid #E5E5E5}
 .element-invisible{margin:0;padding:0;width:1px}
 .navbar .logo{margin-right:-15px;padding-left:15px;padding-right:15px}
 ul.secondary{float:left}
@@ -1620,7 +1620,7 @@ h2.page-header{margin-top:55px}
 #fixed-right-menu h3.overview-right-menu a{display:block;padding:5px 5px 5px 20px;color:#2c899a;border-bottom:3px solid #fff}
 #fixed-right-menu h3.whithout-link{padding:5px 5px 0 20px;margin:5px 0 0;font-weight:700}
 #fixed-right-menu .views-field-title a{padding:5px 5px 5px 20px}
-#fixed-right-menu .view-display-id-attachment_2{background-color:#acc67f}
+#fixed-right-menu .view-display-id-attachment_2,#fixed-right-menu .view-display-id-attachment_7{background-color:#acc67f}
 #fixed-right-menu .downloads-right-menu{background-color:#a1cbc9;border-top:3px solid #fff}
 #fixed-right-menu .downloads-right-menu a{display:block;padding:5px 5px 5px 20px}
 }
@@ -1705,7 +1705,7 @@ body.logged-in.admin-menu .breadcrumb{top:88px}
 @media (min-width:992px) and (max-width:1200px){#home-eliis{margin-left:5px}
 }
 .context-sdl_editor_representation{margin:0 0 10px}
-.footer{height:50vh}
+.footer{margin-top:50vh}
 @media (min-width:768px){.footer .navbar-nav>li>a{padding-top:10px}
 }
 .region-footer-cols>div{margin-top:30px}

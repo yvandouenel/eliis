@@ -4,7 +4,7 @@ jQuery(function($) {
      */
     var menu_top_position = 0;
     if ($('a.link-fixed-right-menu').length != 0) {
-        // Récupération des liens vers des ancres du menu
+        // Récupération des liens vers des ancres du menu qui sont placés dans le tableau link_menu
         var link_menu = [];
         $('a.link-fixed-right-menu').each(function( index ) {
             link_menu[index] = $(this);
@@ -20,13 +20,21 @@ jQuery(function($) {
                 console.log( "position du haut du menu : " + menu_top_position);
 
                 // Comparaison avec les positions des ancres
+              /**
+               * Plutôt que de comparer les positions des éléments, if faudrait
+               * que je sache qui doit être sélectionné et que je modifie la
+               * position du block des ancres et que je donne la class "selected-link"
+               * au lien concerné
+               */
                 var link_menu_selected = false;
                 $('.anchor_product').each(function( index ) {
                     link_menu_selected = false;
                     var position_ancre = $( this ).offset();
-                    console.log( "position des ancres : " + position_ancre.top );
+                    console.log( "position des ancres aaa : " + position_ancre.top );
+
+
                     if(menu_top_position < position_ancre.top){
-                        //console.log( "Mettre en seletected le lien " + (index-1) + ' du menu.');
+                        //console.log( "Mettre en selected le lien " + (index-1) + ' du menu.');
                         $('a.link-fixed-right-menu').removeClass( "selected-link" );
                         link_menu[(index-1)].addClass( "selected-link" );
                         link_menu_selected = true;
@@ -53,6 +61,8 @@ jQuery(function($) {
             var target = $(this.hash);
             if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
             if (target.length == 0) target = $('html');
+
+
             $('html, body').animate({ scrollTop: target.offset().top }, 500);
             return false;
         }
@@ -150,7 +160,6 @@ Login in lightbox
     menu ancres sur la page de download
      */
     if ( $( "body.node-type-licensed-page" ).length &&  $( "#licensed-top-anchors" ).length) {
-    //console.log("position des ancres de haut de page");
         var count = 0;
         $(window).scroll(function() {
 
@@ -179,7 +188,7 @@ Login in lightbox
    menu ancres sur la page de support
    */
   if ( $( "body.node-type-support" ).length &&  $( "#support-top-anchors" ).length) {
-    console.log("position des ancres de haut de page");
+
     var count = 0;
     $(window).scroll(function() {
 
