@@ -93,11 +93,13 @@ function featurediapobio_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Block diaporama';
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Unfiltered text */
-  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
-  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
-  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['header']['area_text_custom']['content'] = '<h1 class="center bg-gris-tres-tres-clair base-line"><span class="vert-fonce">Software</span> <span class="vert-mi-fonce">Solutions in Seismic Interpretation</span></h1>';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<a id="rank-home-ss" href="/classement-diapo">Rank slides</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -240,7 +242,7 @@ function featurediapobio_views_default_views() {
     t('Block'),
     t('Block diaporama'),
     t('more'),
-    t('<h1 class="center bg-gris-tres-tres-clair base-line"><span class="vert-fonce">Software</span> <span class="vert-mi-fonce">Solutions in Seismic Interpretation</span></h1>'),
+    t('<a id="rank-home-ss" href="/classement-diapo">Rank slides</a>'),
     t('<div class="slide-home">
 <div class="title-slide-home"><h2><a href="[field_url]">[title]</a></h2></div>
 <div class="subtitle-slide-home"><h3><a href="[field_url]">[field_subtitle]</a></h3></div>
