@@ -26,7 +26,7 @@ function featurediapobio_views_api($module = NULL, $api = NULL) {
 function featurediapobio_node_info() {
   $items = array(
     'diaporama' => array(
-      'name' => t('Diaporama'),
+      'name' => t('Home slideshow'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
