@@ -1646,7 +1646,6 @@ h2.page-header{margin-top:55px}
 a.red,a.rouge{color:#8e1004}
 .atom-align-left img{margin-right:15px}
 .atom-align-right img{margin-left:15px}
-.context-sdl_editor_representation:hover{margin:0!important}
 @media (min-width:768px){.container,.navbar.container{max-width:none;width:100%}
 }
 @media (min-width:1810px){.container,.navbar.container{max-width:none;width:100%}
@@ -1705,6 +1704,7 @@ body.logged-in.admin-menu .breadcrumb{top:88px}
 @media (min-width:992px) and (max-width:1200px){#home-eliis{margin-left:5px}
 }
 .context-sdl_editor_representation{margin:0 0 10px}
+.context-sdl_editor_representation:hover{margin:-10px 0 0}
 .footer{margin-top:50vh}
 @media (min-width:768px){.footer .navbar-nav>li>a{padding-top:10px}
 }
