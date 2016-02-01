@@ -214,4 +214,39 @@ Login in lightbox
     });
   }
 
+  /**
+   * Gestion du survol des images sur la page Paleoscan overview
+   */
+  if($('.os-link-anchor').length){
+    var target_id, final_target, timer;
+    displayFirstImage();
+
+    $('.os-link-anchor').hover(function(){
+      target_id = $(this).attr('href');
+      clearTimeout(timer);
+      timer = setTimeout(function(){
+        $(".os-main-image").hide();
+        $(target_id).show();
+      },20)
+
+    },function(){
+      clearTimeout(timer);
+      timer = setTimeout(function(){
+        displayFirstImage();
+      },200)
+
+    });
+
+    $('.os-link-anchor').click(function(){
+      target_id = $(this).attr('href');
+      final_target = $(target_id).attr("href");
+      location.href = final_target;
+      return false;
+    });
+    function displayFirstImage(){
+      $(".os-main-image").hide();
+      $("#os-main-image").show();
+    }
+  }
+
 });
