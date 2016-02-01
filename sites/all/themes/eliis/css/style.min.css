@@ -876,7 +876,7 @@ select.input-group-lg>.form-control,select.input-group-lg>.input-group-addon,sel
 select[multiple].input-group-lg>.form-control,select[multiple].input-group-lg>.input-group-addon,select[multiple].input-group-lg>.input-group-btn>.btn,textarea.input-group-lg>.form-control,textarea.input-group-lg>.input-group-addon,textarea.input-group-lg>.input-group-btn>.btn{height:auto}
 .input-group-sm>.form-control,.input-group-sm>.input-group-addon,.input-group-sm>.input-group-btn>.btn{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}
 select.input-group-sm>.form-control,select.input-group-sm>.input-group-addon,select.input-group-sm>.input-group-btn>.btn{height:30px;line-height:30px}
-html.js fieldset.collapsed,select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.input-group-addon,select[multiple].input-group-sm>.input-group-btn>.btn,textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon,textarea.input-group-sm>.input-group-btn>.btn{height:auto}
+select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.input-group-addon,select[multiple].input-group-sm>.input-group-btn>.btn,textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon,textarea.input-group-sm>.input-group-btn>.btn{height:auto}
 .input-group .form-control,.input-group-addon,.input-group-btn{display:table-cell}
 .nav>li,.nav>li>a{display:block;position:relative}
 .input-group .form-control:not(:first-child):not(:last-child),.input-group-addon:not(:first-child):not(:last-child),.input-group-btn:not(:first-child):not(:last-child){border-radius:0}
@@ -1441,6 +1441,7 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .hidden-print{display:none!important}
 }
 html.overlay-open .navbar-fixed-top{z-index:400}
+html.js fieldset.collapsed{height:auto}
 html.js input.form-autocomplete{background-image:none}
 body{position:relative}
 body.admin-expanded.admin-vertical.admin-nw .navbar,body.admin-expanded.admin-vertical.admin-sw .navbar{margin-left:260px}
@@ -1609,7 +1610,6 @@ h2.page-header{margin-top:55px}
 .blue_background_transparent h4:before{display:block;border-top:1px solid #B5C4C9;border-bottom:1px solid #fff}
 .blue_background_transparent h4:after{display:block;border-top:1px solid #fff;border-bottom:1px solid #B5C4C9}
 .blue_background_transparent h4 span{color:#004353;display:table;margin:0 auto;padding-left:45px;line-height:2em;font-size:1.6em}
-#fixed-right-menu h3,.private-file a{font-size:1.2em}
 .icons-paleo-data-api .group-paleoscan h4 span{background:url(../images/icons/Paleoscan.png) 0 50% no-repeat}
 .icons-paleo-data-api .group-datalink h4 span{background:url(../images/icons/datalink.png) 0 50% no-repeat}
 .icons-paleo-data-api .group-api h4 span{background:url(../images/icons/api.png) 0 50% no-repeat}
@@ -1626,6 +1626,7 @@ h2.page-header{margin-top:55px}
 }
 @media screen and (min-width:970px) and (max-width:1810px){#fixed-right-menu{padding:0 50px}
 }
+#fixed-right-menu h3{font-size:1.2em}
 #fixed-right-menu a{display:block}
 #fixed-right-menu a.selected-link{color:#000;background:url(../images/bullet-black.png) 8px 15px no-repeat}
 #top-arrow{display:none}
@@ -1673,8 +1674,8 @@ a.red,a.rouge{color:#8e1004}
 .icon-right-open-h3-a>h3>span>a:before,.icon-right-open:before{content:"\e834"}
 .plus-open-h3-a>h3>span>a:after{content:"\e83e";color:#90c02c;margin-left:10px}
 .private-file{float:left;margin-right:20px}
-.private-file a{color:#00748c}
-.pdf-file a:before,.private-file a:after{font-weight:400;font-size:1em;display:inline-block;text-decoration:inherit;width:1em;line-height:1em;position:relative;text-align:center;font-family:fontello;font-style:normal;speak:none;font-variant:normal;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.private-file a{color:#00748c;font-size:1.2em}
+.pdf-file a:before,.private-file a:after{font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;position:relative;text-align:center}
 .private-file a:after{top:1px;margin-right:10px;content:"\e83b";margin-left:5px;color:#00748c}
 .pdf-file a:before{content:"\e823";color:#90c02c;margin-right:5px;top:-2px}
 .region-page-top #toolbar{display:none}
@@ -1831,6 +1832,18 @@ body.node-type-news input,body.node-type-news select{width:250px}
 #licensed-top-anchors.top-fixed-anchors{top:54px;background-color:#e1e1e1}
 #licensed-top-anchors.top-fixed-anchors.width-admin-menu{top:83px}
 .group-add-on-menu>.field-group-format-wrapper,.group-core-application-menu>.field-group-format-wrapper{position:absolute;min-width:250px}
+#overview-scheme{width:90%;margin:0 auto}
+#overview-scheme .os-col{float:left}
+#overview-scheme .os-col3{width:24%;margin-right:1%}
+#overview-scheme .os-col6{width:50%}
+#overview-scheme .os-col12{width:100%}
+#overview-scheme #os-attributes,#overview-scheme #os-faults,#overview-scheme #os-geobody,#overview-scheme #os-well-correlation{margin-top:100px}
+#overview-scheme #os-attributes,#overview-scheme #os-geobody{text-align:right}
+#overview-scheme .addon-overview-plus:before,body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file a:after{font-family:fontello;font-style:normal;font-weight:400;speak:none;text-align:center;font-variant:normal;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+#overview-scheme #os-3D-geomodel,#overview-scheme #os-horizons,#overview-scheme .addon-overview-plus{display:table;margin:0 auto}
+#overview-scheme .addon-overview-plus:before{position:relative;top:1px;font-size:1em;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;line-height:1em;content:"\e83e";color:#90c02c;float:left}
+#overview-scheme .addon-overview-plus span.green-add-on{color:#90c02c;display:table}
+#overview-scheme .addon-overview-plus .addon-overview-plus-title{display:table;margin-left:25px}
 body.node-type-support.node-type-support .main-container .region-content{padding:0}
 body.node-type-support .field-collection-view{padding:0;margin:0}
 body.node-type-support .panel-body{padding:0 15px}
@@ -1879,7 +1892,7 @@ body.page-node.not-front.node-type-licensed-page .main-container .region-content
 }
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .field-collection-container,body.page-node.not-front.node-type-licensed-page .main-container .region-content .field-name-field-paleoscan-tm,body.page-node.not-front.node-type-licensed-page .main-container .region-content h3{padding-left:20px}
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file a{color:#8e1004;font-size:1.4em}
-body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file a:after{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#8e1004}
+body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file a:after{position:relative;top:1px;font-size:1em;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;line-height:1em;color:#8e1004}
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware h3{padding-right:65px;background:url(../images/icons/exe.png) 100% 50% no-repeat;display:table;line-height:3em}
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware h3 span:after{content:'';display:block;height:1px;border-top:2px solid #828282;width:165%;position:relative;top:-17px;left:-50px}
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .field-name-field-sofware-description{font-size:.8em;font-style:italic;padding-top:3px}
