@@ -296,8 +296,15 @@ a.rouge, a.red{
   
 }
 /* styles ckeditor *********************************************************/
-.grey-background{
+.gray-lighter{
   background-color: @gray-lighter;
-  padding: 20px;
-  margin: 0 -50px;
+  padding: 20px 0;
+}
+.all-width{
+  @media (min-width: @screen-md){
+    margin: 0 -50px;
+  }
+}
+.separator-white-right{
+  border-right: 2px solid white;
 }
