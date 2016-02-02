@@ -1656,7 +1656,7 @@ a.red,a.rouge{color:#8e1004}
 @media (min-width:992px){.all-width{margin:0 -50px}
 }
 .separator-white-right{border-right:2px solid #fff}
-.separator-grey{border:1px solid #464646;height:1px;overflow:hidden}
+.separator-grey{border:1px solid #464646;height:1px;overflow:hidden;margin:20px 0;width:30%}
 @media (min-width:768px){.container,.navbar.container{max-width:none;width:100%}
 }
 @media (min-width:1810px){.container,.navbar.container{max-width:none;width:100%}
