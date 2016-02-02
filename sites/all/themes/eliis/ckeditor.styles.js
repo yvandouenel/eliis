@@ -42,7 +42,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Superscript'		, element : 'sup' },
             */
 
-            { name : 'Separator Grey'	, element : 'div', styles : { 'border' : '1px solid #464646' } },
+            { name : 'Separator Grey'	, element : 'div', styles : { 'class' : 'separator-grey' } },
 
 
             /* Object Styles */
