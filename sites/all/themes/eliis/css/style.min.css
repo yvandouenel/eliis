@@ -1652,6 +1652,7 @@ a.red,a.rouge{color:#8e1004}
 .links-bottom-wrapper .links-bottom ul{list-style:none;margin:0;padding:0}
 .links-bottom-wrapper .links-bottom ul li{float:left;margin:0;padding:0}
 .links-bottom-wrapper .links-bottom ul li a{display:block;padding:10px 20px}
+.grey-background{background-color:#eee;padding:20px;margin:0 -50px}
 @media (min-width:768px){.container,.navbar.container{max-width:none;width:100%}
 }
 @media (min-width:1810px){.container,.navbar.container{max-width:none;width:100%}
