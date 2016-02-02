@@ -233,7 +233,7 @@ Login in lightbox
       clearTimeout(timer);
       timer = setTimeout(function(){
         displayFirstImage();
-      },200)
+      },500)
 
     });
 
