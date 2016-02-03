@@ -1655,8 +1655,10 @@ a.red,a.rouge{color:#8e1004}
 .gray-lighter{background-color:#eee;padding:20px 0}
 @media (min-width:992px){.all-width{margin:0 -50px}
 }
-.separator-white-right{border-right:2px solid #fff}
+.separator-white-right{border-right:2px solid #fff;padding-right:20px}
 .separator-grey{border:1px solid #464646;height:1px;overflow:hidden;margin:20px auto;width:30%}
+.node-type-page .field-name-body .field-item{margin-bottom:10px}
+.vert-fond-products{background-color:#ebf6e6}
 @media (min-width:768px){.container,.navbar.container{max-width:none;width:100%}
 }
 @media (min-width:1810px){.container,.navbar.container{max-width:none;width:100%}
@@ -1772,7 +1774,7 @@ body.logged-in.admin-menu .breadcrumb{top:88px}
 @media screen and (max-width:1810px){.view-id-products .attachment-before.col-md-2{width:100%;margin-bottom:20px}
 }
 .view-id-products .attachment-before .views-row-even,.view-id-products .attachment-before .views-row-odd{background-color:transparent;padding:0}
-.view-id-products .views-row-odd{background-color:#EBF6E6;padding:10px}
+.view-id-products .views-row-odd{background-color:#ebf6e6;padding:10px}
 .view-id-products .views-row-even{background-color:#E1E1E1;padding:10px}
 .view-id-products .anchor_product{position:relative;top:-220px}
 .flexslider{border:1px solid #fff}
