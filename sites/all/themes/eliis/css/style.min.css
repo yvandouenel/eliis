@@ -1,10 +1,11 @@
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 .label,sub,sup{vertical-align:baseline}
 .sr-only,svg:not(:root){overflow:hidden}
 hr,img{border:0}
 body,figure{margin:0}
 .btn-group>.btn-group,.btn-toolbar .btn,.btn-toolbar .btn-group,.btn-toolbar .input-group,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.dropdown-menu{float:left}
 .navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse,.pre-scrollable{max-height:340px}
+@font-face{font-family:walk;src:url(../font/WalkwayBold.ttf);font-weight:700;font-style:normal}
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:10px;-webkit-tap-highlight-color:transparent}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
@@ -40,7 +41,7 @@ td,th{padding:0}
 a,a:visited{text-decoration:underline}
 a[href]:after{content:" (" attr(href) ")"}
 abbr[title]:after{content:" (" attr(title) ")"}
-a[href^="javascript:"]:after,a[href^="#"]:after{content:""}
+a[href^="#"]:after,a[href^="javascript:"]:after{content:""}
 blockquote,pre{border:1px solid #999}
 thead{display:table-header-group}
 img{max-width:100%!important}
@@ -1601,6 +1602,7 @@ table.table-configuration td,table.table-configuration th{padding:5px;border:4px
 .bg-bleu-clair{background-color:#e5f0f2}
 .vert-fonce{color:#076c06}
 .vert-mi-fonce{color:#30952f}
+h1,h2,h3,h4{font-family:walk,arial}
 h2.page-header{margin-top:55px}
 .line_under_h3{display:block;border-top:2px solid #828282;width:165%;position:relative;top:-17px;left:-50px}
 .small-pdf-right,.small-ppt-right{display:inline-block;line-height:30px;padding-right:50px}
