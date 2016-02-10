@@ -126,7 +126,7 @@ function news_strongarm() {
       'display' => array(
         'sharethis' => array(
           'full' => array(
-            'weight' => '26',
+            'weight' => '23',
             'visible' => FALSE,
           ),
           'zoom' => array(
