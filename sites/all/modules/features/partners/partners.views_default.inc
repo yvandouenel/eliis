@@ -81,6 +81,19 @@ function partners_views_default_views() {
 
   /* Display:  Block Partner 1 */
   $handler = $view->new_display('block', ' Block Partner 1', 'block_partner_one');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'partner_type';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'scald_authors' => 0,
+    'scald_tags' => 0,
+    'tags' => 0,
+    'type_partenaire' => 0,
+    'video_type' => 0,
+  );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Draggableviews: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
@@ -104,15 +117,12 @@ function partners_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'partenaires' => 'partenaires',
   );
-  /* Filter criterion: Content: Type de partenaire (field_type_partner) */
-  $handler->display->display_options['filters']['field_type_partner_tid']['id'] = 'field_type_partner_tid';
-  $handler->display->display_options['filters']['field_type_partner_tid']['table'] = 'field_data_field_type_partner';
-  $handler->display->display_options['filters']['field_type_partner_tid']['field'] = 'field_type_partner_tid';
-  $handler->display->display_options['filters']['field_type_partner_tid']['value'] = array(
-    12 => '12',
-  );
-  $handler->display->display_options['filters']['field_type_partner_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_type_partner_tid']['vocabulary'] = 'type_partenaire';
+  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
+  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['filters']['uuid']['value'] = '1a9e7f0d-66cd-4b79-ade1-8093bdaf3277';
   $handler->display->display_options['block_description'] = ' Block Partner 1';
 
   /* Display: Page classement */
@@ -181,6 +191,19 @@ function partners_views_default_views() {
 
   /* Display:  Block Partner 2 */
   $handler = $view->new_display('block', ' Block Partner 2', 'block_partner_two');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'Partners';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'scald_authors' => 0,
+    'scald_tags' => 0,
+    'tags' => 0,
+    'type_partenaire' => 0,
+    'video_type' => 0,
+  );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Draggableviews: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
@@ -204,15 +227,12 @@ function partners_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'partenaires' => 'partenaires',
   );
-  /* Filter criterion: Content: Type de partenaire (field_type_partner) */
-  $handler->display->display_options['filters']['field_type_partner_tid']['id'] = 'field_type_partner_tid';
-  $handler->display->display_options['filters']['field_type_partner_tid']['table'] = 'field_data_field_type_partner';
-  $handler->display->display_options['filters']['field_type_partner_tid']['field'] = 'field_type_partner_tid';
-  $handler->display->display_options['filters']['field_type_partner_tid']['value'] = array(
-    13 => '13',
-  );
-  $handler->display->display_options['filters']['field_type_partner_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_type_partner_tid']['vocabulary'] = 'type_partenaire';
+  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
+  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['filters']['uuid']['value'] = 'ace312d2-97e7-4318-9d1b-919d4db6c9a8';
   $handler->display->display_options['block_description'] = ' Block Partner 2';
   $translatables['partenaires'] = array(
     t('Master'),
@@ -225,8 +245,10 @@ function partners_views_default_views() {
     t('Desc'),
     t('<a href="[field_url_partner]" target="_blank">[field_image]</a>'),
     t(' Block Partner 1'),
+    t('partner_type'),
     t('Page classement'),
     t(' Block Partner 2'),
+    t('Partners'),
   );
   $export['partenaires'] = $view;
 
