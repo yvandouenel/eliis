@@ -106,7 +106,7 @@ function news_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
@@ -129,7 +129,7 @@ function news_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 1,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -200,7 +200,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -251,6 +251,59 @@ function news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-news-field_information_type'
+  $field_instances['node-news-field_information_type'] = array(
+    'bundle' => 'news',
+    'default_value' => array(
+      0 => array(
+        'value' => 'event',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'vie' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_information_type',
+    'label' => 'Type d\'information',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 22,
+    ),
+  );
+
   // Exported field_instance: 'node-news-field_new_window'
   $field_instances['node-news-field_new_window'] = array(
     'bundle' => 'news',
@@ -278,7 +331,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -344,7 +397,7 @@ function news_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -405,7 +458,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -477,7 +530,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -521,6 +574,84 @@ function news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-news-field_registration'
+  $field_instances['node-news-field_registration'] = array(
+    'bundle' => 'news',
+    'default_value' => array(
+      0 => array(
+        'registration_type' => '',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'registration',
+        'settings' => array(),
+        'type' => 'registration_form',
+        'weight' => 31,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'registration',
+        'settings' => array(),
+        'type' => 'registration_form',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'vie' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_registration',
+    'label' => 'Registration',
+    'required' => 0,
+    'settings' => array(
+      'default_registration_settings' => array(
+        'capacity' => 0,
+        'reminder' => array(
+          'reminder_settings' => array(
+            'reminder_date' => NULL,
+            'reminder_template' => '',
+          ),
+          'send_reminder' => 0,
+        ),
+        'scheduling' => array(
+          'close' => NULL,
+          'open' => NULL,
+        ),
+        'settings' => array(
+          'confirmation' => 'Registration has been saved.',
+          'confirmation_redirect' => '',
+          'from_address' => 'sebastien.lacaze@eliis.fr',
+          'maximum_spaces' => 0,
+          'multiple_registrations' => 0,
+        ),
+        'status' => 1,
+      ),
+      'hide_register_tab' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'registration',
+      'settings' => array(),
+      'type' => 'registration_select',
+      'weight' => 23,
+    ),
+  );
+
   // Exported field_instance: 'node-news-field_scald_file'
   $field_instances['node-news-field_scald_file'] = array(
     'bundle' => 'news',
@@ -544,7 +675,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -618,7 +749,7 @@ function news_field_default_field_instances() {
           'override' => 0,
         ),
         'type' => 'full',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -692,7 +823,7 @@ function news_field_default_field_instances() {
           'override' => 0,
         ),
         'type' => 'full',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -778,7 +909,7 @@ function news_field_default_field_instances() {
           'override' => 0,
         ),
         'type' => 'full',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -852,7 +983,7 @@ function news_field_default_field_instances() {
           'override' => 0,
         ),
         'type' => 'full',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -922,7 +1053,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -990,7 +1121,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1056,7 +1187,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1107,8 +1238,10 @@ function news_field_default_field_instances() {
   t('Image');
   t('Lien vers nouvelle fenêtre');
   t('Placer ici l\'url où doit emmener l\'actualité sous la forme : http://www.siteweb.com');
+  t('Registration');
   t('Son');
   t('Tag');
+  t('Type d\'information');
   t('Url de destination');
   t('Vidéo');
   t('Vidéo seule');

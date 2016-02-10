@@ -58,6 +58,35 @@ function news_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
+  // Exported field_base: 'field_information_type'
+  $field_bases['field_information_type'] = array(
+    'active' => 1,
+    'cardinality' => 3,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_information_type',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'news' => 'news',
+        'event' => 'event',
+        'release' => 'software release',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_new_window'
   $field_bases['field_new_window'] = array(
     'active' => 1,
@@ -161,6 +190,28 @@ function news_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_registration'
+  $field_bases['field_registration'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_registration',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'registration_type' => array(
+        0 => 'registration_type',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'registration',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'registration',
+  );
+
   // Exported field_base: 'field_scald_file'
   $field_bases['field_scald_file'] = array(
     'active' => 1,
@@ -187,6 +238,9 @@ function news_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_scald_gallery',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'indexes' => array(
       'sid' => array(
         0 => 'sid',

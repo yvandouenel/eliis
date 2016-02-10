@@ -53,13 +53,13 @@ function news_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'body',
         1 => 'field_date',
-        2 => 'field_formations_liees',
+        2 => 'field_registration',
       ),
     ),
     'fields' => array(
       'body' => 'ds_content',
       'field_date' => 'ds_content',
-      'field_formations_liees' => 'ds_content',
+      'field_registration' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -79,31 +79,34 @@ function news_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'news';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'bootstrap_8_4';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
+      'left' => array(
         0 => 'body',
-        1 => 'field_date',
-        2 => 'field_formations_liees',
-        3 => 'field_scald_image',
-        4 => 'field_scald_video',
-        5 => 'field_scald_gallery',
-        6 => 'field_scald_sound',
+        1 => 'field_scald_image',
+        2 => 'field_scald_video',
+        3 => 'field_scald_gallery',
+        4 => 'field_scald_sound',
+      ),
+      'right' => array(
+        5 => 'field_date',
+        6 => 'field_registration',
       ),
     ),
     'fields' => array(
-      'body' => 'ds_content',
-      'field_date' => 'ds_content',
-      'field_formations_liees' => 'ds_content',
-      'field_scald_image' => 'ds_content',
-      'field_scald_video' => 'ds_content',
-      'field_scald_gallery' => 'ds_content',
-      'field_scald_sound' => 'ds_content',
+      'body' => 'left',
+      'field_scald_image' => 'left',
+      'field_scald_video' => 'left',
+      'field_scald_gallery' => 'left',
+      'field_scald_sound' => 'left',
+      'field_date' => 'right',
+      'field_registration' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'left' => 'div',
+      'right' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
