@@ -142,7 +142,11 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['field_new_window']['field'] = 'field_new_window';
   $handler->display->display_options['fields']['field_new_window']['label'] = '';
   $handler->display->display_options['fields']['field_new_window']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_new_window']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_new_window']['alter']['text'] = 'target="_blank"';
   $handler->display->display_options['fields']['field_new_window']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_new_window']['empty'] = 'target="_self"';
+  $handler->display->display_options['fields']['field_new_window']['hide_alter_empty'] = FALSE;
   /* Field: Content: Date d'événement */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
@@ -179,7 +183,7 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['field_news_url_target']['label'] = '';
   $handler->display->display_options['fields']['field_news_url_target']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_news_url_target']['alter']['text'] = '<div class="group-title-date-event">
-  <h4 class="h4-event"><a href="[field_news_url_target]" target="[field_new_window]">[title]</a></h4>
+  <h4 class="h4-event"><a href="[field_news_url_target]">[title]</a></h4>
   <div class="register-link-view">[field_registration]</div>
   <div class="date-event event-page">[field_date]</div>
 </div>
@@ -467,8 +471,8 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['field_news_url_target']['alter']['text'] = '<div class="col-md-3">
 <div class="group-home-event">
 <div class="group-title-img ">
-<a href="[field_news_url_target]" target="[field_new_window]">[field_scald_image]</a>
-  <h3 class="h3-event"><a href="[field_news_url_target]" target="[field_new_window]">[title]</a></h3>
+<a href="[field_news_url_target]" >[field_scald_image]</a>
+  <h3 class="h3-event"><a href="[field_news_url_target]">[title]</a></h3>
   <div class="date-event home-block">[field_date]</div>
 </div>
 [body]
@@ -1063,9 +1067,11 @@ function news_views_default_views() {
     t('Page-evenement'),
     t('News & Events'),
     t('more'),
+    t('target="_blank"'),
+    t('target="_self"'),
     t('<a href="[path]#event-subscription" class="link-register-view">Register now</a>'),
     t('<div class="group-title-date-event">
-  <h4 class="h4-event"><a href="[field_news_url_target]" target="[field_new_window]">[title]</a></h4>
+  <h4 class="h4-event"><a href="[field_news_url_target]">[title]</a></h4>
   <div class="register-link-view">[field_registration]</div>
   <div class="date-event event-page">[field_date]</div>
 </div>
@@ -1085,8 +1091,8 @@ function news_views_default_views() {
     t('<div class="col-md-3">
 <div class="group-home-event">
 <div class="group-title-img ">
-<a href="[field_news_url_target]" target="[field_new_window]">[field_scald_image]</a>
-  <h3 class="h3-event"><a href="[field_news_url_target]" target="[field_new_window]">[title]</a></h3>
+<a href="[field_news_url_target]" >[field_scald_image]</a>
+  <h3 class="h3-event"><a href="[field_news_url_target]">[title]</a></h3>
   <div class="date-event home-block">[field_date]</div>
 </div>
 [body]
