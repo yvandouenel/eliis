@@ -1628,6 +1628,8 @@ h2.page-header{margin-top:55px}
 }
 @media screen and (min-width:970px) and (max-width:1810px){#fixed-right-menu{padding:0 50px}
 }
+@media screen and (max-width:1810px){#fixed-right-menu{display:none}
+}
 #fixed-right-menu h3{font-size:1.2em}
 #fixed-right-menu a{display:block}
 #fixed-right-menu a.selected-link{color:#000;background:url(../images/bullet-black.png) 8px 15px no-repeat}
@@ -1702,7 +1704,7 @@ body.admin-menu.front .main-container{margin-top:20px}
 body.admin-menu.not-front .main-container{margin-top:70px}
 #h1-logo{float:left;margin:0}
 .base-line{margin:0;padding:25px 0}
-#eliis-baseline{background_color:#eee;text-align:center;color:#096b09}
+#eliis-baseline{margin:0;padding:15px 0;background-color:#eee;text-align:center;color:#096b09}
 #eliis-baseline .green-baseline{color:#4da24d}
 .addicons#main-menu-paleoscan{padding-left:40px;background:url(../images/icons/icon-paleoscan-small.png) 0 50% no-repeat;padding-right:15px}
 .addicons#main-menu-services{padding-left:45px;background:url(../images/icons/icon-services-small.png) 0 49% no-repeat;padding-right:15px}
