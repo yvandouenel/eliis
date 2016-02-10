@@ -156,25 +156,10 @@ function partners_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: URL */
-  $handler->display->display_options['fields']['field_url_partner']['id'] = 'field_url_partner';
-  $handler->display->display_options['fields']['field_url_partner']['table'] = 'field_data_field_url_partner';
-  $handler->display->display_options['fields']['field_url_partner']['field'] = 'field_url_partner';
-  $handler->display->display_options['fields']['field_url_partner']['label'] = '';
-  $handler->display->display_options['fields']['field_url_partner']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_url_partner']['element_label_colon'] = FALSE;
-  /* Field: Content: Grande image */
-  $handler->display->display_options['fields']['field_images']['id'] = 'field_images';
-  $handler->display->display_options['fields']['field_images']['table'] = 'field_data_field_images';
-  $handler->display->display_options['fields']['field_images']['field'] = 'field_images';
-  $handler->display->display_options['fields']['field_images']['label'] = '';
-  $handler->display->display_options['fields']['field_images']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_images']['alter']['text'] = '<a href="[field_url_partner]" target="_blank">[field_images]</a>';
-  $handler->display->display_options['fields']['field_images']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Draggableviews: Content */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
@@ -191,7 +176,7 @@ function partners_views_default_views() {
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  $handler->display->display_options['path'] = 'partenaires-classement';
+  $handler->display->display_options['path'] = 'logo-rank';
 
   /* Display:  Block Partner 2 */
   $handler = $view->new_display('block', ' Block Partner 2', 'block_partner_two');
@@ -240,7 +225,6 @@ function partners_views_default_views() {
     t('<a href="[field_url_partner]" target="_blank">[field_image]</a>'),
     t(' Block Partner 1'),
     t('Page classement'),
-    t('<a href="[field_url_partner]" target="_blank">[field_images]</a>'),
     t(' Block Partner 2'),
   );
   $export['partenaires'] = $view;
