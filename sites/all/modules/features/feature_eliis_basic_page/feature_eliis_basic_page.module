@@ -53,3 +53,10 @@ function feature_eliis_basic_page_field_extra_fields() {
 
   return $extra;
 }
+
+/**
+ * Implements hook_init().
+ */
+function feature_eliis_basic_page_init() {
+  drupal_add_js(drupal_get_path('module','feature_eliis_basic_page').'/feature_eliis_basic_page.js');
+}
