@@ -81,6 +81,13 @@ function partners_views_default_views() {
 
   /* Display:  Block Partner 1 */
   $handler = $view->new_display('block', ' Block Partner 1', 'block_partner_one');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h3>Customers</h3>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
@@ -191,6 +198,12 @@ function partners_views_default_views() {
 
   /* Display:  Block Partner 2 */
   $handler = $view->new_display('block', ' Block Partner 2', 'block_partner_two');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Unfiltered text */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h3>Academic Partners</h3>';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
@@ -245,9 +258,11 @@ function partners_views_default_views() {
     t('Desc'),
     t('<a href="[field_url_partner]" target="_blank">[field_image]</a>'),
     t(' Block Partner 1'),
+    t('<h3>Customers</h3>'),
     t('partner_type'),
     t('Page classement'),
     t(' Block Partner 2'),
+    t('<h3>Academic Partners</h3>'),
     t('Partners'),
   );
   $export['partenaires'] = $view;
