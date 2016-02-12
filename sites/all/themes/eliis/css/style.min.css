@@ -1953,3 +1953,6 @@ body.page-node.not-front.node-type-contact .main-container .region-content .grou
 body.page-node.not-front.node-type-contact .main-container .region-content .group-socail{margin-top:30px}
 body.page-user .main-container>.row .region-content{width:50%;margin:0 auto}
 .page-node .view-id-partenaires .views-row{float:left;margin-right:5px}
+.webform-component-radios .form-type-radio{position:relative;float:left;display:table;margin:0}
+.webform-component-radios .form-type-radio input[type=radio]{position:inherit;display:block;float:left}
+.webform-component-radios .form-type-radio label{display:block;float:left;width:auto;padding:0 0 0 5px;margin:-22px 0 0 40px;text-align:left}
