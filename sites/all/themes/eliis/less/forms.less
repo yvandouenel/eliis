@@ -20,7 +20,7 @@ div.node-webform{
     }
   }
   /* boutons radios classiques ***********************************/
-  .webform-component-radios,.webform-component-checkboxes{
+  .webform-component-radios{
     .form-type-radio{
       position: relative;
       float: left;
@@ -39,24 +39,35 @@ div.node-webform{
         text-align: left;
       }
     }
-    .form-type-checkbox{
-      position: relative;
-      float: none;
-      display: table;
-      margin: 0;
-      input[type=checkbox]{
-        position: inherit;
-        display: block;
-        float: left;
-      }
-      label{
-        display: block;
-        float: left;
-        padding: 0 0 0 5px;
-        margin: -22px 0 0 40px;
-        text-align: left;
+
+  }
+  .webform-component-checkboxes{
+    display: table;
+    > label{
+      display: table-cell;
+    }
+    .form-checkboxes{
+      display: table-cell;
+      .form-type-checkbox{
+        position: relative;
+        float: none;
+        display: table;
+        margin: 0;
+        input[type=checkbox]{
+          position: inherit;
+          display: block;
+          float: left;
+        }
+        label{
+          display: block;
+          float: left;
+          padding: 0 0 0 5px;
+          margin: -22px 0 0 40px;
+          text-align: left;
+        }
       }
     }
+
   }
   /* boutons radios avec commentaires ***********************************/
   .webform-component-optionsmarkup{
