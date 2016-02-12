@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    @import url("http://local.eliis.com/sites/all/themes/eliis/css/style.min.css");
+  </style>
+  <script
+    src="http://local.eliis.com/sites/all/modules/contrib/jquery_update/replace/jquery/1.10/jquery.min.js?v=1.10.2"></script>
+  <script src="http://local.eliis.com/misc/jquery.once.js?v=1.2"></script>
+  <script src="http://local.eliis.com/misc/drupal.js?o1o6ud"></script>
+  <script
+    src="http://local.eliis.com/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js?v=1.10.2"></script>
+  <script
+    src="http://local.eliis.com/sites/all/modules/contrib/jquery_update/replace/misc/1.9/jquery.ba-bbq.min.js?v=1.2.1"></script>
+  <script
+    src="http://local.eliis.com/sites/all/modules/contrib/jquery_update/replace/misc/1.9/overlay-parent.js?v=1.0"></script>
+  <script>
+    jQuery(function ($) {
+      if ($('.os-link-anchor').length) {
+        var target_id, final_target, timer;
+        displayFirstImage();
+
+        $('.os-link-anchor').hover(function () {
+          target_id = $(this).attr('href');
+          clearTimeout(timer);
+          timer = setTimeout(function () {
+            $(".os-main-image").hide();
+            $(target_id).show();
+          }, 20)
+
+        }, function () {
+          clearTimeout(timer);
+          timer = setTimeout(function () {
+            displayFirstImage();
+          }, 200)
+
+        });
+
+        $('.os-link-anchor').click(function () {
+          target_id = $(this).attr('href');
+          final_target = $(target_id).attr("href");
+          location.href = final_target;
+          return false;
+        });
+        function displayFirstImage() {
+          $(".os-main-image").hide();
+          $("#os-main-image").show();
+        }
+      }
+
+    });
+  </script>
+</head>
+<body>
+<div id="overview-scheme">
+  <div class="os-row">
+    <div class="os-col3 os-col">
+      <div id="os-geobody">
+        <a href="#os-main-geobody" class="os-link-anchor">
+          <img src="/sites/all/themes/eliis/images/overview/geobodyLink.jpg"
+               alt="Geobody" class="os-img-link"/>
+          <span class="os-label">Geobody</span>
+        </a>
+      </div>
+      <div id="os-well-correlation">
+        <a href="#os-main-correlation" class="os-link-anchor">
+          <img
+            src="/sites/all/themes/eliis/images/overview/wellCorrelationLink.jpg"
+            alt="Well Correlation" class="os-img-link"/>
+          <span class="os-label">Well Correlation</span>
+        </a>
+      </div>
+    </div>
+    <div class="os-col6 os-col">
+      <div class="os-col6 os-col">
+        <div id="os-horizons">
+          <a href="#os-main-horizons" class="os-link-anchor">
+            <img src="/sites/all/themes/eliis/images/overview/horizonsLink.jpg"
+                 alt="Horizons" class="os-img-link"/>
+            <span class="os-label">Horizons</span>
+          </a>
+        </div>
+      </div>
+      <div class="os-col6 os-col">
+        <div id="os-3D-geomodel">
+          <a href="#os-main-geomodel" class="os-link-anchor">
+            <img
+              src="/sites/all/themes/eliis/images/overview/3DGeomodelLink.jpg"
+              alt="3D Geomeodel" class="os-img-link"/>
+            <span class="os-label">3D Geomodels</span>
+          </a>
+        </div>
+      </div>
+      <!-- Grandes images ----------------------------------------------------->
+      <div class="os-col12 os-col" id="os-main-images">
+        <a href="" id="os-main-image" class="os-main-image">
+          <img src="/sites/all/themes/eliis/images/overview/paleoscanFull.png"
+               alt="Paleoscan overview"/>
+        </a>
+        <a href="http://www.coopernet.fr/" id="os-main-geobody"
+           class="os-main-image">
+          <img src="/sites/all/themes/eliis/images/overview/geobody.png"
+               alt="Paleoscan Geobody"/>
+        </a>
+        <a href="" id="os-main-correlation" class="os-main-image">
+          <img src="/sites/all/themes/eliis/images/overview/wellCorrelation.png"
+               alt="Paleoscan Well Correlation"/>
+        </a>
+        <a href="" id="os-main-horizons" class="os-main-image">
+          <img src="/sites/all/themes/eliis/images/overview/horizons.png"
+               alt="Paleoscan Horizons"/>
+        </a>
+        <a href="" id="os-main-geomodel" class="os-main-image">
+          <img src="/sites/all/themes/eliis/images/overview/3dGeomodel.png"
+               alt="Paleoscan 3D Geomodel"/>
+        </a>
+        <a href="" id="os-main-faults" class="os-main-image">
+          <img src="/sites/all/themes/eliis/images/overview/faults.png"
+               alt="Paleoscan Faults"/>
+        </a>
+        <a href="" id="os-main-attributes" class="os-main-image">
+          <img src="/sites/all/themes/eliis/images/overview/attributes.png"
+               alt="Paleoscan Attributes"/>
+        </a>
+      </div>
+    </div>
+    <!-- Fin des grandes images ----------------------------------------------->
+    <div class="os-col3 os-col">
+      <div id="os-faults">
+        <a href="#os-main-faults" class="os-link-anchor">
+          <img src="/sites/all/themes/eliis/images/overview/faultsLink.jpg"
+               alt="Faults" class="os-img-link"/>
+          <span class="os-label">Faults</span>
+        </a>
+      </div>
+      <div id="os-attributes">
+        <a href="#os-main-attributes" class="os-link-anchor">
+          <img
+            src="/sites/all/themes/eliis/images/overview/attributesLink.jpg"
+            alt="Attributes" class="os-img-link"/>
+          <span class="os-label">Attributes</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Dernière ligne ------------------------------------------------------->
+  <div class="os-row">
+    <div class="os-col3 os-col">
+      <a class="addon-overview-plus" href="">
+        <span class="green-add-on">Add On</span>
+        <span class="addon-overview-plus-title">Well Tie</span>
+      </a>
+    </div>
+
+    <div class="os-col3 os-col">
+      <a class="addon-overview-plus" href="">
+        <span class="green-add-on">Add On</span>
+        <span class="addon-overview-plus-title">Properties <br>Modeling</span>
+      </a>
+    </div>
+    <div class="os-col3 os-col">
+      <a class="addon-overview-plus" href="">
+        <span class="green-add-on">Add On</span>
+        <span
+          class="addon-overview-plus-title">Advanced<br>Interpretation</span>
+      </a>
+    </div>
+    <div class="os-col3 os-col">
+      <a class="addon-overview-plus" href="">
+        <span class="green-add-on">Add On</span>
+        <span class="addon-overview-plus-title">Petrel Link</span>
+      </a>
+    </div>
+  </div>
+
+
+</div>
+<!-- Menus bas ----------------------------------------------------------->
+<div class="links-bottom-wrapper">
+  <nav class="links-bottom">
+    <ul>
+      <li><a href="/products/download">Download</a></li>
+      <li><a href="/content/licence-request">Free Evaluation</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+</body>
+</html>
