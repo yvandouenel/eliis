@@ -19,4 +19,33 @@
     }
   }
 }
+.webform-component-optionsmarkup{
+  display: table;
+  > label{
+    display: table-cell;
+    width: 100%;
+    padding-right: 20px;
+  }
+  > .form-radios{
+    display: table-cell;
+    .webform-component{
+      display: table;
+      input[type=radio]{
+        position: inherit;
+        display: block;
+        float: left;
+      }
+      label{
+        display: block;
+        float: left;
+        width: auto;
+        padding: 0 0 0 5px;
+        margin: -22px 0 0 40px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+
 

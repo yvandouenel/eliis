@@ -1956,3 +1956,9 @@ body.page-user .main-container>.row .region-content{width:50%;margin:0 auto}
 .webform-component-radios .form-type-radio{position:relative;float:left;display:table;margin:0}
 .webform-component-radios .form-type-radio input[type=radio]{position:inherit;display:block;float:left}
 .webform-component-radios .form-type-radio label{display:block;float:left;width:auto;padding:0 0 0 5px;margin:-22px 0 0 40px;text-align:left}
+.webform-component-optionsmarkup{display:table}
+.webform-component-optionsmarkup>label{display:table-cell;width:100%;padding-right:20px}
+.webform-component-optionsmarkup>.form-radios{display:table-cell}
+.webform-component-optionsmarkup>.form-radios .webform-component{display:table}
+.webform-component-optionsmarkup>.form-radios .webform-component input[type=radio]{position:inherit;display:block;float:left}
+.webform-component-optionsmarkup>.form-radios .webform-component label{display:block;float:left;width:auto;padding:0 0 0 5px;margin:-22px 0 0 40px;text-align:left}
