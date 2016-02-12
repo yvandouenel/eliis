@@ -1,57 +1,97 @@
-.webform-component-radios{
-  .form-type-radio{
-    position: relative;
-    float: left;
-    display: table;
-    margin: 0;
-    input[type=radio]{
-      position: inherit;
-      display: block;
-      float: left;
-    }
+div.node-webform{
+
+  @media (min-width: @screen-md){
+    width: 50%;
+    margin: 0 auto;
     label{
-      display: block;
+      min-width: 200px;
+    }
+    .form-select{
+      margin-left: 225px;
+    }
+  }
+  input[type=text],input[type=email],select.form-select{
+    max-width: 300px;
+  }
+  /* select > option classique ***********************************/
+  .webform-component-select{
+    label{
+      padding-right: 20px;
+    }
+  }
+  /* boutons radios classiques ***********************************/
+  .webform-component-radios,.webform-component-checkboxes{
+    .form-type-radio{
+      position: relative;
       float: left;
-      width: auto;
-      padding: 0 0 0 5px;
-      margin: -22px 0 0 40px;
-      text-align: left;
-    }
-  }
-}
-.webform-component-optionsmarkup{
-  display: table;
-  margin-left: 3%;
-  > label{
-    display: table-cell;
-    width: 100%;
-    padding-right: 20px;
-    p{
-      margin-top: -32px;
-    }
-  }
-  > .form-radios{
-    display: table-cell;
-    .webform-component{
       display: table;
+      margin: 0;
       input[type=radio]{
         position: inherit;
         display: block;
         float: left;
-        margin-left: 0;
       }
       label{
         display: block;
         float: left;
-        width: auto;
         padding: 0 0 0 5px;
-        margin: -22px 0 0 10px;
+        margin: -22px 0 0 40px;
         text-align: left;
+      }
+    }
+    .form-type-checkbox{
+      position: relative;
+      float: none;
+      display: table;
+      margin: 0;
+      input[type=checkbox]{
+        position: inherit;
+        display: block;
+        float: left;
+      }
+      label{
+        display: block;
+        float: left;
+        padding: 0 0 0 5px;
+        margin: -22px 0 0 40px;
+        text-align: left;
+      }
+    }
+  }
+  /* boutons radios avec commentaires ***********************************/
+  .webform-component-optionsmarkup{
+    display: table;
+    margin-left: 3%;
+    > label{
+      display: table-cell;
+      padding-right: 20px;
+      p{
+        margin-top: -32px;
+      }
+    }
+    > .form-radios{
+      display: table-cell;
+      .webform-component{
+        display: table;
+        input[type=radio]{
+          position: inherit;
+          display: block;
+          float: left;
+          margin-left: 0;
+        }
+        label{
+          display: block;
+          float: left;
+          padding: 0 0 0 5px;
+          margin: -22px 0 0 15px;
+          text-align: left;
 
+        }
       }
     }
   }
 }
+
 
 
 

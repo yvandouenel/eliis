@@ -1953,13 +1953,22 @@ body.page-node.not-front.node-type-contact .main-container .region-content .grou
 body.page-node.not-front.node-type-contact .main-container .region-content .group-socail{margin-top:30px}
 body.page-user .main-container>.row .region-content{width:50%;margin:0 auto}
 .page-node .view-id-partenaires .views-row{float:left;margin-right:5px}
-.webform-component-radios .form-type-radio{position:relative;float:left;display:table;margin:0}
-.webform-component-radios .form-type-radio input[type=radio]{position:inherit;display:block;float:left}
-.webform-component-radios .form-type-radio label{display:block;float:left;width:auto;padding:0 0 0 5px;margin:-22px 0 0 40px;text-align:left}
-.webform-component-optionsmarkup{display:table;margin-left:3%}
-.webform-component-optionsmarkup>label{display:table-cell;width:100%;padding-right:20px}
-.webform-component-optionsmarkup>label p{margin-top:-32px}
-.webform-component-optionsmarkup>.form-radios{display:table-cell}
-.webform-component-optionsmarkup>.form-radios .webform-component{display:table}
-.webform-component-optionsmarkup>.form-radios .webform-component input[type=radio]{position:inherit;display:block;float:left;margin-left:0}
-.webform-component-optionsmarkup>.form-radios .webform-component label{display:block;float:left;width:auto;padding:0 0 0 5px;margin:-22px 0 0 10px;text-align:left}
+@media (min-width:992px){div.node-webform{width:50%;margin:0 auto}
+div.node-webform label{min-width:200px}
+div.node-webform .form-select{margin-left:225px}
+}
+div.node-webform input[type=email],div.node-webform input[type=text],div.node-webform select.form-select{max-width:300px}
+div.node-webform .webform-component-select label{padding-right:20px}
+div.node-webform .webform-component-checkboxes .form-type-radio,div.node-webform .webform-component-radios .form-type-radio{position:relative;float:left;display:table;margin:0}
+div.node-webform .webform-component-checkboxes .form-type-radio input[type=radio],div.node-webform .webform-component-radios .form-type-radio input[type=radio]{position:inherit;display:block;float:left}
+div.node-webform .webform-component-checkboxes .form-type-radio label,div.node-webform .webform-component-radios .form-type-radio label{display:block;float:left;padding:0 0 0 5px;margin:-22px 0 0 40px;text-align:left}
+div.node-webform .webform-component-checkboxes .form-type-checkbox,div.node-webform .webform-component-radios .form-type-checkbox{position:relative;float:none;display:table;margin:0}
+div.node-webform .webform-component-checkboxes .form-type-checkbox input[type=checkbox],div.node-webform .webform-component-radios .form-type-checkbox input[type=checkbox]{position:inherit;display:block;float:left}
+div.node-webform .webform-component-checkboxes .form-type-checkbox label,div.node-webform .webform-component-radios .form-type-checkbox label{display:block;float:left;padding:0 0 0 5px;margin:-22px 0 0 40px;text-align:left}
+div.node-webform .webform-component-optionsmarkup{display:table;margin-left:3%}
+div.node-webform .webform-component-optionsmarkup>label{display:table-cell;padding-right:20px}
+div.node-webform .webform-component-optionsmarkup>label p{margin-top:-32px}
+div.node-webform .webform-component-optionsmarkup>.form-radios{display:table-cell}
+div.node-webform .webform-component-optionsmarkup>.form-radios .webform-component{display:table}
+div.node-webform .webform-component-optionsmarkup>.form-radios .webform-component input[type=radio]{position:inherit;display:block;float:left;margin-left:0}
+div.node-webform .webform-component-optionsmarkup>.form-radios .webform-component label{display:block;float:left;padding:0 0 0 5px;margin:-22px 0 0 15px;text-align:left}
