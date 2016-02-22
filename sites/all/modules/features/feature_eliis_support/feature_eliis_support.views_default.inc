@@ -99,6 +99,13 @@ function feature_eliis_support_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page_videos_support');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Unfiltered text */
+  $handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area_text_custom']['content'] = '<h4>Soon available</h4>';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -571,6 +578,7 @@ function feature_eliis_support_views_default_views() {
   [field_video]
 </div>'),
     t('Page'),
+    t('<h4>Soon available</h4>'),
     t('<div id="video-[nid]" class="video-support-right">
   <div class="title-video-right">[title]</div>
   [field_video]
