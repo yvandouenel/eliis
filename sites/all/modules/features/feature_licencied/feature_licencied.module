@@ -44,3 +44,19 @@ function feature_licencied_menu_alter(&$items){
 function feature_licencied_ask_account(){
     drupal_goto('/node/17/');
 }
+
+/**
+ * Implements hook_field_collection_item_view().
+ */
+function feature_licencied_field_collection_item_view($field_collection_item, $view_mode, $langcode) {
+  if ($field_collection_item->field_name == 'field_files_to_download'
+    && isset($field_collection_item->content['field_color_link_download'][0]['#markup'])){
+    $color = $field_collection_item->content['field_color_link_download'][0]['#markup'];
+    unset($field_collection_item->content['field_color_link_download']);
+    if ($color == 'red'){
+      $field_collection_item->content['field_sofware'][0]['#prefix']= '<div class="red-download">';
+      $field_collection_item->content['field_sofware'][0]['#suffix']= '</div>';
+    }
+  }
+
+}
