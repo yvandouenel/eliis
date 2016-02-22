@@ -288,11 +288,11 @@ function feature_eliis_support_field_default_field_instances() {
     'description' => 'Years titles (201, 2015, 2014 ...) me be formated with "Titre 4"',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',

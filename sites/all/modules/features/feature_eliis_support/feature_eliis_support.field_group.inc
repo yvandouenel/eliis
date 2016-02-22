@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function feature_eliis_support_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -40,7 +40,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_api_database|node|support|default'] = $field_group;
+  $field_groups['group_api_database|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -72,7 +72,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_api_geomodel|node|support|default'] = $field_group;
+  $field_groups['group_api_geomodel|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -105,7 +105,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_api|node|support|default'] = $field_group;
+  $field_groups['group_api|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -133,7 +133,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_api|node|support|form'] = $field_group;
+  $field_groups['group_api|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -167,7 +167,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_cols_setup|node|support|default'] = $field_group;
+  $field_groups['group_cols_setup|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -200,7 +200,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_datalink|node|support|default'] = $field_group;
+  $field_groups['group_datalink|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -228,7 +228,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_datalink|node|support|form'] = $field_group;
+  $field_groups['group_datalink|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -260,7 +260,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_decision_space|field_collection_item|field_help_user_guide_decison_sp|default'] = $field_group;
+  $field_groups['group_decision_space|field_collection_item|field_help_user_guide_decison_sp|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -295,7 +295,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_global_col_1|node|support|default'] = $field_group;
+  $field_groups['group_global_col_1|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -308,7 +308,7 @@ function feature_eliis_support_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Help Files',
-    'weight' => '0',
+    'weight' => '2',
     'children' => array(
       0 => 'group_help_files',
     ),
@@ -327,7 +327,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_global_wrapper|node|support|default'] = $field_group;
+  $field_groups['group_global_wrapper|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -361,7 +361,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_help_files|node|support|default'] = $field_group;
+  $field_groups['group_help_files|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -393,7 +393,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_new_features|node|support|default'] = $field_group;
+  $field_groups['group_new_features|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -423,7 +423,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_new_features|node|support|form'] = $field_group;
+  $field_groups['group_new_features|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -456,7 +456,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_nf_api|node|support|default'] = $field_group;
+  $field_groups['group_nf_api|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -489,7 +489,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_nf_api|node|support|form'] = $field_group;
+  $field_groups['group_nf_api|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -522,7 +522,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_nf_datalink|node|support|default'] = $field_group;
+  $field_groups['group_nf_datalink|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -555,7 +555,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_nf_datalink|node|support|form'] = $field_group;
+  $field_groups['group_nf_datalink|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -588,7 +588,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_nf_paleoscan|node|support|default'] = $field_group;
+  $field_groups['group_nf_paleoscan|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -621,7 +621,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_nf_paleoscan|node|support|form'] = $field_group;
+  $field_groups['group_nf_paleoscan|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -655,7 +655,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_over_new_features|node|support|default'] = $field_group;
+  $field_groups['group_over_new_features|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -689,7 +689,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_over_rn|node|support|default'] = $field_group;
+  $field_groups['group_over_rn|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -721,7 +721,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_over_training|node|support|default'] = $field_group;
+  $field_groups['group_over_training|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -753,7 +753,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_paleoscan_col1|node|support|default'] = $field_group;
+  $field_groups['group_paleoscan_col1|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -785,7 +785,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_paleoscan_col2|node|support|default'] = $field_group;
+  $field_groups['group_paleoscan_col2|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -818,7 +818,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_paleoscan|node|support|default'] = $field_group;
+  $field_groups['group_paleoscan|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -846,7 +846,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_paleoscan|node|support|form'] = $field_group;
+  $field_groups['group_paleoscan|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -878,7 +878,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_petrel|field_collection_item|field_help_user_guide_petrel|default'] = $field_group;
+  $field_groups['group_petrel|field_collection_item|field_help_user_guide_petrel|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -906,7 +906,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_publications|node|support|form'] = $field_group;
+  $field_groups['group_publications|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -919,9 +919,10 @@ function feature_eliis_support_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'group publication',
-    'weight' => '3',
+    'weight' => '7',
     'children' => array(
       0 => 'field_support_publications',
+      1 => 'configuration_anchor',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -938,7 +939,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_publication|node|support|default'] = $field_group;
+  $field_groups['group_publication|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -970,7 +971,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_release_note|node|support|default'] = $field_group;
+  $field_groups['group_release_note|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1000,7 +1001,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_release_note|node|support|form'] = $field_group;
+  $field_groups['group_release_note|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1033,7 +1034,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_rn_api|node|support|default'] = $field_group;
+  $field_groups['group_rn_api|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1066,7 +1067,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_rn_api|node|support|form'] = $field_group;
+  $field_groups['group_rn_api|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1099,7 +1100,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_rn_datalink|node|support|default'] = $field_group;
+  $field_groups['group_rn_datalink|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1132,7 +1133,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_rn_datalink|node|support|form'] = $field_group;
+  $field_groups['group_rn_datalink|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1165,7 +1166,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_rn_paleoscan|node|support|default'] = $field_group;
+  $field_groups['group_rn_paleoscan|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1199,7 +1200,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_rn_paleoscan|node|support|form'] = $field_group;
+  $field_groups['group_rn_paleoscan|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1230,7 +1231,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_set_up|node|support|form'] = $field_group;
+  $field_groups['group_set_up|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1263,7 +1264,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_setup|node|support|default'] = $field_group;
+  $field_groups['group_setup|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1291,7 +1292,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_tabs|node|support|form'] = $field_group;
+  $field_groups['group_tabs|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1321,7 +1322,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_training_coc|node|support|form'] = $field_group;
+  $field_groups['group_training_coc|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1354,7 +1355,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_training_col1|node|support|default'] = $field_group;
+  $field_groups['group_training_col1|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1367,7 +1368,7 @@ function feature_eliis_support_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Training',
-    'weight' => '1',
+    'weight' => '4',
     'children' => array(
       0 => 'group_over_training',
     ),
@@ -1386,7 +1387,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_training_doc|node|support|default'] = $field_group;
+  $field_groups['group_training_doc|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1418,7 +1419,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_tuto_col1|node|support|default'] = $field_group;
+  $field_groups['group_tuto_col1|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1450,7 +1451,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_tuto_col2|node|support|default'] = $field_group;
+  $field_groups['group_tuto_col2|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1482,7 +1483,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_user_guide_decision|node|support|default'] = $field_group;
+  $field_groups['group_user_guide_decision|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1516,7 +1517,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_user_guide_over|node|support|default'] = $field_group;
+  $field_groups['group_user_guide_over|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1548,7 +1549,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_user_guide_petrel|node|support|default'] = $field_group;
+  $field_groups['group_user_guide_petrel|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1580,7 +1581,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_user_guide|field_collection_item|field_help_user_guide_paleoscan|default'] = $field_group;
+  $field_groups['group_user_guide|field_collection_item|field_help_user_guide_paleoscan|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1612,7 +1613,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_user_guide|node|support|default'] = $field_group;
+  $field_groups['group_user_guide|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1640,7 +1641,7 @@ function feature_eliis_support_field_group_info() {
       ),
     ),
   );
-  $export['group_user_guide|node|support|form'] = $field_group;
+  $field_groups['group_user_guide|node|support|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1653,7 +1654,7 @@ function feature_eliis_support_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'group video',
-    'weight' => '2',
+    'weight' => '6',
     'children' => array(
       0 => 'field_videos',
     ),
@@ -1672,7 +1673,7 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_video_wrapper|node|support|default'] = $field_group;
+  $field_groups['group_video_wrapper|node|support|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1703,7 +1704,50 @@ function feature_eliis_support_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_videos|node|support|form'] = $field_group;
+  $field_groups['group_videos|node|support|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('API');
+  t('DATALINK');
+  t('Datalink');
+  t('Decision Space');
+  t('Help Files');
+  t('Help Files wrapper');
+  t('New Features');
+  t('Paleoscan');
+  t('Petrel');
+  t('Presentation');
+  t('Publications');
+  t('Release Note');
+  t('Set Up');
+  t('Set up');
+  t('Tabs');
+  t('Training');
+  t('Tutorial');
+  t('User\'s guide');
+  t('Videos');
+  t('group api database');
+  t('group api geomodel');
+  t('group cols setup');
+  t('group nf API');
+  t('group nf datalink');
+  t('group nf paleoscan');
+  t('group over new features');
+  t('group over release note');
+  t('group over training');
+  t('group paleoscan col1');
+  t('group paleoscan col2');
+  t('group publication');
+  t('group rn api');
+  t('group rn datalink');
+  t('group rn paleoscan');
+  t('group training col1');
+  t('group user guide decision');
+  t('group user guide over');
+  t('group user guide petrel');
+  t('group video');
+  t('groupe global col1');
+
+  return $field_groups;
 }
