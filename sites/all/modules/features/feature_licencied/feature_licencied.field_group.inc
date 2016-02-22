@@ -728,6 +728,7 @@ function feature_licencied_field_group_info() {
     'children' => array(
       0 => 'field_sofware',
       1 => 'field_sofware_description',
+      2 => 'field_color_link_download',
     ),
     'format_type' => 'div',
     'format_settings' => array(
