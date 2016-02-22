@@ -1867,7 +1867,7 @@ body.node-type-news input,body.node-type-news select{width:250px}
 #overview-scheme .os-col12{width:100%}
 #overview-scheme #os-attributes,#overview-scheme #os-faults,#overview-scheme #os-geobody,#overview-scheme #os-well-correlation{margin-top:100px}
 #overview-scheme #os-attributes,#overview-scheme #os-geobody{text-align:right}
-#overview-scheme .addon-overview-plus:before,body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file a:after{font-family:fontello;font-style:normal;font-weight:400;speak:none;text-align:center;font-variant:normal;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+#overview-scheme .addon-overview-plus:before,body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file .red-download a:after{font-family:fontello;font-style:normal;font-weight:400;speak:none;text-align:center;font-variant:normal;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 #overview-scheme #os-3D-geomodel,#overview-scheme #os-horizons,#overview-scheme .addon-overview-plus{display:table;margin:0 auto}
 #overview-scheme .addon-overview-plus:before{position:relative;top:1px;font-size:1em;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;line-height:1em;content:"\e83e";color:#90c02c;float:left}
 #overview-scheme .addon-overview-plus span.green-add-on{color:#90c02c;display:table}
@@ -1921,8 +1921,8 @@ body.page-node.not-front.node-type-licensed-page .main-container .region-content
 @media (max-width:970px){body.page-node.not-front.node-type-licensed-page .main-container .region-content{padding:0 5px}
 }
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .field-collection-container,body.page-node.not-front.node-type-licensed-page .main-container .region-content .field-name-field-paleoscan-tm,body.page-node.not-front.node-type-licensed-page .main-container .region-content h3{padding-left:20px}
-body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file a{color:#8e1004;font-size:1.4em}
-body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file a:after{position:relative;top:1px;font-size:1em;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;line-height:1em;color:#8e1004}
+body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file .red-download a{color:#8e1004;font-size:1.4em}
+body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file .red-download a:after{position:relative;top:1px;font-size:1em;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;line-height:1em;color:#8e1004}
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware h3{padding-right:65px;background:url(../images/icons/exe.png) 100% 50% no-repeat;display:table;line-height:3em}
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware h3 span:after{content:'';display:block;height:1px;border-top:2px solid #828282;width:165%;position:relative;top:-17px;left:-50px}
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .field-name-field-sofware-description{font-size:.8em;font-style:italic;padding-top:3px}
