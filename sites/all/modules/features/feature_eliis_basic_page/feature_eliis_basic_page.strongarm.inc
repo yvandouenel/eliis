@@ -67,22 +67,22 @@ function feature_eliis_basic_page_strongarm() {
         ),
       ),
       'display' => array(
-        'sharethis' => array(
-          'default' => array(
-            'weight' => '10',
-            'visible' => TRUE,
-          ),
-        ),
         'extra_field_customers' => array(
           'default' => array(
-            'weight' => '0',
+            'weight' => '1',
             'visible' => TRUE,
           ),
         ),
         'extra_field_academics' => array(
           'default' => array(
-            'weight' => '0',
+            'weight' => '2',
             'visible' => TRUE,
+          ),
+        ),
+        'sharethis' => array(
+          'default' => array(
+            'weight' => '6',
+            'visible' => FALSE,
           ),
         ),
       ),
