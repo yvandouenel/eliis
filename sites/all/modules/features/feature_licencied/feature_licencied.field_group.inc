@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function feature_licencied_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -41,7 +41,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_api|node|licensed_page|default'] = $field_group;
+  $field_groups['group_api|node|licensed_page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -70,7 +70,7 @@ function feature_licencied_field_group_info() {
       ),
     ),
   );
-  $export['group_api|node|licensed_page|form'] = $field_group;
+  $field_groups['group_api|node|licensed_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -83,10 +83,9 @@ function feature_licencied_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'group configuration',
-    'weight' => '10',
+    'weight' => '12',
     'children' => array(
       0 => 'field_configuration',
-      1 => 'configuration_anchor',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -103,7 +102,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_configuration|node|licensed_page|default'] = $field_group;
+  $field_groups['group_configuration|node|licensed_page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -131,7 +130,7 @@ function feature_licencied_field_group_info() {
       ),
     ),
   );
-  $export['group_configuration|node|licensed_page|form'] = $field_group;
+  $field_groups['group_configuration|node|licensed_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -164,7 +163,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_datalink|node|licensed_page|default'] = $field_group;
+  $field_groups['group_datalink|node|licensed_page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -193,7 +192,7 @@ function feature_licencied_field_group_info() {
       ),
     ),
   );
-  $export['group_datalink|node|licensed_page|form'] = $field_group;
+  $field_groups['group_datalink|node|licensed_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -226,7 +225,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_decision_space|node|licensed_page|default'] = $field_group;
+  $field_groups['group_decision_space|node|licensed_page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -259,7 +258,7 @@ function feature_licencied_field_group_info() {
       ),
     ),
   );
-  $export['group_decision_space|node|licensed_page|form'] = $field_group;
+  $field_groups['group_decision_space|node|licensed_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -287,7 +286,7 @@ function feature_licencied_field_group_info() {
       ),
     ),
   );
-  $export['group_flexnet_external_drivers|node|licensed_page|form'] = $field_group;
+  $field_groups['group_flexnet_external_drivers|node|licensed_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -318,7 +317,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_licence_request|node|licensed_page|form'] = $field_group;
+  $field_groups['group_licence_request|node|licensed_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -350,7 +349,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_license_request|node|licensed_page|default'] = $field_group;
+  $field_groups['group_license_request|node|licensed_page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -383,7 +382,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_paleoscan_db|node|licensed_page|default'] = $field_group;
+  $field_groups['group_paleoscan_db|node|licensed_page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -417,7 +416,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_paleoscan_db|node|licensed_page|form'] = $field_group;
+  $field_groups['group_paleoscan_db|node|licensed_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -450,7 +449,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_paleoscan_geomodel|node|licensed_page|default'] = $field_group;
+  $field_groups['group_paleoscan_geomodel|node|licensed_page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -483,7 +482,7 @@ function feature_licencied_field_group_info() {
       ),
     ),
   );
-  $export['group_paleoscan_geomodel|node|licensed_page|form'] = $field_group;
+  $field_groups['group_paleoscan_geomodel|node|licensed_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -516,7 +515,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_paleoscan|node|licensed_page|default'] = $field_group;
+  $field_groups['group_paleoscan|node|licensed_page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -546,7 +545,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_paleoscan|node|licensed_page|form'] = $field_group;
+  $field_groups['group_paleoscan|node|licensed_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -579,7 +578,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_petrel|node|licensed_page|default'] = $field_group;
+  $field_groups['group_petrel|node|licensed_page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -612,7 +611,7 @@ function feature_licencied_field_group_info() {
       ),
     ),
   );
-  $export['group_petrel|node|licensed_page|form'] = $field_group;
+  $field_groups['group_petrel|node|licensed_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -646,7 +645,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_same_height_2|node|licensed_page|default'] = $field_group;
+  $field_groups['group_same_height_2|node|licensed_page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -659,7 +658,7 @@ function feature_licencied_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'group external drivers',
-    'weight' => '9',
+    'weight' => '10',
     'children' => array(
       0 => 'field_external_drivers',
     ),
@@ -678,7 +677,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_same_height_3|node|licensed_page|default'] = $field_group;
+  $field_groups['group_same_height_3|node|licensed_page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -712,7 +711,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_same_height|node|licensed_page|default'] = $field_group;
+  $field_groups['group_same_height|node|licensed_page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -745,7 +744,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_sofware|field_collection_item|field_files_to_download|default'] = $field_group;
+  $field_groups['group_sofware|field_collection_item|field_files_to_download|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -777,7 +776,7 @@ function feature_licencied_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_sofware|node|licensed_page|default'] = $field_group;
+  $field_groups['group_sofware|node|licensed_page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -808,7 +807,7 @@ function feature_licencied_field_group_info() {
       ),
     ),
   );
-  $export['group_sofware|node|licensed_page|form'] = $field_group;
+  $field_groups['group_sofware|node|licensed_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -838,7 +837,29 @@ function feature_licencied_field_group_info() {
       ),
     ),
   );
-  $export['group_text_intro|node|licensed_page|form'] = $field_group;
+  $field_groups['group_text_intro|node|licensed_page|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('API');
+  t('Configuration');
+  t('DATALINK');
+  t('DecisionSpace');
+  t('Flexnet/External Drivers');
+  t('Introduction texts');
+  t('Licensing');
+  t('PaleoScan');
+  t('PaleoScan Geomodel');
+  t('Paleoscan');
+  t('Paleoscan Database');
+  t('Paleoscan Geomodel');
+  t('Petrel');
+  t('Software');
+  t('group configuration');
+  t('group external drivers');
+  t('group sofware');
+  t('same height');
+  t('same height 2');
+
+  return $field_groups;
 }

@@ -1,4 +1,4 @@
-name = Feature licencied
+name = Feature download licencied
 core = 7.x
 package = Eliis
 version = 7.x-1.0
@@ -9,6 +9,7 @@ dependencies[] = field_collection
 dependencies[] = field_group
 dependencies[] = file
 dependencies[] = list
+dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = text
 features[ctools][] = field_group:field_group:1

@@ -125,12 +125,12 @@ function feature_licencied_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_sofware',
-    'label' => 'Sofware',
+    'label' => 'Software',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
       'file_directory' => 'licensed',
-      'file_extensions' => 'txt exe doc pdf',
+      'file_extensions' => 'txt exe doc pdf msi',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -285,12 +285,12 @@ function feature_licencied_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_sofware',
-    'label' => 'Sofware',
+    'label' => 'Software',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
       'file_directory' => 'licensed',
-      'file_extensions' => 'txt doc pdf exe docx',
+      'file_extensions' => 'txt exe doc pdf msi',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -405,12 +405,12 @@ function feature_licencied_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_sofware',
-    'label' => 'Sofware',
+    'label' => 'Software',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
       'file_directory' => 'licensed',
-      'file_extensions' => 'txt doc pdf exe docx',
+      'file_extensions' => 'txt exe doc pdf msi',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -525,12 +525,12 @@ function feature_licencied_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_sofware',
-    'label' => 'Sofware',
+    'label' => 'Software',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
       'file_directory' => 'licensed',
-      'file_extensions' => 'txt doc pdf exe docx',
+      'file_extensions' => 'txt exe doc pdf msi zip',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -645,12 +645,12 @@ function feature_licencied_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_sofware',
-    'label' => 'Sofware',
+    'label' => 'Software',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
       'file_directory' => 'licensed',
-      'file_extensions' => 'txt doc pdf exe docx',
+      'file_extensions' => 'txt exe doc pdf msi zip docx',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -1539,7 +1539,7 @@ function feature_licencied_field_default_field_instances() {
   t('Petrel');
   t('Public description');
   t('Release notes');
-  t('Sofware');
+  t('Software');
   t('Sofware description');
   t('Text only anonymous');
   t('Text only licensed');
