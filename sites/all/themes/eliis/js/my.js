@@ -50,7 +50,7 @@ jQuery(function($) {
             }, 250));
         });
     }
-
+    // Gestion du click sur les ancres
     $('a[href^="#"]').click(function(event) {
         //console.log("entrée sur click d'ancre");
         if($(this).attr("class").indexOf("contextual-links-trigger") != 0){
