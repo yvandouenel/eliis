@@ -204,7 +204,7 @@ function feature_licencied_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_datalink';
   $field_group->data = array(
-    'label' => 'DecisionSpace',
+    'label' => 'DecisionSpace Plug-in',
     'weight' => '18',
     'children' => array(
       0 => 'field_decisionspace',
@@ -212,7 +212,7 @@ function feature_licencied_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'DecisionSpace',
+      'label' => 'DecisionSpace Plug-in',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-decision-space field-group-div col-md-6',
@@ -361,7 +361,7 @@ function feature_licencied_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_api';
   $field_group->data = array(
-    'label' => 'Paleoscan Database',
+    'label' => 'PaleoScan Database',
     'weight' => '21',
     'children' => array(
       0 => 'field_paleoscan_database',
@@ -369,7 +369,7 @@ function feature_licencied_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Paleoscan Database',
+      'label' => 'PaleoScan Database',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-paleoscan-db field-group-div col-md-6',
@@ -557,7 +557,7 @@ function feature_licencied_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_datalink';
   $field_group->data = array(
-    'label' => 'Petrel',
+    'label' => 'Petrel Plug-in',
     'weight' => '17',
     'children' => array(
       0 => 'field_petrel',
@@ -565,7 +565,7 @@ function feature_licencied_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Petrel',
+      'label' => 'Petrel Plug-in',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-petrel field-group-div col-md-6',
@@ -846,15 +846,18 @@ function feature_licencied_field_group_info() {
   t('Configuration');
   t('DATALINK');
   t('DecisionSpace');
+  t('DecisionSpace Plug-in');
   t('Flexnet/External Drivers');
   t('Introduction texts');
   t('Licensing');
   t('PaleoScan');
+  t('PaleoScan Database');
   t('PaleoScan Geomodel');
   t('Paleoscan');
   t('Paleoscan Database');
   t('Paleoscan Geomodel');
   t('Petrel');
+  t('Petrel Plug-in');
   t('Software');
   t('group configuration');
   t('group external drivers');
