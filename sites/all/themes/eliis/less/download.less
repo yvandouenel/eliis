@@ -6,15 +6,24 @@ body.page-node.not-front.node-type-licensed-page .main-container .region-content
   h3, .field-name-field-paleoscan-tm, .field-collection-container{
     padding-left: 20px;
   }
+  
     .group-sofware{
     /* private files ******************************************************************************************************/
-    .group-paleoscan .private-file .red-download{
-      a{
-        color: @rouge-eliis;
-        font-size: 1.3em;
-        &:before {
-          .glyphicon();
+    .group-paleoscan {
+      .paleoscan-sup-label{
+        margin: 20px;
+      }
+      > p{
+        margin-left: 20px;
+      }
+      .private-file .red-download{
+        a{
           color: @rouge-eliis;
+          font-size: 1.3em;
+          &:before {
+            .glyphicon();
+            color: @rouge-eliis;
+          }
         }
       }
     }

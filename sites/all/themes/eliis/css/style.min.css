@@ -1922,6 +1922,8 @@ body.page-node.not-front.node-type-licensed-page .main-container .region-content
 @media (max-width:970px){body.page-node.not-front.node-type-licensed-page .main-container .region-content{padding:0 5px}
 }
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .field-collection-container,body.page-node.not-front.node-type-licensed-page .main-container .region-content .field-name-field-paleoscan-tm,body.page-node.not-front.node-type-licensed-page .main-container .region-content h3{padding-left:20px}
+body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .paleoscan-sup-label{margin:20px}
+body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan>p{margin-left:20px}
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file .red-download a{color:#8e1004;font-size:1.3em}
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware .group-paleoscan .private-file .red-download a:before{position:relative;top:1px;font-size:1em;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;line-height:1em;color:#8e1004}
 body.page-node.not-front.node-type-licensed-page .main-container .region-content .group-sofware h3{padding-right:65px;background:url(../images/icons/exe.png) 100% 50% no-repeat;display:table;line-height:3em}
