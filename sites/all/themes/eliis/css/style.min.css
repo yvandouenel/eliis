@@ -1715,6 +1715,10 @@ body.front #main-nav>ul>li>a#main-menu-paleoscan{padding-left:40px;background:ur
 body.front #main-nav>ul>li>a#main-menu-services{padding-left:45px;background:url(../images/icons/icon-services-small.png) 0 49% no-repeat;padding-right:15px}
 body.front #main-nav>ul>li>a#main-menu-support{padding-left:45px;background:url(../images/icons/icon-support-small.png) 0 50% no-repeat}
 body.front #main-nav>ul>li .active,body.front #main-nav>ul>li .active-trail{background-color:#e1e1e1}
+@media (max-width:768px){body.front #main-nav>ul>li>a{height:auto;padding:5px}
+body.front #main-nav>ul>li>a#main-menu-paleoscan,body.front #main-nav>ul>li>a#main-menu-services,body.front #main-nav>ul>li>a#main-menu-support{padding:25px 0 25px 50px}
+.navbar-nav{margin:7.5px 15px}
+}
 body.not-front #h1-logo img{width:60%}
 body.not-front #main-nav>ul>li>a{height:60px;padding-top:20px}
 body.not-front #main-nav>ul>li>a#main-menu-paleoscan{padding-left:40px;background:url(../images/icons/icon-paleoscan-small.png) 0 50% no-repeat;padding-right:15px}

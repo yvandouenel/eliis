@@ -73,16 +73,30 @@ body.role-webmaster{
     background: url(../images/icons/icon-support-small.png) no-repeat 0 50%;
   }
 }
+
 body.front #main-nav > ul > li {
   > a{
     height: 90px;
     padding-top: 40px;
     .addicons();
+    @media (max-width: @screen-sm){
+      height: auto;
+      padding: 5px;
+      &#main-menu-paleoscan, &#main-menu-services, &#main-menu-support{
+        padding: 25px 0 25px 50px
+      }
+    }
   }
   .active-trail, .active{
     background-color: @gris-menus-hauts;
   }
 }
+.navbar-nav {
+  @media (max-width:@screen-sm){
+    margin: 7.5px 15px;
+  }
+}
+/* Fin des menus ******************************************************************************************************/
 body.not-front{
   #h1-logo img{
     width: 60%;
