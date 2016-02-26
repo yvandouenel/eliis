@@ -15,37 +15,41 @@ jQuery(function($) {
             $.data(this, 'scrollTimer', setTimeout(function() {
                 // Récupération de la position du haut du menu :
                 // c'est uniquement elle qui change s'il n'y a pas de redimensionnement de la page
+              if ($('#fixed-right-menu').length) {
+
+
                 var top_menu_position_offset = $('#fixed-right-menu').offset();
                 menu_top_position = top_menu_position_offset.top;
-                console.log( "position du haut du menu : " + menu_top_position);
+                console.log("position du haut du menu : " + menu_top_position);
 
                 // Comparaison avec les positions des ancres
-              /**
-               * Plutôt que de comparer les positions des éléments, if faudrait
-               * que je sache qui doit être sélectionné et que je modifie la
-               * position du block des ancres et que je donne la class "selected-link"
-               * au lien concerné
-               */
+                /**
+                 * Plutôt que de comparer les positions des éléments, if faudrait
+                 * que je sache qui doit être sélectionné et que je modifie la
+                 * position du block des ancres et que je donne la class "selected-link"
+                 * au lien concerné
+                 */
                 var link_menu_selected = false;
-                $('.anchor_product').each(function( index ) {
-                    link_menu_selected = false;
-                    var position_ancre = $( this ).offset();
-                    console.log( "position des ancres aaa : " + position_ancre.top );
+                $('.anchor_product').each(function (index) {
+                  link_menu_selected = false;
+                  var position_ancre = $(this).offset();
+                  console.log("position des ancres aaa : " + position_ancre.top);
 
 
-                    if(menu_top_position < position_ancre.top){
-                        //console.log( "Mettre en selected le lien " + (index-1) + ' du menu.');
-                        $('a.link-fixed-right-menu').removeClass( "selected-link" );
-                        link_menu[(index-1)].addClass( "selected-link" );
-                        link_menu_selected = true;
-                        return false;
-                    }
+                  if (menu_top_position < position_ancre.top) {
+                    //console.log( "Mettre en selected le lien " + (index-1) + ' du menu.');
+                    $('a.link-fixed-right-menu').removeClass("selected-link");
+                    link_menu[(index - 1)].addClass("selected-link");
+                    link_menu_selected = true;
+                    return false;
+                  }
                 });
-                if (!link_menu_selected){
-                    //console.log( "Mettre en selected le lien " + (link_menu.length-1) + ' du menu.');
-                    $('a.link-fixed-right-menu').removeClass( "selected-link" );
-                    link_menu[(link_menu.length-1)].addClass( "selected-link" );
+                if (!link_menu_selected) {
+                  //console.log( "Mettre en selected le lien " + (link_menu.length-1) + ' du menu.');
+                  $('a.link-fixed-right-menu').removeClass("selected-link");
+                  link_menu[(link_menu.length - 1)].addClass("selected-link");
                 }
+              }
                 //console.log("Haven't scrolled in 250ms!");
             }, 250));
         });
@@ -218,6 +222,7 @@ Login in lightbox
    * Gestion du survol des images sur la page Paleoscan overview
    */
   if($('.os-link-anchor').length){
+    console.log("Gestion du survol des images sur la page Paleoscan overview");
     var target_id, final_target, timer;
     displayFirstImage();
 
@@ -243,10 +248,12 @@ Login in lightbox
       location.href = final_target;
       return false;
     });
-    function displayFirstImage(){
-      $(".os-main-image").hide();
-      $("#os-main-image").show();
-    }
+
+  }
+  function displayFirstImage(){
+    console.log("effacement des images");
+    $(".os-main-image").hide();
+    $("#os-main-image").show();
   }
 
 });
