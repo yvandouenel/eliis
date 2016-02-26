@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function core_application_feature_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -38,7 +38,7 @@ function core_application_feature_field_group_info() {
       ),
     ),
   );
-  $export['group_3_columns|node|add_on_module|form'] = $field_group;
+  $field_groups['group_3_columns|node|add_on_module|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -70,7 +70,7 @@ function core_application_feature_field_group_info() {
       'formatter' => 'collapsed',
     ),
   );
-  $export['group_add_on_menu|node|paleoscan_overview|default'] = $field_group;
+  $field_groups['group_add_on_menu|node|paleoscan_overview|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -103,7 +103,7 @@ function core_application_feature_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_add_on|node|paleoscan_overview|default'] = $field_group;
+  $field_groups['group_add_on|node|paleoscan_overview|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -137,7 +137,7 @@ function core_application_feature_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_col_3|node|add_on_module|teaser'] = $field_group;
+  $field_groups['group_col_3|node|add_on_module|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -169,7 +169,7 @@ function core_application_feature_field_group_info() {
       'formatter' => 'collapsed',
     ),
   );
-  $export['group_core_application_menu|node|paleoscan_overview|default'] = $field_group;
+  $field_groups['group_core_application_menu|node|paleoscan_overview|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -202,7 +202,7 @@ function core_application_feature_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_core_application|node|paleoscan_overview|default'] = $field_group;
+  $field_groups['group_core_application|node|paleoscan_overview|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -231,7 +231,7 @@ function core_application_feature_field_group_info() {
       ),
     ),
   );
-  $export['group_gallery_left_text_right|node|core_application_feature|form'] = $field_group;
+  $field_groups['group_gallery_left_text_right|node|core_application_feature|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -264,7 +264,7 @@ function core_application_feature_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_introductions|node|paleoscan_overview|default'] = $field_group;
+  $field_groups['group_introductions|node|paleoscan_overview|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -293,7 +293,7 @@ function core_application_feature_field_group_info() {
       ),
     ),
   );
-  $export['group_left_text_right_gallery|node|add_on_module|form'] = $field_group;
+  $field_groups['group_left_text_right_gallery|node|add_on_module|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -319,7 +319,7 @@ function core_application_feature_field_group_info() {
       ),
     ),
   );
-  $export['group_menus_products|node|paleoscan_overview|form'] = $field_group;
+  $field_groups['group_menus_products|node|paleoscan_overview|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -346,7 +346,7 @@ function core_application_feature_field_group_info() {
       ),
     ),
   );
-  $export['group_menus_sofware|node|paleoscan_overview|form'] = $field_group;
+  $field_groups['group_menus_sofware|node|paleoscan_overview|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -372,7 +372,7 @@ function core_application_feature_field_group_info() {
       ),
     ),
   );
-  $export['group_tabs|node|add_on_module|form'] = $field_group;
+  $field_groups['group_tabs|node|add_on_module|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -401,7 +401,7 @@ function core_application_feature_field_group_info() {
       ),
     ),
   );
-  $export['group_text_left_gallery_right|node|core_application_feature|form'] = $field_group;
+  $field_groups['group_text_left_gallery_right|node|core_application_feature|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -434,7 +434,7 @@ function core_application_feature_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text_left|node|add_on_module|teaser'] = $field_group;
+  $field_groups['group_text_left|node|add_on_module|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -467,7 +467,7 @@ function core_application_feature_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text_left|node|core_application_feature|default'] = $field_group;
+  $field_groups['group_text_left|node|core_application_feature|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -500,7 +500,7 @@ function core_application_feature_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text_left|node|core_application_feature|teaser'] = $field_group;
+  $field_groups['group_text_left|node|core_application_feature|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -526,7 +526,7 @@ function core_application_feature_field_group_info() {
       ),
     ),
   );
-  $export['group_text_position|node|core_application_feature|form'] = $field_group;
+  $field_groups['group_text_position|node|core_application_feature|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -559,7 +559,7 @@ function core_application_feature_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text_right|node|core_application_feature|default'] = $field_group;
+  $field_groups['group_text_right|node|core_application_feature|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -592,7 +592,7 @@ function core_application_feature_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text_right|node|core_application_feature|teaser'] = $field_group;
+  $field_groups['group_text_right|node|core_application_feature|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -625,7 +625,29 @@ function core_application_feature_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_title_intro|node|add_on_module|teaser'] = $field_group;
+  $field_groups['group_title_intro|node|add_on_module|teaser'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('3 columns');
+  t('Add-on Modules');
+  t('Core Application');
+  t('Gallery left - Text right');
+  t('Group text right');
+  t('Left text - right gallery');
+  t('Menus');
+  t('Menus software');
+  t('Tabs');
+  t('Text left - Gallery right');
+  t('Text position');
+  t('group add-on');
+  t('group col 3');
+  t('group core application');
+  t('group introductions');
+  t('group text left');
+  t('group text left ');
+  t('group text right');
+  t('group title intro');
+
+  return $field_groups;
 }
