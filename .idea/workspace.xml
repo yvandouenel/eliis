@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed02d4fa-e028-4fc4-abd9-1f47596dfc9e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/eliis/less/events-page.less" afterPath="$PROJECT_DIR$/sites/all/themes/eliis/less/events-page.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/eliis/less/header.less" afterPath="$PROJECT_DIR$/sites/all/themes/eliis/less/header.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/eliis/css/style.min.css" afterPath="$PROJECT_DIR$/sites/all/themes/eliis/css/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="eliis.iws" />
@@ -186,8 +184,8 @@
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/fontello.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/download.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/templates/page.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/header.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/events-page.less" />
+        <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/header.less" />
       </list>
     </option>
   </component>
