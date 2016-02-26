@@ -1602,7 +1602,7 @@ table.table-configuration td,table.table-configuration th{padding:5px;border:4px
 .bg-bleu-clair{background-color:#e5f0f2}
 .vert-fonce{color:#076c06}
 .vert-mi-fonce{color:#30952f}
-h1,h2,h3,h4{font-family:walk,arial}
+h1,h2,h3{font-family:walk,arial}
 h2.page-header{margin-top:55px}
 .line_under_h3{display:block;border-top:2px solid #828282;width:165%;position:relative;top:-17px;left:-50px}
 .small-pdf-right,.small-ppt-right{display:inline-block;line-height:30px;padding-right:50px}
