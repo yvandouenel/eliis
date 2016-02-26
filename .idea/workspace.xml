@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed02d4fa-e028-4fc4-abd9-1f47596dfc9e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/eliis/less/header.less" afterPath="$PROJECT_DIR$/sites/all/themes/eliis/less/header.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/eliis/less/download.less" afterPath="$PROJECT_DIR$/sites/all/themes/eliis/less/download.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="eliis.iws" />
@@ -31,18 +31,18 @@
       <file leaf-file-name="base.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/less/base.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="185" column="17" selection-start-line="185" selection-start-column="17" selection-end-line="185" selection-end-column="17" />
+            <state vertical-scroll-proportion="-9.333333">
+              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/less/forms.less">
+      <file leaf-file-name="field_group.module" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/field_group/field_group.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+            <state vertical-scroll-proportion="-7.259259">
+              <caret line="556" column="93" selection-start-line="556" selection-start-column="93" selection-end-line="556" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -58,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="download.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="download.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/less/download.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.21428572">
+              <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -91,17 +91,30 @@
       <file leaf-file-name="my.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/js/my.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="7" selection-start-line="53" selection-start-column="4" selection-end-line="69" selection-end-column="7" />
+            <state vertical-scroll-proportion="-27.258064">
+              <caret line="256" column="3" selection-start-line="256" selection-start-column="3" selection-end-line="256" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/masquerade/README.txt">
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/less/header.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.670068">
+            <state vertical-scroll-proportion="-14.592592">
               <caret line="53" column="2" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
               <folding />
             </state>
@@ -113,16 +126,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-9.592592">
               <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/less/style.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -151,7 +154,6 @@
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/galleria.less" />
         <option value="$PROJECT_DIR$/sites/all/libraries/galleria/galleria-1.4.2.min.js" />
         <option value="$PROJECT_DIR$/sites/all/modules/features/core_application_feature/core_application_feature.module" />
-        <option value="$PROJECT_DIR$/sites/all/modules/contrib/field_group/field_group.module" />
         <option value="$PROJECT_DIR$/sites/all/modules/features/feature_eliis_support/feature_eliis_support.module" />
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/js/diaporama_video.js" />
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/template.php" />
@@ -176,16 +178,17 @@
         <option value="$PROJECT_DIR$/sites/all/modules/features/feature_eliis_basic_page/feature_eliis_basic_page.js" />
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/basic_page.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/custom_variables.less" />
-        <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/base.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/style.less" />
-        <option value="$PROJECT_DIR$/sites/all/themes/eliis/js/my.js" />
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/forms.less" />
         <option value="$PROJECT_DIR$/sites/all/modules/features/feature_licencied/feature_licencied.module" />
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/fontello.less" />
-        <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/download.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/templates/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/events-page.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/header.less" />
+        <option value="$PROJECT_DIR$/sites/all/themes/eliis/js/my.js" />
+        <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/base.less" />
+        <option value="$PROJECT_DIR$/sites/all/modules/contrib/field_group/field_group.module" />
+        <option value="$PROJECT_DIR$/sites/all/themes/eliis/less/download.less" />
       </list>
     </option>
   </component>
@@ -556,7 +559,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.381979" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2498618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3375" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -586,13 +589,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/less/licensed.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/js/my.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -653,13 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="74" column="16" selection-start-line="47" selection-start-column="2" selection-end-line="74" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/field_group/field_group.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="550" column="33" selection-start-line="550" selection-start-column="33" selection-end-line="550" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -875,26 +864,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/less/base.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="185" column="17" selection-start-line="185" selection-start-column="17" selection-end-line="185" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/less/style.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/js/my.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="7" selection-start-line="53" selection-start-column="4" selection-end-line="69" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -923,14 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/less/download.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/templates/page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.962963">
@@ -949,8 +914,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/less/header.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.670068">
+        <state vertical-scroll-proportion="-14.592592">
           <caret line="53" column="2" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/js/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.258064">
+          <caret line="256" column="3" selection-start-line="256" selection-start-column="3" selection-end-line="256" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/masquerade/README.txt">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/less/base.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.333333">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/field_group/field_group.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.259259">
+          <caret line="556" column="93" selection-start-line="556" selection-start-column="93" selection-end-line="556" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/eliis/less/download.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21428572">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
           <folding />
         </state>
       </provider>
