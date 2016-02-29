@@ -42,7 +42,7 @@ function feature_licencied_menu_alter(&$items){
 }
 
 function feature_licencied_ask_account(){
-    drupal_goto('/node/17/');
+    drupal_goto('/node/120/');
 }
 
 /**
