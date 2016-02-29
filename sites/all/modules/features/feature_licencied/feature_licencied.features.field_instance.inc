@@ -1241,7 +1241,7 @@ function feature_licencied_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 24,
+      'weight' => 25,
     ),
   );
 
@@ -1425,6 +1425,60 @@ function feature_licencied_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-licensed_page-field_set_up'
+  $field_instances['node-licensed_page-field_set_up'] = array(
+    'bundle' => 'licensed_page',
+    'default_value' => array(
+      0 => array(
+        'value' => '<p>Text here</p>
+<div class="row">
+<div class="col-md-4><p>First column</p></div>
+<div class="col-md-4><p>Second column</p></div>
+<div class="col-md-4><p>Third column</p></div>
+</div>',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_set_up',
+    'label' => 'Set up',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 30,
+    ),
+  );
+
   // Exported field_instance: 'node-licensed_page-field_text_only_anonymous'
   $field_instances['node-licensed_page-field_text_only_anonymous'] = array(
     'bundle' => 'licensed_page',
@@ -1539,6 +1593,7 @@ function feature_licencied_field_default_field_instances() {
   t('Petrel');
   t('Public description');
   t('Release notes');
+  t('Set up');
   t('Software');
   t('Sofware description');
   t('Text only anonymous');

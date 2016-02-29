@@ -409,6 +409,28 @@ function feature_licencied_field_default_field_bases() {
     'type' => 'file',
   );
 
+  // Exported field_base: 'field_set_up'
+  $field_bases['field_set_up'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_set_up',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_sofware'
   $field_bases['field_sofware'] = array(
     'active' => 1,
