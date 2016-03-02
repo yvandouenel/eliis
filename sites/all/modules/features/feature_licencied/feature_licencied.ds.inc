@@ -38,6 +38,57 @@ function feature_licencied_ds_field_settings_info() {
 }
 
 /**
+ * Implements hook_ds_custom_fields_info().
+ */
+function feature_licencied_ds_custom_fields_info() {
+  $export = array();
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'anchor_5';
+  $ds_field->label = 'anchor-5';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<a name="anchor-5" id="anchor-5" class="anchor-link">&nbsp;</a>',
+      'format' => 'ds_code',
+    ),
+    'use_token' => 0,
+  );
+  $export['anchor_5'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'top_licensed_page_anchor';
+  $ds_field->label = 'top-licensed-page-anchors';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = 'licensed_page|*';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<div id="licensed-top-anchors">
+<a href="#anchor-1" class="licensed-top-anchor">Software</a>
+<a href="#anchor-2" class="licensed-top-anchor">License Request</a>
+<a href="#anchor-3" class="licensed-top-anchor">Set up</a>
+<a href="#anchor-4" class="licensed-top-anchor">External Drivers</a>
+<a href="#anchor-5" class="licensed-top-anchor">Configuration</a>
+</div>',
+      'format' => 'ds_code',
+    ),
+    'use_token' => 0,
+  );
+  $export['top_licensed_page_anchor'] = $ds_field;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function feature_licencied_ds_layout_settings_info() {

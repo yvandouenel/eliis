@@ -83,7 +83,7 @@ function feature_licencied_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'group configuration',
-    'weight' => '12',
+    'weight' => '14',
     'children' => array(
       0 => 'field_configuration',
     ),
@@ -115,7 +115,7 @@ function feature_licencied_field_group_info() {
   $field_group->parent_name = 'group_sofware';
   $field_group->data = array(
     'label' => 'Configuration',
-    'weight' => '30',
+    'weight' => '32',
     'children' => array(
       0 => 'field_configuration',
     ),
@@ -271,7 +271,7 @@ function feature_licencied_field_group_info() {
   $field_group->parent_name = 'group_sofware';
   $field_group->data = array(
     'label' => 'Flexnet/External Drivers',
-    'weight' => '29',
+    'weight' => '31',
     'children' => array(
       0 => 'field_external_drivers',
     ),
@@ -658,7 +658,7 @@ function feature_licencied_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'group external drivers',
-    'weight' => '10',
+    'weight' => '12',
     'children' => array(
       0 => 'field_external_drivers',
     ),
@@ -712,6 +712,65 @@ function feature_licencied_field_group_info() {
     ),
   );
   $field_groups['group_same_height|node|licensed_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_set_up_download|node|licensed_page|default';
+  $field_group->group_name = 'group_set_up_download';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'licensed_page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Set up',
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_set_up',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Set up',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-set-up-download field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_set_up_download|node|licensed_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_setup_licensed|node|licensed_page|form';
+  $field_group->group_name = 'group_setup_licensed';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'licensed_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_sofware';
+  $field_group->data = array(
+    'label' => 'Set up',
+    'weight' => '29',
+    'children' => array(
+      0 => 'field_set_up',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_setup_licensed|node|licensed_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -799,6 +858,7 @@ function feature_licencied_field_group_info() {
       4 => 'group_licence_request',
       5 => 'group_flexnet_external_drivers',
       6 => 'group_configuration',
+      7 => 'group_setup_licensed',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -858,6 +918,7 @@ function feature_licencied_field_group_info() {
   t('Paleoscan Geomodel');
   t('Petrel');
   t('Petrel Plug-in');
+  t('Set up');
   t('Software');
   t('group configuration');
   t('group external drivers');
