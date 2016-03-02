@@ -1,11 +1,12 @@
 .footer{
-  margin-top: 50vh;
+
   @media (min-width: @screen-sm){
     .navbar-nav>li>a {
       padding-top: 10px;
     }
   }
 }
+
 .region-footer-cols{
   > div{
     margin-top: 30px;
@@ -15,19 +16,28 @@
   }
 }
 .social-courtesy{
-  background-color: @bleu-clair;
+
   min-height: 50px;
+  @media (min-width:@screen-lg){
+    padding-bottom: 40vh;
+    background: url(../images/map_eliis_bottom.gif) no-repeat 50% 0;
+  }
+  
+  #block-menu-menu-bottom-courtesy-nav{
+    background-color: @bleu-clair;
+    ul {
+      float: right;
+      li{
+        float: left;
+      }
+    }
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
 }
-#block-menu-menu-bottom-courtesy-nav{
-  float: right;
-  ul li{
-    float: left;
-  }
-  &:after{
-    content: '';
-    display: block;
-    clear: both;
-  }
+
 }
 #footer-adress{
   clear: both;
