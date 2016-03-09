@@ -27,7 +27,7 @@ function core_application_feature_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'link' => '1',
+        'link' => '0',
         'wrapper' => 'h3',
         'class' => 'h3-add-on-list',
         'ft' => array(),
@@ -180,7 +180,7 @@ function core_application_feature_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'link' => '1',
+        'link' => '0',
         'wrapper' => 'h4',
         'class' => 'h3-product-list',
         'ft' => array(),
@@ -409,10 +409,10 @@ function core_application_feature_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'central' => array(
-        0 => 'anchor_id',
-        1 => 'field_left_gallery',
-        2 => 'title',
-        3 => 'field_right_text',
+        0 => 'field_left_gallery',
+        1 => 'anchor_id',
+        2 => 'field_right_text',
+        3 => 'title',
         4 => 'group_text_left',
         5 => 'group_text_right',
         6 => 'body',
@@ -420,10 +420,10 @@ function core_application_feature_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'anchor_id' => 'central',
       'field_left_gallery' => 'central',
-      'title' => 'central',
+      'anchor_id' => 'central',
       'field_right_text' => 'central',
+      'title' => 'central',
       'group_text_left' => 'central',
       'group_text_right' => 'central',
       'body' => 'central',

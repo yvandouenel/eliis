@@ -348,8 +348,8 @@ function core_application_feature_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<div class="downloads-right-menu">
 <h3 class="whithout-link">Downloads</h3>
-<div><a href="/products/download">Software</a></div>
-<div><a href="/products/download#licence-anchor">Free evaluation</a></div>
+<div><a href="/node/10">Software</a></div>
+<div><a href="/node/17">Free evaluation</a></div>
 </div>
 </div>
 ';
@@ -413,8 +413,8 @@ function core_application_feature_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<div class="downloads-right-menu">
 <h3 class="whithout-link">Downloads</h3>
-<div><a href="/products/download">Software</a></div>
-<div><a href="/products/download#licence-anchor">Free evaluation</a></div>
+<div><a href="/node/10">Software</a></div>
+<div><a href="/node/17">Free evaluation</a></div>
 </div>
 </div>
 ';
@@ -689,8 +689,8 @@ function core_application_feature_views_default_views() {
     t('<h3 class="whithout-link">Add-On Modules</h3>'),
     t('<div class="downloads-right-menu">
 <h3 class="whithout-link">Downloads</h3>
-<div><a href="/products/download">Software</a></div>
-<div><a href="/products/download#licence-anchor">Free evaluation</a></div>
+<div><a href="/node/10">Software</a></div>
+<div><a href="/node/17">Free evaluation</a></div>
 </div>
 </div>
 '),
