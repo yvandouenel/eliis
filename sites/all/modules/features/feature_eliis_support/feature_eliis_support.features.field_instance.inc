@@ -10,6 +10,201 @@
 function feature_eliis_support_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-private_files-field_private_file'
+  $field_instances['node-private_files-field_private_file'] = array(
+    'bundle' => 'private_files',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_private_file',
+    'label' => 'Tutorial private files',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'file_directory' => 'Tutorial',
+      'file_extensions' => 'txt exe doc pdf msi',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 'attach',
+            'clipboard' => 0,
+            'imce' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'private/tmp',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 1,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 42,
+    ),
+  );
+
+  // Exported field_instance: 'node-private_files-field_setup_private_files'
+  $field_instances['node-private_files-field_setup_private_files'] = array(
+    'bundle' => 'private_files',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_setup_private_files',
+    'label' => 'Setup private files',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'file_directory' => 'Setup',
+      'file_extensions' => 'txt exe doc pdf msi',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 'attach',
+            'clipboard' => 0,
+            'imce' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'private/tmp',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 1,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 43,
+    ),
+  );
+
+  // Exported field_instance: 'node-private_files-field_user_guide_files'
+  $field_instances['node-private_files-field_user_guide_files'] = array(
+    'bundle' => 'private_files',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_user_guide_files',
+    'label' => 'User guide files',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'file_directory' => 'user_guide',
+      'file_extensions' => 'txt exe doc pdf msi',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 'attach',
+            'clipboard' => 0,
+            'imce' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'private/tmp',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 1,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 44,
+    ),
+  );
+
   // Exported field_instance: 'node-support-field__support_paleoscan_db'
   $field_instances['node-support-field__support_paleoscan_db'] = array(
     'bundle' => 'support',
@@ -621,7 +816,10 @@ function feature_eliis_support_field_default_field_instances() {
   t('Petrel Link');
   t('Presentation');
   t('Publications');
+  t('Setup private files');
   t('Tutorial');
+  t('Tutorial private files');
+  t('User guide files');
   t('Video');
   t('Video type');
   t('Videos');

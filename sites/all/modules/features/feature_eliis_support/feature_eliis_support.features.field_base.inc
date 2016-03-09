@@ -54,6 +54,58 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_private_file'
+  $field_bases['field_private_file'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_private_file',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'file',
+    'settings' => array(
+      'display_default' => 0,
+      'display_field' => 0,
+      'uri_scheme' => 'private',
+    ),
+    'translatable' => 0,
+    'type' => 'file',
+  );
+
+  // Exported field_base: 'field_setup_private_files'
+  $field_bases['field_setup_private_files'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_setup_private_files',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'file',
+    'settings' => array(
+      'display_default' => 0,
+      'display_field' => 0,
+      'uri_scheme' => 'private',
+    ),
+    'translatable' => 0,
+    'type' => 'file',
+  );
+
   // Exported field_base: 'field_support_decision_space'
   $field_bases['field_support_decision_space'] = array(
     'active' => 1,
@@ -206,6 +258,32 @@ function feature_eliis_support_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_user_guide_files'
+  $field_bases['field_user_guide_files'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_user_guide_files',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'file',
+    'settings' => array(
+      'display_default' => 0,
+      'display_field' => 0,
+      'uri_scheme' => 'private',
+    ),
+    'translatable' => 0,
+    'type' => 'file',
   );
 
   // Exported field_base: 'field_video'

@@ -27,7 +27,8 @@ function feature_eliis_support_permission() {
  * Implements hook_file_download().
  */
 function feature_eliis_support_file_download($uri) {
-  if (strpos($uri, "private://user_guide/") === 0) {
+  //dpm("uri : " . $uri);
+ if (strpos($uri, "private://user_guide/") === 0) {
     if (!user_access("access user guide files")) {
       return -1;
     }
@@ -38,8 +39,10 @@ function feature_eliis_support_file_download($uri) {
     $file = reset($files);
     return file_get_content_headers($file);
   }
-  elseif (strpos($uri, "private://training/") === 0) {
+  elseif (strpos($uri, "private://Tutorial/") === 0) {
+
     if (!user_access("access training files")) {
+      dpm("Pas d'accès");
       return -1;
     }
     $files = file_load_multiple(array(), array("uri" => $uri));
@@ -49,8 +52,8 @@ function feature_eliis_support_file_download($uri) {
     $file = reset($files);
     return file_get_content_headers($file);
   }
-  elseif (strpos($uri, "private://setup/") === 0) {
-    if (!user_access("access setup files")) {
+  elseif (strpos($uri, "private://Setup/") === 0) {
+    if (!user_access("access set up files")) {
       return -1;
     }
     $files = file_load_multiple(array(), array("uri" => $uri));
@@ -60,6 +63,9 @@ function feature_eliis_support_file_download($uri) {
     $file = reset($files);
     return file_get_content_headers($file);
   }
+ elseif (strpos($uri, "private://tmp/") === 0) {
+   return -1;
+ }
 }
 
 /**
