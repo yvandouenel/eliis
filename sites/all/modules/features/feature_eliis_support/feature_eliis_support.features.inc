@@ -31,6 +31,14 @@ function feature_eliis_support_views_api($module = NULL, $api = NULL) {
  */
 function feature_eliis_support_node_info() {
   $items = array(
+    'private_files' => array(
+      'name' => t('Private files'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'support' => array(
       'name' => t('Support'),
       'base' => 'node_content',
