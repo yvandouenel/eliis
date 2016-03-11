@@ -1888,7 +1888,7 @@ body.node-type-news input,body.node-type-news select{width:250px}
 }
 body.node-type-support.node-type-support .main-container .region-content{padding:0}
 body.node-type-support h5{font-weight:700}
-body.node-type-support .group-paleoscan-col1 h5{background:url(../images/icons/tm.png) 110px 0 no-repeat}
+body.node-type-support .group-paleoscan-col1 .h5-paleoscan{background:url(../images/icons/tm.png) 110px 0 no-repeat}
 body.node-type-support .field-collection-view{padding:0;margin:0}
 body.node-type-support .panel-body{padding:0 15px}
 body.node-type-support .group-help-files h4{background:rgba(0,115,140,.5);width:105.4%;margin-left:-15px}
