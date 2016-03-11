@@ -181,7 +181,7 @@ function core_application_feature_ds_field_settings_info() {
       'format' => 'default',
       'formatter_settings' => array(
         'link' => '0',
-        'wrapper' => 'h4',
+        'wrapper' => 'h3',
         'class' => 'h3-product-list',
         'ft' => array(),
       ),
