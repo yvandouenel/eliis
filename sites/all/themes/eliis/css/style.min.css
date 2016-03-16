@@ -1705,12 +1705,13 @@ body.admin-menu.front .main-container{margin-top:20px}
 body.admin-menu.not-front .main-container{margin-top:70px}
 #h1-logo{float:left;margin:0}
 .base-line{margin:0;padding:25px 0}
-#eliis-baseline{margin:0;padding:15px 0;background-color:#eee;text-align:center;color:#096b09}
+#eliis-baseline{margin:0;padding:15px 0;background-color:#e1e1e1;text-align:center;color:#096b09}
 #eliis-baseline .green-baseline{color:#4da24d}
 body.role-webmaster #block-bean-baseline{margin-top:80px}
 .addicons#main-menu-paleoscan{padding-left:40px;background:url(../images/icons/icon-paleoscan-small.png) 0 50% no-repeat;padding-right:15px}
 .addicons#main-menu-services{padding-left:45px;background:url(../images/icons/icon-services-small.png) 0 49% no-repeat;padding-right:15px}
 .addicons#main-menu-support{padding-left:45px;background:url(../images/icons/icon-support-small.png) 0 50% no-repeat}
+#main-nav>ul>li{border-bottom:1px solid #e1e1e1}
 body.front #main-nav>ul>li>a{height:90px;padding-top:40px}
 body.front #main-nav>ul>li>a#main-menu-paleoscan{padding-left:40px;background:url(../images/icons/icon-paleoscan-small.png) 0 50% no-repeat;padding-right:15px}
 body.front #main-nav>ul>li>a#main-menu-services{padding-left:45px;background:url(../images/icons/icon-services-small.png) 0 49% no-repeat;padding-right:15px}
