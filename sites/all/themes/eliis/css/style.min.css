@@ -1663,6 +1663,9 @@ a.red,a.rouge{color:#8e1004}
 .separator-grey{border:1px solid #464646;height:1px;overflow:hidden;margin:20px auto;width:30%}
 .node-type-page .field-name-body .field-item{margin-bottom:10px}
 .vert-fond-products{background-color:#ebf6e6}
+#arrow-top{position:fixed;right:20px;bottom:20px;z-index:9}
+@media (min-width:992px){#arrow-top{right:180px}
+}
 @media (min-width:768px){.container,.navbar.container{max-width:none;width:100%}
 }
 @media (min-width:1810px){.container,.navbar.container{max-width:none;width:100%}

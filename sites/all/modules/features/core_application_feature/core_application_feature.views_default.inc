@@ -113,6 +113,9 @@ function core_application_feature_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<div id="arrow-top">
+<a href="#"><img src="/sites/all/themes/eliis/images/icons/top.png" alt="top" /></a>
+</div>';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Unfiltered text */
   $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
@@ -151,6 +154,14 @@ function core_application_feature_views_default_views() {
   /* Display: Page Add-on */
   $handler = $view->new_display('page', 'Page Add-on', 'page_4');
   $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<div id="arrow-top">
+<a href="#"><img src="/sites/all/themes/eliis/images/icons/top.png" alt="top" /></a>
+</div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Unfiltered text */
   $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
@@ -678,6 +689,9 @@ function core_application_feature_views_default_views() {
     t('<a href="#"><img id="top-arrow" src="/sites/all/themes/eliis/images/top-arrow.png" alt="top of the page" /></a>'),
     t('Page core application'),
     t('Core Application'),
+    t('<div id="arrow-top">
+<a href="#"><img src="/sites/all/themes/eliis/images/icons/top.png" alt="top" /></a>
+</div>'),
     t('Page Add-on'),
     t('Attachment core index'),
     t('Products index'),
