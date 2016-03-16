@@ -1792,8 +1792,8 @@ body.logged-in.admin-menu .breadcrumb{top:88px}
 @media screen and (max-width:1810px){.view-id-products .attachment-before.col-md-2{width:100%;margin-bottom:20px}
 }
 .view-id-products .attachment-before .views-row-even,.view-id-products .attachment-before .views-row-odd{background-color:transparent;padding:0}
-.view-id-products .views-row-odd{background-color:#ebf6e6;padding:10px}
-.view-id-products .views-row-even{background-color:#E1E1E1;padding:10px}
+.view-id-products .views-row-odd{background-color:#eee;padding:10px}
+.view-id-products .views-row-even{background-color:#ebf6e6;padding:10px}
 .view-id-products .anchor_product{position:relative;top:-220px}
 .flexslider{border:1px solid #fff}
 .slide-home{position:relative}
