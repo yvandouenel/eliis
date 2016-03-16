@@ -1743,6 +1743,8 @@ body.logged-in.admin-menu .breadcrumb{top:88px}
 }
 .context-sdl_editor_representation{margin:0 0 10px}
 .footer #block-bean-social-buttons{margin-left:10px}
+@media (min-width:1200px){.footer #block-bean-social-buttons{float:left;margin-left:50px;z-index:1;margin-top:10px;position:relative;top:5px}
+}
 .footer #block-bean-social-buttons a.icon-twitter:before{color:#58AEE8;font-size:2em}
 .footer #block-bean-social-buttons a.icon-linkedin:before{color:#0274B3;font-size:2em}
 @media (min-width:768px){.footer .navbar-nav>li>a{padding-top:10px}
@@ -1750,8 +1752,7 @@ body.logged-in.admin-menu .breadcrumb{top:88px}
 .region-footer-cols>div{margin-top:30px}
 .region-footer-cols>div h2{color:#004353}
 .social-courtesy{min-height:50px}
-@media (min-width:1200px){.footer #block-bean-social-buttons{float:left;margin-left:50px;z-index:1;margin-top:30px;position:relative;top:15px}
-.social-courtesy{padding-bottom:40vh;background:url(../images/map_eliis_bottom.gif) 50% 0 no-repeat}
+@media (min-width:1200px){.social-courtesy{padding-bottom:40vh;background:url(../images/map_eliis_bottom.jpg) 50% 0 no-repeat}
 }
 .social-courtesy #block-menu-menu-bottom-courtesy-nav{background-color:#e5f0f2}
 .social-courtesy #block-menu-menu-bottom-courtesy-nav ul{float:right}
