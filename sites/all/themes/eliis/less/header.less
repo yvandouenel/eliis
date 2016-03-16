@@ -74,7 +74,15 @@ body.role-webmaster{
   }
 }
 #main-nav > ul > li {
-  border-bottom: 1px solid @gris-menus-hauts;
+
+  border-bottom: 0;
+  &.active-trail{
+    border-bottom: 1px solid @gris-menus-hauts;
+    &.first-three{
+      border-bottom: 0;
+    }
+  }
+
 }
 body.front #main-nav > ul > li {
   > a{

@@ -1711,7 +1711,9 @@ body.role-webmaster #block-bean-baseline{margin-top:80px}
 .addicons#main-menu-paleoscan{padding-left:40px;background:url(../images/icons/icon-paleoscan-small.png) 0 50% no-repeat;padding-right:15px}
 .addicons#main-menu-services{padding-left:45px;background:url(../images/icons/icon-services-small.png) 0 49% no-repeat;padding-right:15px}
 .addicons#main-menu-support{padding-left:45px;background:url(../images/icons/icon-support-small.png) 0 50% no-repeat}
-#main-nav>ul>li{border-bottom:1px solid #e1e1e1}
+#main-nav>ul>li{border-bottom:0}
+#main-nav>ul>li.active-trail{border-bottom:1px solid #e1e1e1}
+#main-nav>ul>li.active-trail.first-three{border-bottom:0}
 body.front #main-nav>ul>li>a{height:90px;padding-top:40px}
 body.front #main-nav>ul>li>a#main-menu-paleoscan{padding-left:40px;background:url(../images/icons/icon-paleoscan-small.png) 0 50% no-repeat;padding-right:15px}
 body.front #main-nav>ul>li>a#main-menu-services{padding-left:45px;background:url(../images/icons/icon-services-small.png) 0 49% no-repeat;padding-right:15px}
