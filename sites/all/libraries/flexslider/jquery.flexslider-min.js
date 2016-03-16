@@ -136,7 +136,7 @@
           //If we're visible, or we don't use PageVisibility API
           if(!slider.vars.pauseInvisible || !methods.pauseInvisible.isHidden()) {
               console.log("on ne commence pas !");
-            //(slider.vars.initDelay > 0) ? slider.startTimeout = setTimeout(slider.play, slider.vars.initDelay) : slider.play();
+            (slider.vars.initDelay > 0) ? slider.startTimeout = setTimeout(slider.play, slider.vars.initDelay) : slider.play();
           }
         }
 
