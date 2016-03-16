@@ -350,6 +350,7 @@ function core_application_feature_views_default_views() {
 <h3 class="whithout-link">Downloads</h3>
 <div><a href="/node/10">Software</a></div>
 <div><a href="/node/17">Free evaluation</a></div>
+<div><a href="/sites/default/files/new_features/Brochure%20PaleoScan%202016.pdf">PaleoScan™&nbsp;Brochure</a></div>
 </div>
 </div>
 ';
@@ -415,7 +416,7 @@ function core_application_feature_views_default_views() {
 <h3 class="whithout-link">Downloads</h3>
 <div><a href="/node/10">Software</a></div>
 <div><a href="/node/17">Free evaluation</a></div>
-</div>
+<div><a href="/sites/default/files/new_features/Brochure%20PaleoScan%202016.pdf">PaleoScan™&nbsp;Brochure</a></div>
 </div>
 ';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
@@ -691,11 +692,19 @@ function core_application_feature_views_default_views() {
 <h3 class="whithout-link">Downloads</h3>
 <div><a href="/node/10">Software</a></div>
 <div><a href="/node/17">Free evaluation</a></div>
+<div><a href="/sites/default/files/new_features/Brochure%20PaleoScan%202016.pdf">PaleoScan™&nbsp;Brochure</a></div>
 </div>
 </div>
 '),
     t('<a href="/products/add-on#product[nid]" class="link-right-menu">[title]</a>'),
     t('add-on index only #'),
+    t('<div class="downloads-right-menu">
+<h3 class="whithout-link">Downloads</h3>
+<div><a href="/node/10">Software</a></div>
+<div><a href="/node/17">Free evaluation</a></div>
+<div><a href="/sites/default/files/new_features/Brochure%20PaleoScan%202016.pdf">PaleoScan™&nbsp;Brochure</a></div>
+</div>
+'),
     t('Ranking product\'s page'),
     t('Attachment add-on'),
     t('<h3>Add-On Modules</h3>'),
