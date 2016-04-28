@@ -1744,6 +1744,10 @@ body.logged-in.admin-menu .breadcrumb{top:88px}
 }
 @media (min-width:992px) and (max-width:1200px){#home-eliis{margin-left:5px}
 }
+#block-search-form{width:50px;position:absolute;top:28px;right:20px}
+#block-search-form .form-text{width:0;padding:0;margin:0}
+#block-search-form:hover{width:200px}
+#block-search-form:hover .form-text{width:150px;padding:3px;margin:0}
 .context-sdl_editor_representation{margin:0 0 10px}
 .footer #block-bean-social-buttons{margin-left:10px}
 @media (min-width:1200px){.footer #block-bean-social-buttons{float:left;margin-left:50px;z-index:1;margin-top:10px;position:relative;top:5px}

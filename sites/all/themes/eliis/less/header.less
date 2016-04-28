@@ -148,7 +148,25 @@ body.logged-in.admin-menu .breadcrumb{
   @media (min-width: @screen-md) and  (max-width: @screen-lg){
     margin-left: 5px;
   }
-
+}
+#block-search-form{
+  width: 50px;
+  position: absolute;
+  top: 28px;
+  right: 20px;
+  .form-text{
+    width: 0px;
+    padding: 0;
+    margin:0;
+  }
+  &:hover{
+    width: 200px;
+    .form-text{
+      width: 150px;
+      padding: 3px;
+      margin:0;
+    }
+  }
 }
 
 
