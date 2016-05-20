@@ -255,5 +255,10 @@ Login in lightbox
     $(".os-main-image").hide();
     $("#os-main-image").show();
   }
+  if($('body.page-products').length) {
+    if (typeof Galleria != 'undefined') {
+      Galleria.loadTheme('/sites/all/libraries/galleria/themes/classic/galleria.classic.min.js');
+    }
+  }
 
 });
