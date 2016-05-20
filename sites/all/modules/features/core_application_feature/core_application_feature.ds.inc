@@ -27,7 +27,7 @@ function core_application_feature_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'link' => '0',
+        'link' => '1',
         'wrapper' => 'h3',
         'class' => 'h3-add-on-list',
         'ft' => array(),
@@ -180,7 +180,7 @@ function core_application_feature_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'link' => '0',
+        'link' => '1',
         'wrapper' => 'h3',
         'class' => 'h3-product-list',
         'ft' => array(),
