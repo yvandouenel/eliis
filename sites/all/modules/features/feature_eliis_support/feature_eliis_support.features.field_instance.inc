@@ -38,7 +38,7 @@ function feature_eliis_support_field_default_field_instances() {
     'settings' => array(
       'description_field' => 1,
       'file_directory' => 'Tutorial',
-      'file_extensions' => 'txt exe doc pdf msi',
+      'file_extensions' => 'txt exe doc pdf msi zip',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -103,7 +103,7 @@ function feature_eliis_support_field_default_field_instances() {
     'settings' => array(
       'description_field' => 1,
       'file_directory' => 'Setup',
-      'file_extensions' => 'txt exe doc pdf msi',
+      'file_extensions' => 'txt exe doc pdf msi zip',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -168,7 +168,7 @@ function feature_eliis_support_field_default_field_instances() {
     'settings' => array(
       'description_field' => 1,
       'file_directory' => 'user_guide',
-      'file_extensions' => 'txt exe doc pdf msi',
+      'file_extensions' => 'txt exe doc pdf msi zip',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),

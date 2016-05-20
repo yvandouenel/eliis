@@ -13,6 +13,7 @@ dependencies[] = file
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
+dependencies[] = uuid
 dependencies[] = uuid_features
 dependencies[] = viewfield
 dependencies[] = views
