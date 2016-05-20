@@ -31,23 +31,6 @@ function core_application_feature_node_view($node, $view_mode, $langcode) {
       );
     }
 
-
-    /* // Load the view of core application menu
-     $view_menu_core = views_embed_view('products', 'attachment_4');
-
-     // Load the view of core add-on menu
-     $view_menu_addon = views_embed_view('products', 'attachment_5');
-
-     // Create the wrapper
-     $wrapper = entity_metadata_wrapper('node', $node);
-
-     // Set the value to field with the good format
-     $wrapper->field_core_application_menu->set(array("value" => $view_menu_core,"format" => "full_html"));
-     $wrapper->field_add_on_menu->set(array("value" => $view_menu_addon,"format" => "full_html"));
-
-     // Save the wrapper
-     $wrapper->save();*/
-
   }
 
 }
