@@ -205,8 +205,8 @@ Login in lightbox
           if (count && !$( "#support-top-anchors").hasClass("top-fixed-anchors")){
           /*console.log('hello');*/
             $( "#support-top-anchors" ).animate({
-                'top': "120px",
-                'z-index': '1'
+                'top': "55px",
+                'z-index': '10'
             },500);
             // Ajout de la classe top-fixed-anchors
             $( "#licensed-top-anchors").addClass("top-fixed-anchors");
