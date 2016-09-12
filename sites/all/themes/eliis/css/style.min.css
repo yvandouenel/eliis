@@ -1931,7 +1931,7 @@ body.node-type-support .group-video-wrapper h3{position:absolute;margin-top:0;z-
 body.node-type-support .group-video-wrapper h3 span:after{content:'';display:block;height:1px;border-top:2px solid #828282;position:relative;top:-17px;left:-50px;width:180%}
 body.node-type-support .group-video-wrapper .view-display-id-page_videos_support{position:relative;background-color:#eee;padding:80px 60px 30px;min-height:380px}
 body.node-type-support .group-video-wrapper .view-display-id-page_videos_support iframe{max-width:100%!important}
-@media (min-width:992px){body.node-type-support .group-video-wrapper .view-display-id-page_videos_support>.view-content .views-row{position:absolute;right:20%;top:80px}
+@media (min-width:992px){body.node-type-support .group-video-wrapper .view-display-id-page_videos_support>.view-content .views-row{position:absolute;right:20%;top:20px}
 }
 body.node-type-support .group-video-wrapper .view-display-id-page_videos_support .video-list-left{cursor:pointer;color:#337ab7;text-decoration:underline;font-size:1.2em;padding:5px}
 body.node-type-support .group-video-wrapper .view-display-id-page_videos_support .video-list-left.video-controler-selected{cursor:default;color:#000;text-decoration:none}
