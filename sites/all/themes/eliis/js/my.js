@@ -170,7 +170,7 @@ Login in lightbox
             clearTimeout($.data(this, 'scrollTimer'));
             $.data(this, 'scrollTimer', setTimeout(function() {
                 if (count && !$( "#licensed-top-anchors").hasClass("top-fixed-anchors")){
-                  console.log('hello');
+                  /*console.log('hello');*/
                    $( "#licensed-top-anchors" ).animate({
                         'top': "120px",
                         'z-index': '1'
@@ -202,18 +202,23 @@ Login in lightbox
         $( "#support-top-anchors" ).addClass("width-admin-menu");
       }
       $.data(this, 'scrollTimer', setTimeout(function() {
-        if (count && !$( "#support-top-anchors").hasClass("top-fixed-anchors")){
-          console.log('hello');
-          $( "#support-top-anchors" ).animate({
-            'top': "120px",
-            'z-index': '1'
-          },500);
-          // Ajout de la classe top-fixed-anchors
-          $( "#licensed-top-anchors").addClass("top-fixed-anchors");
-
-        }
-        //console.log("Haven't scrolled in 250ms! " + count);
-        count ++;
+          if (count && !$( "#support-top-anchors").hasClass("top-fixed-anchors")){
+          /*console.log('hello');*/
+            $( "#support-top-anchors" ).animate({
+                'top': "120px",
+                'z-index': '1'
+            },500);
+            // Ajout de la classe top-fixed-anchors
+            $( "#licensed-top-anchors").addClass("top-fixed-anchors");
+          }
+          if($(window).scrollTop() == 0){
+              $( "#support-top-anchors" ).animate({
+                  'top': "200px",
+                  'z-index': '1'
+              },500);
+          }
+          //console.log("Haven't scrolled in 250ms! " + count);
+          count ++;
       }, 250));
     });
   }
