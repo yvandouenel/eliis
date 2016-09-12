@@ -1639,6 +1639,7 @@ h2.page-header{margin-top:55px}
 #block-system-main>.view-display-id-page>.view-header,#block-views-evenements-block-home-event,#navbar .container>div,.region-footer-cols,body.page-node.not-front .main-container .region-content,body.page-products #block-system-main .attachment-after .view-header,body.page-products #block-system-main .attachment-after .views-row,body.page-products #block-system-main .view-display-id-page_3>.view-content>.views-row,body.page-products #block-system-main .view-display-id-page_4>.view-content>.views-row,body.page-products #block-system-main>.view-display-id-page>.view-content>.views-row{padding:0 50px}
 @media (max-width:970px){#block-system-main>.view-display-id-page>.view-header,#block-views-evenements-block-home-event,#navbar .container>div,.region-footer-cols,body.page-node.not-front .main-container .region-content,body.page-products #block-system-main .attachment-after .view-header,body.page-products #block-system-main .attachment-after .views-row,body.page-products #block-system-main .view-display-id-page_3>.view-content>.views-row,body.page-products #block-system-main .view-display-id-page_4>.view-content>.views-row,body.page-products #block-system-main>.view-display-id-page>.view-content>.views-row{padding:0 5px}
 }
+.main-container.container .row{margin-right:0}
 .webform-client-form label{width:15%;float:left;text-align:right;margin-bottom:5px;font-weight:700;clear:left}
 @media (max-width:768px){.webform-client-form label{width:150px}
 }
