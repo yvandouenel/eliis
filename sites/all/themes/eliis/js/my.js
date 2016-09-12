@@ -204,10 +204,18 @@ Login in lightbox
       $.data(this, 'scrollTimer', setTimeout(function() {
           if (count && !$( "#support-top-anchors").hasClass("top-fixed-anchors")){
           /*console.log('hello');*/
-            $( "#support-top-anchors" ).animate({
-                'top': "55px",
-                'z-index': '10'
-            },500);
+              if ($( "body.logged-in").length){
+                  $( "#support-top-anchors" ).animate({
+                      'top': "85px",
+                      'z-index': '10'
+                  },500);
+              } else {
+                  $( "#support-top-anchors" ).animate({
+                      'top': "55px",
+                      'z-index': '10'
+                  },500);
+              }
+
             // Ajout de la classe top-fixed-anchors
             $( "#licensed-top-anchors").addClass("top-fixed-anchors");
           }
