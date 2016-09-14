@@ -165,24 +165,37 @@ Login in lightbox
      */
     if ( $( "body.node-type-licensed-page" ).length &&  $( "#licensed-top-anchors" ).length) {
         var count = 0;
+        // Ajout de la classe top-fixed-anchors
+        $( "#licensed-top-anchors" ).addClass("top-fixed-anchors");
         $(window).scroll(function() {
 
             clearTimeout($.data(this, 'scrollTimer'));
             $.data(this, 'scrollTimer', setTimeout(function() {
-                if (count && !$( "#licensed-top-anchors").hasClass("top-fixed-anchors")){
+                if (count && $(window).scrollTop()){
                   /*console.log('hello');*/
-                   $( "#licensed-top-anchors" ).animate({
-                        'top': "120px",
-                        'z-index': '1'
-                    },500);
-                    // Ajout de la classe top-fixed-anchors
-                    $( "#licensed-top-anchors").addClass("top-fixed-anchors");
-
                     // si le menu admin existe, on ajoute une classe supplémentaire
                     if($( "#admin-menu" ).length) {
                         $( "#licensed-top-anchors" ).addClass("width-admin-menu");
+                        $( "#licensed-top-anchors" ).animate({
+                            'top': "83px",
+                            'z-index': '3'
+                        },500);
+                    } else {
+                       $( "#licensed-top-anchors" ).animate({
+                            'top': "55px",
+                            'z-index': '3'
+                        },500);
                     }
+
                 }
+                if($(window).scrollTop() == 0 && count) {
+                    console.log('suis en haut et ce n\'est pas la première fois');
+                    $( "#licensed-top-anchors" ).animate({
+                        'top': "200px",
+                        'z-index': '3'
+                    },500);
+                }
+                /**/
                 //console.log("Haven't scrolled in 250ms! " + count);
                 count ++;
             }, 250));
