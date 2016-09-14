@@ -1762,7 +1762,7 @@ body.logged-in.admin-menu .breadcrumb{top:88px}
 .region-footer-cols>div{margin-top:30px}
 .region-footer-cols>div h2{color:#004353}
 .social-courtesy{min-height:50px}
-@media (min-width:1200px){.social-courtesy{padding-bottom:40vh;background:url(../images/map_eliis_bottom.jpg) 50% 0 no-repeat}
+@media (min-width:1200px){.social-courtesy{padding-bottom:40vh;background:url(../images/map_eliis_bottom.jpg) 50% 20px no-repeat}
 }
 .social-courtesy #block-menu-menu-bottom-courtesy-nav{background-color:#e5f0f2}
 .social-courtesy #block-menu-menu-bottom-courtesy-nav ul{float:right}
