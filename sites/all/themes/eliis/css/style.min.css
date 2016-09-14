@@ -1486,7 +1486,7 @@ p:last-child{margin-bottom:0}
 .region-help .block{overflow:hidden}
 form#search-block-form{margin:0}
 .navbar #block-search-form{float:none;margin:5px 0 5px 5px}
-@media screen and (min-width:992px){.navbar #block-search-form{float:right}
+@media screen and (min-width:992px){.navbar #block-search-form{float:right;margin:-20px 0 0}
 }
 .navbar-search .control-group{margin-bottom:0}
 ul.action-links{margin:12px 0;padding:0}
