@@ -40,12 +40,12 @@ function scald_file_scald_add_form(&$form, &$form_state) {
   $validators = array(
     'file_validate_extensions' => array(0 => 'ppt pptx xls xlsx doc docx odt pdf txt csv odg sxw ods rtf zip rar gz 7z tar'),
   );
-  $location = 'public://atoms/files/';
+  $location = 'public://atoms/files';
   if ($field && $instance) {
     $validators = file_field_widget_upload_validators($field, $instance);
     $directory = file_field_widget_uri($field, $instance);
     if (file_prepare_directory($directory, FILE_CREATE_DIRECTORY)) {
-      $location = $directory . '/';
+      $location = $directory;
     }
   }
   $form['file'] = array(
@@ -176,13 +176,17 @@ function _scald_file_pdf_thumbnail($atom, $file) {
       $temp = file_directory_temp() . '/pdf_thumb.png';
       if (scald_file_is_exec_available()) {
         if (scald_file_command_exists('pdfdraw')) {
-          exec('pdfdraw -o ' . $temp . ' ' . $uri . ' 1');
+          exec('pdfdraw -o ' . escapeshellarg($temp) . ' ' . escapeshellarg($uri) . ' 1');
         }
-        else if (scald_file_command_exists('convert')) {
-          exec('convert ' . $uri . '[0] ' . $temp);
+        elseif (scald_file_command_exists('mudraw')) {
+          exec('mudraw -o ' . escapeshellarg($temp) . ' ' . escapeshellarg($uri) . ' 1');
+        }
+        elseif (scald_file_command_exists('convert')) {
+          $uri = $uri . '[0]';
+          exec('convert ' . escapeshellarg($uri) . ' ' . escapeshellarg($temp));
         }
       }
-      else if (extension_loaded('imagick') && class_exists("Imagick")) {
+      elseif (extension_loaded('imagick') && class_exists("Imagick")) {
         $im = new Imagick($uri . '[0]');
         $im = $im->flattenImages();
         $im->setImageFormat("png");
@@ -249,8 +253,9 @@ function _scald_file_get_default_icon($file) {
  *   Atom.
  */
 function _scald_file_sync_file($atom) {
-  if ($atom->scald_file) {
-    $atom->base_id = $atom->scald_file[LANGUAGE_NONE][0]['fid'];
+  if (!empty($atom->scald_file)) {
+    $items = field_get_items('scald_atom', $atom, 'scald_file');
+    $atom->base_id = $items[0]['fid'];
   }
 }
 
@@ -432,6 +437,31 @@ function scald_file_scald_render($atom, $context, $options = array()) {
         ),
       )
     );
+  }
+}
+
+/**
+ * Implements hook_action_info().
+ */
+function scald_file_action_info() {
+  return array(
+    'scald_file_generate_thumbnail' => array(
+      'type' => 'scald_atom',
+      'label' => t('Generate Thumbnail'),
+      'configurable' => FALSE,
+      'behavior' => array('changes_property'),
+      'triggers' => array('any'),
+    ),
+  );
+}
+
+/**
+ * Action callback for the thumbnail generation action.
+ */
+function scald_file_generate_thumbnail($entity, $context) {
+  if ($entity->provider === 'scald_file') {
+    $entity->data['scald_thumbnail_default'] = TRUE;
+    scald_atom_save($entity);
   }
 }
 
