@@ -1593,7 +1593,7 @@ img{max-width:100%}
 .container,.container-fluid{padding:0}
 .center,.page-header{text-align:center}
 .clear-all{clear:both}
-@media screen and (min-width:992px){.body{overflow-x:hidden;overflow-y:scroll}
+@media screen and (min-width:992px){body{overflow-x:hidden;overflow-y:scroll}
 .row-eq-height{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 }
 table.table-classic td{padding-right:20px}
