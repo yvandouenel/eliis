@@ -10,7 +10,7 @@
 function feature_eliis_support_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-private_files-field_private_file'
+  // Exported field_instance: 'node-private_files-field_private_file'.
   $field_instances['node-private_files-field_private_file'] = array(
     'bundle' => 'private_files',
     'deleted' => 0,
@@ -75,7 +75,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-private_files-field_setup_private_files'
+  // Exported field_instance: 'node-private_files-field_setup_private_files'.
   $field_instances['node-private_files-field_setup_private_files'] = array(
     'bundle' => 'private_files',
     'deleted' => 0,
@@ -140,7 +140,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-private_files-field_user_guide_files'
+  // Exported field_instance: 'node-private_files-field_user_guide_files'.
   $field_instances['node-private_files-field_user_guide_files'] = array(
     'bundle' => 'private_files',
     'deleted' => 0,
@@ -205,7 +205,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-support-field__support_paleoscan_db'
+  // Exported field_instance: 'node-support-field__support_paleoscan_db'.
   $field_instances['node-support-field__support_paleoscan_db'] = array(
     'bundle' => 'support',
     'default_value' => NULL,
@@ -250,7 +250,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-support-field_presentation'
+  // Exported field_instance: 'node-support-field_presentation'.
   $field_instances['node-support-field_presentation'] = array(
     'bundle' => 'support',
     'default_value' => NULL,
@@ -295,7 +295,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-support-field_support_decision_space'
+  // Exported field_instance: 'node-support-field_support_decision_space'.
   $field_instances['node-support-field_support_decision_space'] = array(
     'bundle' => 'support',
     'default_value' => NULL,
@@ -340,7 +340,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-support-field_support_paleoscan'
+  // Exported field_instance: 'node-support-field_support_paleoscan'.
   $field_instances['node-support-field_support_paleoscan'] = array(
     'bundle' => 'support',
     'default_value' => NULL,
@@ -385,7 +385,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-support-field_support_paleoscan_geomodel'
+  // Exported field_instance: 'node-support-field_support_paleoscan_geomodel'.
   $field_instances['node-support-field_support_paleoscan_geomodel'] = array(
     'bundle' => 'support',
     'default_value' => NULL,
@@ -430,7 +430,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-support-field_support_petrel_link'
+  // Exported field_instance: 'node-support-field_support_petrel_link'.
   $field_instances['node-support-field_support_petrel_link'] = array(
     'bundle' => 'support',
     'default_value' => NULL,
@@ -475,7 +475,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-support-field_support_publications'
+  // Exported field_instance: 'node-support-field_support_publications'.
   $field_instances['node-support-field_support_publications'] = array(
     'bundle' => 'support',
     'default_value' => NULL,
@@ -520,7 +520,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-support-field_support_tutorial'
+  // Exported field_instance: 'node-support-field_support_tutorial'.
   $field_instances['node-support-field_support_tutorial'] = array(
     'bundle' => 'support',
     'default_value' => NULL,
@@ -565,7 +565,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-support-field_support_viewer'
+  // Exported field_instance: 'node-support-field_support_viewer'.
   $field_instances['node-support-field_support_viewer'] = array(
     'bundle' => 'support',
     'default_value' => NULL,
@@ -610,7 +610,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-support-field_videos'
+  // Exported field_instance: 'node-support-field_videos'.
   $field_instances['node-support-field_videos'] = array(
     'bundle' => 'support',
     'default_value' => array(
@@ -668,7 +668,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-video-body'
+  // Exported field_instance: 'node-video-body'.
   $field_instances['node-video-body'] = array(
     'bundle' => 'video',
     'default_value' => NULL,
@@ -715,7 +715,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-video-field_video'
+  // Exported field_instance: 'node-video-field_video'.
   $field_instances['node-video-field_video'] = array(
     'bundle' => 'video',
     'default_value' => NULL,
@@ -765,7 +765,7 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-video-field_video_type'
+  // Exported field_instance: 'node-video-field_video_type'.
   $field_instances['node-video-field_video_type'] = array(
     'bundle' => 'video',
     'default_value' => NULL,

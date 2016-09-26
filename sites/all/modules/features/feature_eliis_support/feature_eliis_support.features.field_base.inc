@@ -10,7 +10,7 @@
 function feature_eliis_support_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field__support_paleoscan_db'
+  // Exported field_base: 'field__support_paleoscan_db'.
   $field_bases['field__support_paleoscan_db'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -32,7 +32,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_presentation'
+  // Exported field_base: 'field_presentation'.
   $field_bases['field_presentation'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -54,7 +54,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_private_file'
+  // Exported field_base: 'field_private_file'.
   $field_bases['field_private_file'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -80,7 +80,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_setup_private_files'
+  // Exported field_base: 'field_setup_private_files'.
   $field_bases['field_setup_private_files'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -106,7 +106,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_support_decision_space'
+  // Exported field_base: 'field_support_decision_space'.
   $field_bases['field_support_decision_space'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -128,7 +128,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_support_paleoscan'
+  // Exported field_base: 'field_support_paleoscan'.
   $field_bases['field_support_paleoscan'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -150,7 +150,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_support_paleoscan_geomodel'
+  // Exported field_base: 'field_support_paleoscan_geomodel'.
   $field_bases['field_support_paleoscan_geomodel'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -172,7 +172,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_support_petrel_link'
+  // Exported field_base: 'field_support_petrel_link'.
   $field_bases['field_support_petrel_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -194,7 +194,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_support_publications'
+  // Exported field_base: 'field_support_publications'.
   $field_bases['field_support_publications'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -216,7 +216,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_support_tutorial'
+  // Exported field_base: 'field_support_tutorial'.
   $field_bases['field_support_tutorial'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -238,7 +238,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_support_viewer'
+  // Exported field_base: 'field_support_viewer'.
   $field_bases['field_support_viewer'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -260,7 +260,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_user_guide_files'
+  // Exported field_base: 'field_user_guide_files'.
   $field_bases['field_user_guide_files'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -286,7 +286,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_video'
+  // Exported field_base: 'field_video'.
   $field_bases['field_video'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -308,7 +308,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_video_type'
+  // Exported field_base: 'field_video_type'.
   $field_bases['field_video_type'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -337,7 +337,7 @@ function feature_eliis_support_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_videos'
+  // Exported field_base: 'field_videos'.
   $field_bases['field_videos'] = array(
     'active' => 1,
     'cardinality' => 1,
