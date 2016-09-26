@@ -1754,8 +1754,10 @@ body.logged-in.admin-menu .breadcrumb{top:88px}
 .footer #block-bean-social-buttons{margin-left:10px}
 @media (min-width:1200px){.footer #block-bean-social-buttons{float:left;margin-left:50px;z-index:1;margin-top:10px;position:relative;top:5px}
 }
-.footer #block-bean-social-buttons a.icon-twitter:before{color:#58AEE8;font-size:2em}
-.footer #block-bean-social-buttons a.icon-linkedin:before{color:#0274B3;font-size:2em}
+.footer #block-bean-social-buttons a:before{font-size:2em}
+.footer #block-bean-social-buttons a.icon-twitter:before{color:#58AEE8}
+.footer #block-bean-social-buttons a.icon-linkedin:before{color:#0274B3}
+.footer #block-bean-social-buttons a.icon-youtube:before{color:#E62117}
 @media (min-width:768px){.footer .navbar-nav>li>a{padding-top:10px}
 }
 .region-footer-cols>div{margin-top:30px}
