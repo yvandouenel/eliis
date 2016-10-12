@@ -207,13 +207,18 @@ Login in lightbox
   if ( $( "body.node-type-support" ).length &&  $( "#support-top-anchors" ).length) {
 
     var count = 0;
+      // dans le cas où l'on est dans la page directement via une ancre, count est égal à un pour bien positionner le menu des ancres
+      if(count == 0 && window.location.hash) {
+          count ++;
+      }
     $(window).scroll(function() {
-
+        console.log("je rentre dans ce bloc de code")
       clearTimeout($.data(this, 'scrollTimer'));
       // si le menu admin existe, on ajoute une classe supplémentaire
       if($( "#admin-menu" ).length) {
         $( "#support-top-anchors" ).addClass("width-admin-menu");
       }
+
       $.data(this, 'scrollTimer', setTimeout(function() {
           if (count && !$( "#support-top-anchors").hasClass("top-fixed-anchors")){
           /*console.log('hello');*/
