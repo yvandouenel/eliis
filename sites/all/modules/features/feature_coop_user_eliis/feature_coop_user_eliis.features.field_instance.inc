@@ -10,7 +10,7 @@
 function feature_coop_user_eliis_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'user-user-field_user_address'
+  // Exported field_instance: 'user-user-field_user_address'.
   $field_instances['user-user-field_user_address'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -49,7 +49,7 @@ function feature_coop_user_eliis_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_city'
+  // Exported field_instance: 'user-user-field_user_city'.
   $field_instances['user-user-field_user_city'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -88,7 +88,7 @@ function feature_coop_user_eliis_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_company'
+  // Exported field_instance: 'user-user-field_user_company'.
   $field_instances['user-user-field_user_company'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -127,7 +127,7 @@ function feature_coop_user_eliis_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_country'
+  // Exported field_instance: 'user-user-field_user_country'.
   $field_instances['user-user-field_user_country'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -166,7 +166,7 @@ function feature_coop_user_eliis_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_first_name'
+  // Exported field_instance: 'user-user-field_user_first_name'.
   $field_instances['user-user-field_user_first_name'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -205,7 +205,7 @@ function feature_coop_user_eliis_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_last_name'
+  // Exported field_instance: 'user-user-field_user_last_name'.
   $field_instances['user-user-field_user_last_name'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -244,7 +244,7 @@ function feature_coop_user_eliis_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_mobile'
+  // Exported field_instance: 'user-user-field_user_mobile'.
   $field_instances['user-user-field_user_mobile'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -283,7 +283,7 @@ function feature_coop_user_eliis_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_position'
+  // Exported field_instance: 'user-user-field_user_position'.
   $field_instances['user-user-field_user_position'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -322,7 +322,7 @@ function feature_coop_user_eliis_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_postal_code'
+  // Exported field_instance: 'user-user-field_user_postal_code'.
   $field_instances['user-user-field_user_postal_code'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -361,7 +361,7 @@ function feature_coop_user_eliis_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_telephone'
+  // Exported field_instance: 'user-user-field_user_telephone'.
   $field_instances['user-user-field_user_telephone'] = array(
     'bundle' => 'user',
     'default_value' => NULL,

@@ -10,7 +10,7 @@
 function feature_coop_user_eliis_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_user_address'
+  // Exported field_base: 'field_user_address'.
   $field_bases['field_user_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -34,7 +34,7 @@ function feature_coop_user_eliis_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_city'
+  // Exported field_base: 'field_user_city'.
   $field_bases['field_user_city'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -58,7 +58,7 @@ function feature_coop_user_eliis_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_company'
+  // Exported field_base: 'field_user_company'.
   $field_bases['field_user_company'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -82,7 +82,7 @@ function feature_coop_user_eliis_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_country'
+  // Exported field_base: 'field_user_country'.
   $field_bases['field_user_country'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -106,7 +106,7 @@ function feature_coop_user_eliis_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_first_name'
+  // Exported field_base: 'field_user_first_name'.
   $field_bases['field_user_first_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -130,7 +130,7 @@ function feature_coop_user_eliis_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_last_name'
+  // Exported field_base: 'field_user_last_name'.
   $field_bases['field_user_last_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -154,7 +154,7 @@ function feature_coop_user_eliis_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_mobile'
+  // Exported field_base: 'field_user_mobile'.
   $field_bases['field_user_mobile'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -178,7 +178,7 @@ function feature_coop_user_eliis_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_position'
+  // Exported field_base: 'field_user_position'.
   $field_bases['field_user_position'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -202,7 +202,7 @@ function feature_coop_user_eliis_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_postal_code'
+  // Exported field_base: 'field_user_postal_code'.
   $field_bases['field_user_postal_code'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -226,7 +226,7 @@ function feature_coop_user_eliis_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_telephone'
+  // Exported field_base: 'field_user_telephone'.
   $field_bases['field_user_telephone'] = array(
     'active' => 1,
     'cardinality' => 1,
