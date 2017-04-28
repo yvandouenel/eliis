@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature_contact_eliis feature.
+ */
+
+include_once 'feature_contact_eliis.features.inc';
