@@ -574,7 +574,6 @@ tbody.collapse.in{display:table-row-group}
 .glyphicon-th-large:before{content:"\e010"}
 .glyphicon-th:before{content:"\e011"}
 .glyphicon-th-list:before{content:"\e012"}
-.glyphicon-ok:before{content:"\e013"}
 .glyphicon-remove:before{content:"\e014"}
 .glyphicon-zoom-in:before{content:"\e015"}
 .glyphicon-zoom-out:before{content:"\e016"}
@@ -1668,6 +1667,7 @@ a.red,a.rouge{color:#8e1004}
 #arrow-top{position:fixed;right:20px;bottom:20px;z-index:9}
 @media (min-width:992px){#arrow-top{right:180px}
 }
+.glyphicon-ok:before{content:'\e834';color:#8e1004}
 @media (min-width:768px){.container,.navbar.container{max-width:none;width:100%}
 }
 @media (min-width:1810px){.container,.navbar.container{max-width:none;width:100%}
