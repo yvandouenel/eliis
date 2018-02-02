@@ -212,7 +212,7 @@ Login in lightbox
           count ++;
       }
     $(window).scroll(function() {
-        console.log("je rentre dans ce bloc de code")
+        //console.log("je rentre dans ce bloc de code")
       clearTimeout($.data(this, 'scrollTimer'));
       // si le menu admin existe, on ajoute une classe supplémentaire
       if($( "#admin-menu" ).length) {
