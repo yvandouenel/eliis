@@ -1877,6 +1877,7 @@ body.logged-in.admin-menu .breadcrumb{top:88px}
 .page-events .link-register-view{float:right;display:block;padding-right:35%}
 .page-events #event-subscription{position:relative;top:-50px}
 body.node-type-news input,body.node-type-news select{width:250px}
+.view-registration-to-events{margin:0 20px}
 .field-collection-container,.field-collection-view{border:0}
 .field-group-htabs>.field-group-div{min-height:300px}
 .group-same-height-3{margin-top:20px}
@@ -1936,7 +1937,7 @@ body.node-type-support .group-video-wrapper .view-display-id-page_videos_support
 body.node-type-support .group-video-wrapper .view-display-id-page_videos_support .views-exposed-widget .form-type-bef-link{float:left}
 body.node-type-support .group-video-wrapper .view-display-id-page_videos_support .views-exposed-widget .form-type-bef-link a{font-family:walk,arial;font-size:1.6em;font-weight:700;color:#222;padding:0 20px;text-decoration:underline}
 body.node-type-support .group-video-wrapper .view-display-id-page_videos_support .video-viewed iframe{border:2px solid #319746}
-body.node-type-support .group-video-wrapper .view-display-id-page_videos_support #big-video{position:fixed;top:50%;left:0;border:30px solid #000;background-color:#000;z-index:9}
+body.node-type-support .group-video-wrapper .view-display-id-page_videos_support #big-video{position:fixed;top:35%;left:0;border:30px solid #000;background-color:#000;z-index:9}
 body.node-type-support .group-video-wrapper .view-display-id-page_videos_support #big-video #close-button{position:absolute;top:-26px;right:-26px;z-index:9999;height:20px;width:20px}
 body.node-type-support .group-video-wrapper .view-display-id-page_videos_support #big-video #close-button:hover{cursor:pointer}
 body.node-type-support .group-video-wrapper .view-display-id-page_videos_support #big-video #close-button:before{position:relative;top:1px;font-family:fontello;font-weight:400;font-size:1em;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;line-height:1em;content:"\e832";color:#fff}
