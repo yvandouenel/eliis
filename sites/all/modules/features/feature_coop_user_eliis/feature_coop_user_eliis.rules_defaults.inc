@@ -18,8 +18,8 @@ function feature_coop_user_eliis_default_rules_configuration() {
       "DO" : [
         { "mail" : {
             "to" : "contact@eliis.fr",
-            "subject" : "New user account on eliis.fr",
-            "message" : "A new user account was created on eliis.fr :\\r\\n - email: [account:mail],\\r\\n - name: [account:name]\\r\\n - role: [account:roles]",
+            "subject" : "New user account on eliis.fr: [account:field-user-first-name] [account:field_user_last_name] [account:field-user-company]",
+            "message" : "A new user account was created on eliis.fr :\\r\\n - email: [account:mail],\\r\\n - name: [account:name]\\r\\n - company: [account:field-user-company]\\r\\n - role: [account:roles]",
             "language" : [ "account:language" ]
           }
         }

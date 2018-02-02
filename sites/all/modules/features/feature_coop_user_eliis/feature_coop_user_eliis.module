@@ -5,3 +5,61 @@
  */
 
 include_once 'feature_coop_user_eliis.features.inc';
+/**
+ * Implements hook_entity_insert().
+ */
+function feature_coop_user_eliis_entity_insert($entity, $entity_type) {
+
+  if ($entity_type == "registration"){
+    $usermail = $entity->anon_mail;
+    $firstname = $entity->field_first_name["und"][0]["value"];
+    $lastname = $entity->field_last_name["und"][0]["value"];
+    $company = $entity->field_company["und"][0]["value"];
+
+   /* dpm($entity->anon_mail);
+    dpm($entity->field_first_name["und"][0]["value"]);
+    dpm($entity->field_last_name["und"][0]["value"]);
+    dpm($entity->field_company["und"][0]["value"]);*/
+    //dpm($entity);
+    if (!user_load_by_mail($usermail)) {
+      $new_user = array(
+        'name' => $usermail,
+        'pass' => 'sdf58EBPo;deZ',
+        'mail' => $usermail,
+        'status' => 1,
+        'language' => 'en',
+        'timezone' => 'America/Los_Angeles',
+        'init' => 'Email',
+        'roles' => array(
+          DRUPAL_AUTHENTICATED_RID => 'authenticated user',
+          8 => 'event registrant', // role id for custom roles varies per website
+        ),
+        'field_user_first_name' => array(
+          'und' => array(
+            0 => array(
+              'value' => $firstname,
+            ),
+          ),
+        ),
+        'field_user_last_name' => array(
+          'und' => array(
+            0 => array(
+              'value' => $lastname,
+            ),
+          ),
+        ),
+        'field_user_company' => array(
+          'und' => array(
+            0 => array(
+              'value' => $company,
+            ),
+          ),
+        ),
+      );
+
+      $account = user_save(NULL, $new_user);
+    }
+
+  }
+}
+
