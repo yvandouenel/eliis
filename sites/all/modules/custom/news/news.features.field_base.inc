@@ -10,7 +10,7 @@
 function news_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_date'
+  // Exported field_base: 'field_date'.
   $field_bases['field_date'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -39,7 +39,7 @@ function news_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_images'
+  // Exported field_base: 'field_images'.
   $field_bases['field_images'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -58,7 +58,7 @@ function news_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_information_type'
+  // Exported field_base: 'field_information_type'.
   $field_bases['field_information_type'] = array(
     'active' => 1,
     'cardinality' => 3,
@@ -87,7 +87,7 @@ function news_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_new_window'
+  // Exported field_base: 'field_new_window'.
   $field_bases['field_new_window'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -112,7 +112,7 @@ function news_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_news_only_video'
+  // Exported field_base: 'field_news_only_video'.
   $field_bases['field_news_only_video'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -137,7 +137,7 @@ function news_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_news_publication_date'
+  // Exported field_base: 'field_news_publication_date'.
   $field_bases['field_news_publication_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -169,7 +169,7 @@ function news_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_news_url_target'
+  // Exported field_base: 'field_news_url_target'.
   $field_bases['field_news_url_target'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -190,7 +190,7 @@ function news_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_registration'
+  // Exported field_base: 'field_registration'.
   $field_bases['field_registration'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -212,7 +212,7 @@ function news_field_default_field_bases() {
     'type' => 'registration',
   );
 
-  // Exported field_base: 'field_scald_file'
+  // Exported field_base: 'field_scald_file'.
   $field_bases['field_scald_file'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -231,7 +231,7 @@ function news_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_scald_gallery'
+  // Exported field_base: 'field_scald_gallery'.
   $field_bases['field_scald_gallery'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -253,7 +253,7 @@ function news_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_scald_image'
+  // Exported field_base: 'field_scald_image'.
   $field_bases['field_scald_image'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -272,7 +272,7 @@ function news_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_scald_sound'
+  // Exported field_base: 'field_scald_sound'.
   $field_bases['field_scald_sound'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -291,7 +291,7 @@ function news_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_scald_video'
+  // Exported field_base: 'field_scald_video'.
   $field_bases['field_scald_video'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -310,7 +310,7 @@ function news_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_visible_bas_accueil'
+  // Exported field_base: 'field_visible_bas_accueil'.
   $field_bases['field_visible_bas_accueil'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -335,7 +335,7 @@ function news_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_zoom'
+  // Exported field_base: 'field_zoom'.
   $field_bases['field_zoom'] = array(
     'active' => 1,
     'cardinality' => 1,
