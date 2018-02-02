@@ -16,6 +16,7 @@ dependencies[] = list
 dependencies[] = options
 dependencies[] = pathauto
 dependencies[] = registration
+dependencies[] = registration_views
 dependencies[] = scald
 dependencies[] = strongarm
 dependencies[] = taxonomy
