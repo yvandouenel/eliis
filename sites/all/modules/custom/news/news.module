@@ -77,4 +77,5 @@ function news_node_view_alter(&$build) {
             '</div>';
     $build['field_news_only_video'][0]['#markup'] = "";
   }
+
 }
