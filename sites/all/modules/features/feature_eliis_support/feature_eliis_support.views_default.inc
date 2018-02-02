@@ -101,7 +101,54 @@ function feature_eliis_support_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_videos_support');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['defaults']['exposed_form'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'input_required' => 0,
+      'text_input_required' => array(
+        'text_input_required' => array(
+          'value' => 'Select any filter and click on Apply to see results',
+          'format' => 'full_html',
+        ),
+      ),
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+      'secondary_collapse_override' => '0',
+    ),
+    'field_video_type_tid' => array(
+      'bef_format' => 'bef_links',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'autosubmit' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            1 => 'vocabulary',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+  );
   $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<div class="row">
+  <div class="col-md4 col-md-offset-4 " id="big-video"></div>
+</div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Unfiltered text */
   $handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
@@ -138,9 +185,9 @@ function feature_eliis_support_views_default_views() {
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['nid']['alter']['text'] = '<div id="video-[nid]" class="video-support-right">
-  <div class="title-video-right">[title]</div>
-  [field_video]
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '<div id="video-[nid]" class="">
+ <!-- <div class="title-video-right">[title]</div> -->
+[field_video]
 </div>';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
@@ -167,6 +214,25 @@ function feature_eliis_support_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'video' => 'video',
   );
+  /* Filter criterion: Content: Video type (field_video_type) */
+  $handler->display->display_options['filters']['field_video_type_tid']['id'] = 'field_video_type_tid';
+  $handler->display->display_options['filters']['field_video_type_tid']['table'] = 'field_data_field_video_type';
+  $handler->display->display_options['filters']['field_video_type_tid']['field'] = 'field_video_type_tid';
+  $handler->display->display_options['filters']['field_video_type_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_video_type_tid']['expose']['operator_id'] = 'field_video_type_tid_op';
+  $handler->display->display_options['filters']['field_video_type_tid']['expose']['operator'] = 'field_video_type_tid_op';
+  $handler->display->display_options['filters']['field_video_type_tid']['expose']['identifier'] = 'field_video_type_tid';
+  $handler->display->display_options['filters']['field_video_type_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    6 => 0,
+    7 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_video_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_video_type_tid']['vocabulary'] = 'video_type';
   $handler->display->display_options['path'] = 'videos';
 
   /* Display: Attachment Core */
@@ -208,8 +274,9 @@ function feature_eliis_support_views_default_views() {
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'videos:page_1';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['displays'] = array(
-    'page_videos_support' => 'page_videos_support',
     'default' => 0,
+    'page_videos_support' => 0,
+    'page_1' => 0,
   );
 
   /* Display: Page ranking */
@@ -348,8 +415,9 @@ function feature_eliis_support_views_default_views() {
   $handler->display->display_options['filters']['field_video_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_video_type_tid']['vocabulary'] = 'video_type';
   $handler->display->display_options['displays'] = array(
-    'page_videos_support' => 'page_videos_support',
     'default' => 0,
+    'page_videos_support' => 0,
+    'page_1' => 0,
   );
   $handler->display->display_options['attachment_position'] = 'after';
 
@@ -417,8 +485,9 @@ function feature_eliis_support_views_default_views() {
   $handler->display->display_options['filters']['field_video_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_video_type_tid']['vocabulary'] = 'video_type';
   $handler->display->display_options['displays'] = array(
-    'page_videos_support' => 'page_videos_support',
     'default' => 0,
+    'page_videos_support' => 0,
+    'page_1' => 0,
   );
   $handler->display->display_options['attachment_position'] = 'after';
 
@@ -486,8 +555,9 @@ function feature_eliis_support_views_default_views() {
   $handler->display->display_options['filters']['field_video_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_video_type_tid']['vocabulary'] = 'video_type';
   $handler->display->display_options['displays'] = array(
-    'page_videos_support' => 'page_videos_support',
     'default' => 0,
+    'page_videos_support' => 0,
+    'page_1' => 0,
   );
   $handler->display->display_options['attachment_position'] = 'after';
 
@@ -555,8 +625,9 @@ function feature_eliis_support_views_default_views() {
   $handler->display->display_options['filters']['field_video_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_video_type_tid']['vocabulary'] = 'video_type';
   $handler->display->display_options['displays'] = array(
-    'page_videos_support' => 'page_videos_support',
     'default' => 0,
+    'page_videos_support' => 0,
+    'page_1' => 0,
   );
   $handler->display->display_options['attachment_position'] = 'after';
   $translatables['videos'] = array(
@@ -581,10 +652,15 @@ function feature_eliis_support_views_default_views() {
   [field_video]
 </div>'),
     t('Page'),
+    t('Select any filter and click on Apply to see results'),
+    t('Advanced options'),
+    t('<div class="row">
+  <div class="col-md4 col-md-offset-4 " id="big-video"></div>
+</div>'),
     t('<h4>Soon available</h4>'),
-    t('<div id="video-[nid]" class="video-support-right">
-  <div class="title-video-right">[title]</div>
-  [field_video]
+    t('<div id="video-[nid]" class="">
+ <!-- <div class="title-video-right">[title]</div> -->
+[field_video]
 </div>'),
     t('Attachment Core'),
     t('<h4 class="support-video-subtitle"><span>Core Application</span></h4>'),
