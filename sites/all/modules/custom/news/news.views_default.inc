@@ -122,6 +122,13 @@ function news_views_default_views() {
   $handler = $view->new_display('page', 'Page-evenement', 'event_page');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'News & Events';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="events-archive">View event\'s archive</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
@@ -1052,6 +1059,136 @@ function news_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['block_description'] = 'block zoom event';
+
+  /* Display: Page archive evenement */
+  $handler = $view->new_display('page', 'Page archive evenement', 'event_archive');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Events Archive';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '50';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Lien vers nouvelle fenêtre */
+  $handler->display->display_options['fields']['field_new_window']['id'] = 'field_new_window';
+  $handler->display->display_options['fields']['field_new_window']['table'] = 'field_data_field_new_window';
+  $handler->display->display_options['fields']['field_new_window']['field'] = 'field_new_window';
+  $handler->display->display_options['fields']['field_new_window']['label'] = '';
+  $handler->display->display_options['fields']['field_new_window']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_new_window']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_new_window']['alter']['text'] = 'target="_blank"';
+  $handler->display->display_options['fields']['field_new_window']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_new_window']['empty'] = 'target="_self"';
+  $handler->display->display_options['fields']['field_new_window']['hide_alter_empty'] = FALSE;
+  /* Field: Content: Date d'événement */
+  $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
+  $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
+  $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
+  $handler->display->display_options['fields']['field_date']['label'] = '';
+  $handler->display->display_options['fields']['field_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_date']['settings'] = array(
+    'format_type' => 'american',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  $handler->display->display_options['fields']['field_date']['delta_offset'] = '0';
+  /* Field: Content: Registration */
+  $handler->display->display_options['fields']['field_registration']['id'] = 'field_registration';
+  $handler->display->display_options['fields']['field_registration']['table'] = 'field_data_field_registration';
+  $handler->display->display_options['fields']['field_registration']['field'] = 'field_registration';
+  $handler->display->display_options['fields']['field_registration']['label'] = '';
+  $handler->display->display_options['fields']['field_registration']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_registration']['alter']['text'] = '<a href="[path]#event-subscription" class="link-register-view">Register now</a>';
+  $handler->display->display_options['fields']['field_registration']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_registration']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_registration']['type'] = 'registration_link';
+  $handler->display->display_options['fields']['field_registration']['settings'] = array(
+    'label' => '',
+    'i18n_string_key' => 'ctools:ctools:_custom:field_registration',
+  );
+  /* Field: Content: Url de destination */
+  $handler->display->display_options['fields']['field_news_url_target']['id'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['table'] = 'field_data_field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['field'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['label'] = '';
+  $handler->display->display_options['fields']['field_news_url_target']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_news_url_target']['alter']['text'] = '<div class="group-title-date-event">
+  <h4 class="h4-event"><a href="[field_news_url_target]">[title]</a></h4>
+  <div class="register-link-view">[field_registration]</div>
+  <div class="date-event event-page">[field_date]</div>
+</div>
+';
+  $handler->display->display_options['fields']['field_news_url_target']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_news_url_target']['empty'] = '<div class="group-title-date-event">
+  <h4 class="h4-event"><a href="[path]">[title]</a></h4>
+  <div class="date-event event-page">[field_date]</div>
+</div>';
+  $handler->display->display_options['fields']['field_news_url_target']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Date d&#039;événement (field_date) */
+  $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
+  $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
+  $handler->display->display_options['sorts']['field_date_value']['field'] = 'field_date_value';
+  $handler->display->display_options['sorts']['field_date_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  /* Filter criterion: Content: Type d&#039;information (field_information_type) */
+  $handler->display->display_options['filters']['field_information_type_value']['id'] = 'field_information_type_value';
+  $handler->display->display_options['filters']['field_information_type_value']['table'] = 'field_data_field_information_type';
+  $handler->display->display_options['filters']['field_information_type_value']['field'] = 'field_information_type_value';
+  $handler->display->display_options['filters']['field_information_type_value']['value'] = array(
+    'event' => 'event',
+  );
+  /* Filter criterion: Content: Date d&#039;événement (field_date) */
+  $handler->display->display_options['filters']['field_date_value_1']['id'] = 'field_date_value_1';
+  $handler->display->display_options['filters']['field_date_value_1']['table'] = 'field_data_field_date';
+  $handler->display->display_options['filters']['field_date_value_1']['field'] = 'field_date_value';
+  $handler->display->display_options['filters']['field_date_value_1']['operator'] = '<';
+  $handler->display->display_options['filters']['field_date_value_1']['default_date'] = 'now';
+  $handler->display->display_options['path'] = 'events-archive';
   $translatables['evenements'] = array(
     t('Master'),
     t('Evénements au domaine d\'O'),
@@ -1071,6 +1208,7 @@ function news_views_default_views() {
     t('Page-evenement'),
     t('News & Events'),
     t('more'),
+    t('<a href="events-archive">View event\'s archive</a>'),
     t('target="_blank"'),
     t('target="_self"'),
     t('<a href="[path]#event-subscription" class="link-register-view">Register now</a>'),
@@ -1153,6 +1291,8 @@ function news_views_default_views() {
 </div>
 </div>'),
     t('block zoom event'),
+    t('Page archive evenement'),
+    t('Events Archive'),
   );
   $export['evenements'] = $view;
 
