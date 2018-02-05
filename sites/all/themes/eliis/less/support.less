@@ -33,7 +33,7 @@ body.node-type-support{
     background-color: #FFF;
   }
 
-  #block-system-main .group-global-wrapper {
+  #block-system-main .group-global-wrapper{
     margin-top: 50px;
     h3{
       position: absolute;
@@ -204,6 +204,36 @@ body.node-type-support{
           color: #000;
           text-decoration: none;
         }
+      }
+    }
+  }
+  // FAQ
+  #block-system-main .group-faq-wrapper {
+    margin-top: 50px;
+    h3{
+      display: table;
+      padding: 0 80px 0 20px;
+      background: url(../images/icons/faq.png) 100% 30% no-repeat;
+      line-height: 3em;
+      width: 230px;
+      span{
+        &:after{
+          .line_under_h3();
+          width: 180%;
+        }
+      }
+    }
+    > div {
+      @media (min-width: @screen-lg) {
+        padding-left: 30px;
+      }
+    }
+
+    .row-eq-height{
+      min-height: 50px;
+      > .field-group-div{
+        padding-top: 50px;
+        padding-bottom: 15px;
       }
     }
   }
