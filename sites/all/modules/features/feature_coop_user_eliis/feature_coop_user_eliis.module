@@ -62,4 +62,13 @@ function feature_coop_user_eliis_entity_insert($entity, $entity_type) {
 
   }
 }
+/**
+ * Implements hook_form_alter().
+ * Sets "notify user of new account" chosen by default
+ */
+function feature_coop_user_eliis_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'user_register_form') {
+    $form['account']['notify']['#default_value'] = TRUE;
+  }
+}
 
