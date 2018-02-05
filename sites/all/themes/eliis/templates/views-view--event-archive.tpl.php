@@ -50,15 +50,13 @@
       <?php print $attachment_before; ?>
     </div>
   <?php endif; ?>
-    <div class="col-md-4">
+    <div class="col-md-12">
   <?php if ($rows): ?>
     <div>
-        <h3 class="h3-event">Events</h3>
+        <h3 class="h3-event">Events Archive</h3>
         <div class="view-content">
         <?php print $rows; ?>
         </div>
-        <h4><a href="events-archive" class="events-archive">View Events Archive</a></h4>
-    </div>
   <?php elseif ($empty): ?>
     <div class="view-empty">
       <?php print $empty; ?>
