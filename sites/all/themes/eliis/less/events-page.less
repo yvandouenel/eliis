@@ -110,7 +110,13 @@
     position: relative;
     top: -50px;
   }
+  .events-archive:before{
+    .glyphicon();
+    content: "\e82c";
+    color: @vert-fonce;
+  }
 }
+
 body.node-type-news{
   .label-registration{
     font-size: 2em;
@@ -118,9 +124,23 @@ body.node-type-news{
   input, select{
     width: 250px;
   }
+
 }
 
 /* Inscriptions aux événements ****************************************************************************************/
 .view-registration-to-events{
   margin: 0 20px;
+}
+.page-events-archive {
+  #block-system-main{
+    margin: 0 2%;
+    .views-field-field-registration{
+      display: none;
+    }
+    .views-field-field-news-url-target{
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid @vert-fonce;
+    }
+  }
 }
