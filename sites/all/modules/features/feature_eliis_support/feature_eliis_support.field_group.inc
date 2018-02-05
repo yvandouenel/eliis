@@ -182,8 +182,8 @@ function feature_eliis_support_field_group_info() {
     'label' => 'DATALINK',
     'weight' => '26',
     'children' => array(
-      0 => 'group_user_guide_petrel',
-      1 => 'group_user_guide_decision',
+      0 => 'group_user_guide_decision',
+      1 => 'group_user_guide_petrel',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -265,6 +265,66 @@ function feature_eliis_support_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_faq|node|support|default';
+  $field_group->group_name = 'group_faq';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'support';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'FAQ',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_faq',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'FAQ',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-faq-wrapper field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_faq|node|support|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_faq|node|support|form';
+  $field_group->group_name = 'group_faq';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'support';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_tabs';
+  $field_group->data = array(
+    'label' => 'FAQ',
+    'weight' => '19',
+    'children' => array(
+      0 => 'field_faq',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'label' => 'FAQ',
+      'instance_settings' => array(
+        'required_fields' => 0,
+        'classes' => 'group-faq field-group-htab',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_faq|node|support|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_global_col_1|node|support|default';
   $field_group->group_name = 'group_global_col_1';
   $field_group->entity_type = 'node';
@@ -342,8 +402,8 @@ function feature_eliis_support_field_group_info() {
     'label' => 'Help Files wrapper',
     'weight' => '56',
     'children' => array(
-      0 => 'group_datalink',
-      1 => 'group_api',
+      0 => 'group_api',
+      1 => 'group_datalink',
       2 => 'group_paleoscan',
     ),
     'format_type' => 'div',
@@ -891,7 +951,7 @@ function feature_eliis_support_field_group_info() {
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
     'label' => 'Publications',
-    'weight' => '19',
+    'weight' => '20',
     'children' => array(
       0 => 'field_support_publications',
     ),
@@ -919,10 +979,9 @@ function feature_eliis_support_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'group publication',
-    'weight' => '7',
+    'weight' => '10',
     'children' => array(
       0 => 'field_support_publications',
-      1 => 'configuration_anchor',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1280,9 +1339,10 @@ function feature_eliis_support_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'group_help',
-      1 => 'group_training_coc',
-      2 => 'group_videos',
-      3 => 'group_publications',
+      1 => 'group_publications',
+      2 => 'group_training_coc',
+      3 => 'group_videos',
+      4 => 'group_faq',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -1628,9 +1688,9 @@ function feature_eliis_support_field_group_info() {
     'label' => 'User\'s guide',
     'weight' => '7',
     'children' => array(
-      0 => 'group_paleoscan',
+      0 => 'group_api',
       1 => 'group_datalink',
-      2 => 'group_api',
+      2 => 'group_paleoscan',
     ),
     'format_type' => 'accordion',
     'format_settings' => array(
@@ -1712,6 +1772,7 @@ function feature_eliis_support_field_group_info() {
   t('DATALINK');
   t('Datalink');
   t('Decision Space');
+  t('FAQ');
   t('Help Files');
   t('Help Files wrapper');
   t('New Features');

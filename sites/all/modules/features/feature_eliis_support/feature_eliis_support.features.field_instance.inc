@@ -250,6 +250,51 @@ function feature_eliis_support_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-support-field_faq'.
+  $field_instances['node-support-field_faq'] = array(
+    'bundle' => 'support',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 76,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_faq',
+    'label' => 'FAQ',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 43,
+    ),
+  );
+
   // Exported field_instance: 'node-support-field_presentation'.
   $field_instances['node-support-field_presentation'] = array(
     'bundle' => 'support',
@@ -487,7 +532,7 @@ function feature_eliis_support_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 17,
+        'weight' => 78,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -516,7 +561,7 @@ function feature_eliis_support_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 42,
+      'weight' => 44,
     ),
   );
 
@@ -810,6 +855,7 @@ function feature_eliis_support_field_default_field_instances() {
 <a href="/admin/content" target="_blank">View all videos</a>');
   t('Body');
   t('Decision Space Link');
+  t('FAQ');
   t('PaleoScan');
   t('PaleoScan Database 2016');
   t('PaleoScan Geomodel 2016');
