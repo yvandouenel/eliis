@@ -1,7 +1,10 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
-.idea/
+
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
 .htaccess
+.idea/eliis.iml
+.idea/workspace.xml
+tmp/
