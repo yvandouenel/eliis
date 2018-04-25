@@ -322,6 +322,58 @@ function feature_contact_eliis_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-contact-field_contact_resellers'.
+  $field_instances['node-contact-field_contact_resellers'] = array(
+    'bundle' => 'contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 18,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_contact_resellers',
+    'label' => 'Resellers',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'node-contact-field_contact_social_links'.
   $field_instances['node-contact-field_contact_social_links'] = array(
     'bundle' => 'contact',
@@ -487,6 +539,7 @@ function feature_contact_eliis_field_default_field_instances() {
   t('Link Training / Consulting');
   t('Link commercial');
   t('Link support');
+  t('Resellers');
   t('Social links');
   t('USA');
 

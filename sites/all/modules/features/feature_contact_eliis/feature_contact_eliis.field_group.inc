@@ -93,6 +93,7 @@ function feature_contact_eliis_field_group_info() {
       0 => 'group_first',
       1 => 'group_second',
       2 => 'group_third',
+      3 => 'group_second_bis',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -115,7 +116,7 @@ function feature_contact_eliis_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'group link',
-    'weight' => '23',
+    'weight' => '3',
     'children' => array(
       0 => 'field_contact_link_commercial',
       1 => 'field_contact_training_con',
@@ -149,7 +150,7 @@ function feature_contact_eliis_field_group_info() {
   $field_group->parent_name = 'group_support';
   $field_group->data = array(
     'label' => 'group support',
-    'weight' => '18',
+    'weight' => '27',
     'children' => array(
       0 => 'field_contact_client_support',
     ),
@@ -173,6 +174,65 @@ function feature_contact_eliis_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_resellers|node|contact|full';
+  $field_group->group_name = 'group_resellers';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'contact';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Group Resellers',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_contact_resellers',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Group Resellers',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-resellers field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_resellers|node|contact|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_second_bis|node|contact|form';
+  $field_group->group_name = 'group_second_bis';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'contact';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_horizon';
+  $field_group->data = array(
+    'label' => 'Second Row',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_contact_resellers',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-second-bis field-group-htab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_second_bis|node|contact|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_second|node|contact|form';
   $field_group->group_name = 'group_second';
   $field_group->entity_type = 'node';
@@ -180,21 +240,21 @@ function feature_contact_eliis_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_horizon';
   $field_group->data = array(
-    'label' => 'Second row',
-    'weight' => '6',
+    'label' => 'Thrid row',
+    'weight' => '8',
     'children' => array(
       0 => 'field_contact_client_support',
       1 => 'field_contact_social_links',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Thrid row',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-second field-group-htab',
         'required_fields' => 1,
-        'id' => '',
+        'classes' => 'group-second field-group-htab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups['group_second|node|contact|form'] = $field_group;
@@ -210,7 +270,7 @@ function feature_contact_eliis_field_group_info() {
   $field_group->parent_name = 'group_support';
   $field_group->data = array(
     'label' => 'group social',
-    'weight' => '19',
+    'weight' => '28',
     'children' => array(
       0 => 'field_contact_social_links',
     ),
@@ -242,7 +302,7 @@ function feature_contact_eliis_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'group suppor',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'group_over_support',
       1 => 'group_socail',
@@ -274,8 +334,8 @@ function feature_contact_eliis_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_horizon';
   $field_group->data = array(
-    'label' => 'Third row',
-    'weight' => '7',
+    'label' => 'Fourth row',
+    'weight' => '9',
     'children' => array(
       0 => 'field_contact_link_commercial',
       1 => 'field_contact_training_con',
@@ -283,13 +343,13 @@ function feature_contact_eliis_field_group_info() {
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Fourth row',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-third field-group-htab',
         'required_fields' => 1,
-        'id' => '',
+        'classes' => 'group-third field-group-htab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups['group_third|node|contact|form'] = $field_group;
@@ -297,9 +357,11 @@ function feature_contact_eliis_field_group_info() {
   // Translatables
   // Included for use with string extractors like potx.
   t('First row');
+  t('Fourth row');
+  t('Group Resellers');
   t('Horizontal');
-  t('Second row');
-  t('Third row');
+  t('Second Row');
+  t('Thrid row');
   t('group countries');
   t('group link');
   t('group social');
