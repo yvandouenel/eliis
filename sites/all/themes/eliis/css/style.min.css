@@ -2010,6 +2010,7 @@ body.page-node.not-front.node-type-contact .main-container .region-content .grou
 body.page-user .main-container>.row .region-content{width:50%;margin:0 auto}
 .page-node .view-id-partenaires .views-row{float:left;margin-right:5px;min-height:110px}
 @media (min-width:992px){body.page-node.not-front.node-type-contact .main-container .region-content .group-countries .big-margin.col-md-3>h3,body.page-node.not-front.node-type-contact .main-container .region-content .group-countries .big-margin.col-md-3>p{padding-left:25%}
+body.page-node.not-front.node-type-contact .main-container .region-content .group-resellers p,body.page-node.not-front.node-type-contact .main-container .region-content .group-resellers>h3{padding-left:6%}
 div.node-webform{width:50%;margin:0 auto}
 div.node-webform label{min-width:200px}
 div.node-webform .form-select{margin-left:225px}
