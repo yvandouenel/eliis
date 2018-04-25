@@ -58,7 +58,7 @@ function feature_contact_eliis_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -93,10 +93,10 @@ function feature_contact_eliis_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_contact_china',
-    'label' => 'China',
+    'label' => 'Mexico',
     'required' => 0,
     'settings' => array(
-      'context' => 'debug',
+      'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 1,
       'mee_enabled' => 1,
@@ -110,7 +110,7 @@ function feature_contact_eliis_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -533,12 +533,12 @@ function feature_contact_eliis_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Australia');
-  t('China');
   t('Client support');
   t('France');
   t('Link Training / Consulting');
   t('Link commercial');
   t('Link support');
+  t('Mexico');
   t('Resellers');
   t('Social links');
   t('USA');
