@@ -53,7 +53,7 @@ function feature_contact_eliis_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'lb' => 'Mexico',
+          'lb' => 'Malaysia',
           'lb-el' => 'h3',
           'lb-col' => TRUE,
           'ow' => TRUE,
@@ -139,6 +139,7 @@ function feature_contact_eliis_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'lb' => 'Australia',
           'lb-el' => 'h3',
+          'lb-col' => TRUE,
           'ow' => TRUE,
           'ow-el' => 'div',
           'ow-cl' => 'col-md-3 bg-gris-tres-tres-clair col-xs-12',

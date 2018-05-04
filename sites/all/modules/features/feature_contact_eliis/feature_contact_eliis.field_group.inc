@@ -181,14 +181,14 @@ function feature_contact_eliis_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Group Resellers',
+    'label' => 'Resellers',
     'weight' => '1',
     'children' => array(
       0 => 'field_contact_resellers',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Group Resellers',
+      'label' => 'Resellers',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-resellers field-group-div',
@@ -358,8 +358,8 @@ function feature_contact_eliis_field_group_info() {
   // Included for use with string extractors like potx.
   t('First row');
   t('Fourth row');
-  t('Group Resellers');
   t('Horizontal');
+  t('Resellers');
   t('Second Row');
   t('Thrid row');
   t('group countries');
