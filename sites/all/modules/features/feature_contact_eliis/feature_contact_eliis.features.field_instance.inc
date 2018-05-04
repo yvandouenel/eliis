@@ -93,7 +93,7 @@ function feature_contact_eliis_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_contact_china',
-    'label' => 'Mexico',
+    'label' => 'Malaysia',
     'required' => 0,
     'settings' => array(
       'context' => 'title',
@@ -538,7 +538,7 @@ function feature_contact_eliis_field_default_field_instances() {
   t('Link Training / Consulting');
   t('Link commercial');
   t('Link support');
-  t('Mexico');
+  t('Malaysia');
   t('Resellers');
   t('Social links');
   t('USA');
